@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\BFollow.cs" />
      <Compile Include="Assets\Scripts\Gun.cs" />
+     <Compile Include="Assets\Scripts\HIVCollision.cs" />
      <Compile Include="Assets\Scripts\MoveT.cs" />
      <Compile Include="Assets\Scripts\OffScreenDelete.cs" />
      <Compile Include="Assets\Scripts\SpawnManager.cs" />
