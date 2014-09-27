@@ -57,8 +57,7 @@ public class SpawnManager : MonoBehaviour {
 	}
 
 	void Update () {
-		int count = spawnQueue.Count;
-		Debug.Log (count);
+		
 	}
 
 }
