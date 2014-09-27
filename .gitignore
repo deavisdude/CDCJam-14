@@ -1,5 +1,33 @@
-/CDC14/Temp/
-/CDC14/Library
-CDC14/Library
-CDC14/Temp
+# =============== #
+# Unity generated #
+# =============== #
+Temp/
+Obj/
+UnityGenerated/
 Library/
+ 
+# ===================================== #
+# Visual Studio / MonoDevelop generated #
+# ===================================== #
+ExportedObj/
+*.svd
+*.userprefs
+*.csproj
+*.pidb
+*.suo
+*.sln
+*.user
+*.unityproj
+*.booproj
+ 
+# ============ #
+# OS generated #
+# ============ #
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
