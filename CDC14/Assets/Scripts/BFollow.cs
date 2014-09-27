@@ -10,11 +10,11 @@ public class BFollow : MonoBehaviour {
 	
 
 	void Update () {
-		for(int i=0; i<MoveT.delayPos.Count; i++){
-			MoveT.PosOb poso = (MoveT.PosOb) MoveT.delayPos[i];
+		for(int i=0; i<Player.delayPos.Count; i++){
+			Player.PosOb poso = (Player.PosOb) Player.delayPos[i];
 			if((Time.time - poso.time) <= 0.3f && (Time.time - poso.time) >= 0.25f){
 				transform.position = poso.position;
-				MoveT.delayPos.Remove(poso);
+				Player.delayPos.Remove(poso);
 			}
 		}
 	}
