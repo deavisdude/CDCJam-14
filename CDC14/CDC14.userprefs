@@ -1,25 +1,14 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\HIVCollision.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\OffScreenDelete.cs">
     <Files>
-<<<<<<< HEAD
-      <File FileName="Assets\Scripts\HIVCollision.cs" Line="7" Column="17" />
-      <File FileName="Assets\Scripts\Gun.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\OffScreenDelete.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\BFollow.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Bullet.cs" Line="6" Column="32" />
-=======
-      <File FileName="Assets\Scripts\SpawnManager.cs" Line="39" Column="52" />
-      <File FileName="Assets\Scripts\HIVPilot.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Bullet.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Gun.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\OffScreenDelete.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\BFollow.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\ScrollScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Infected.cs" Line="46" Column="29" />
       <File FileName="Assets\Scripts\Killer.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Player.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Infected.cs" Line="33" Column="1" />
->>>>>>> 0a2d5e1262a5980d7c4997bedbc9f42d45fc6713
+      <File FileName="Assets\Scripts\Bullet.cs" Line="18" Column="24" />
+      <File FileName="Assets\Scripts\SpawnManager.cs" Line="57" Column="24" />
+      <File FileName="Assets\Scripts\HIVPilot.cs" Line="14" Column="3" />
+      <File FileName="Assets\Scripts\Gun.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\OffScreenDelete.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

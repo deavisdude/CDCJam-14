@@ -84,6 +84,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f36bf72f75ccae4283af133847a61c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 15
+  firespeed: 3.5
   prefab: {fileID: 100000, guid: c50148482280bda479364216bf423fe8, type: 2}
 --- !u!212 &21200000
 SpriteRenderer:

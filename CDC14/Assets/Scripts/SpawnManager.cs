@@ -20,7 +20,7 @@ public class SpawnManager : MonoBehaviour {
 		}
 	}
 
-	public List<Enemy> spawnQueue = new List<Enemy>();
+	public static List<Enemy> spawnQueue = new List<Enemy>();
 	public int enemyMultiplier;
 	public GameObject[] prefabs;
 
