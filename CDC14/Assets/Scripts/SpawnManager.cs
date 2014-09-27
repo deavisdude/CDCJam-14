@@ -7,7 +7,6 @@ public class SpawnManager : MonoBehaviour {
 	public class Enemy {
 		public string Type;
 		public GameObject GOB;
-
 		public enum types  {HIV, EarlyInfected, LateInfected, ForeignParticle};
 
 		public Enemy(types type, GameObject gameOB){
@@ -58,6 +57,8 @@ public class SpawnManager : MonoBehaviour {
 	}
 
 	void Update () {
+		int count = spawnQueue.Count;
+		Debug.Log (count);
 	}
 
 }
