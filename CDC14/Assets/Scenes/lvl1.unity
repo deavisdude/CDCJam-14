@@ -169,6 +169,7 @@ GameObject:
   - 50: {fileID: 739187934}
   - 212: {fileID: 739187933}
   - 95: {fileID: 739187936}
+  - 114: {fileID: 739187937}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -220,8 +221,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 739187932}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.57000017, y: -.11191532, z: 0}
-  m_LocalScale: {x: .5, y: .5, z: 1}
+  m_LocalPosition: {x: -5.67418766, y: .0130199045, z: 0}
+  m_LocalScale: {x: .300000012, y: .300000012, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -240,6 +241,17 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &739187937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 739187932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5bf7e25c8a99ad4593a2788442dd0cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &906956478
 GameObject:
   m_ObjectHideFlags: 0
@@ -252,6 +264,8 @@ GameObject:
   - 212: {fileID: 906956481}
   - 61: {fileID: 906956480}
   - 95: {fileID: 906956479}
+  - 114: {fileID: 906956484}
+  - 114: {fileID: 906956485}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -329,8 +343,33 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 906956478}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.27376461, y: -.0145586729, z: 0}
+  m_LocalPosition: {x: -7.1316328, y: -.0145586729, z: 0}
   m_LocalScale: {x: .5, y: .5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!114 &906956484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 906956478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40f69d952ff827046ae094f103c6a901, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+--- !u!114 &906956485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 906956478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d95fe04e2e8a10f428d11a95d8f91b1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 100000, guid: b3766734e943e734dbbbd923ad08fb01, type: 2}
+  shootSpeed: .100000001
