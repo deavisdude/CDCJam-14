@@ -2,15 +2,15 @@
 using System.Collections;
 
 public class HIVCollision : MonoBehaviour {
-	float speed = 1f;//150
+	float speed = 80f;//150
 	// Use this for initialization
 	void Start () {
+		rigidbody2D.AddForce(new Vector2((-speed),0));
 
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		rigidbody2D.AddForce(new Vector2((-speed),0));
 	}
 
 	void OnCollisionEnter2D(Collision2D col){
