@@ -25,9 +25,17 @@ public class SpawnManager : MonoBehaviour {
 	public GameObject[] prefabs;
 
 	void Start () {
-		enemyMultiplier = Application.levelCount*10;
+		enemyMultiplier = Application.levelCount*20;
 		for(int i=0; i<enemyMultiplier; i++){
-			spawnQueue.Add(new Enemy(Enemy.types.HIV, prefabs[0])); 
+			Enemy.types type;
+			int index;
+			float rand = Random.value;
+			if(rand <= .75f){type = Enemy.types.HIV; index=0;}
+			else if(rand <=.90){type = Enemy.types.EarlyInfected; index=1;}
+			else if(rand <=.97){type = Enemy.types.LateInfected; index=2;}
+			else {type = Enemy.types.ForeignParticle; index=3;}
+
+			spawnQueue.Add(new Enemy(type, prefabs[index])); 
 		}
 		InvokeRepeating("Sender", 0f, 1f);
 	}

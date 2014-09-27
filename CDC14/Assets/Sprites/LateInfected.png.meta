@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 09a2918eeeaceaa4cb8dbcd25764d307
+guid: e54b5e1753e6902479be0dade9ea11e3
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Cells1_corrupt_0
-    21300002: Cells1_corrupt_1
-    21300004: Cells1_corrupt_2
+    21300000: LateInfected_0
+    21300002: LateInfected_1
+    21300004: LateInfected_2
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -46,35 +46,35 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: Cells1_corrupt_0
+    - name: LateInfected_0
       rect:
         serializedVersion: 2
-        x: 12
-        y: 31
-        width: 289
-        height: 281
+        x: 3
+        y: 7
+        width: 290
+        height: 280
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Cells1_corrupt_1
+    - name: LateInfected_1
       rect:
         serializedVersion: 2
-        x: 344
-        y: 40
-        width: 272
-        height: 264
+        x: 300
+        y: 33
+        width: 329
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Cells1_corrupt_2
+    - name: LateInfected_2
       rect:
         serializedVersion: 2
-        x: 654
-        y: 43
-        width: 265
-        height: 257
+        x: 629
+        y: 21
+        width: 300
+        height: 280
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

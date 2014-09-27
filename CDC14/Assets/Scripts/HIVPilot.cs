@@ -3,7 +3,7 @@ using System.Collections;
 
 public class HIVPilot : MonoBehaviour {
 
-	float speed = 8f;//150
+	public static float speed = 8f;//150
 	// Use this for initialization
 	void Start () {
 		rigidbody2D.AddForce((GameObject.Find("Player").transform.position-transform.position)*speed);
