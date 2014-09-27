@@ -171,7 +171,7 @@ GameObject:
   - 95: {fileID: 739187936}
   - 114: {fileID: 739187937}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: B-Cell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

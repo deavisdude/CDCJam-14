@@ -69,7 +69,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1eae8decb4c49334fbba40a6e7cf6741, type: 3}
+  m_Script: {fileID: 11500000, guid: 6ff89c4e95a4ef1448728c65ce680cfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &21200000
@@ -90,7 +90,7 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
+  m_SortingLayerID: 147409417
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300002, guid: d6e0a6cffbcfcbe46802d0e9a19347b1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
