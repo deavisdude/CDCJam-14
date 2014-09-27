@@ -262,7 +262,7 @@ GameObject:
   - 4: {fileID: 906956483}
   - 50: {fileID: 906956482}
   - 212: {fileID: 906956481}
-  - 61: {fileID: 906956480}
+  - 58: {fileID: 906956480}
   - 95: {fileID: 906956479}
   - 114: {fileID: 906956484}
   - 114: {fileID: 906956485}
@@ -288,8 +288,8 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!61 &906956480
-BoxCollider2D:
+--- !u!58 &906956480
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -297,7 +297,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: .930000007, y: 1.82000005}
+  m_Radius: 1.18499994
   m_Center: {x: 0, y: 0}
 --- !u!212 &906956481
 SpriteRenderer:
@@ -343,7 +343,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 906956478}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.1316328, y: -.0145586729, z: 0}
+  m_LocalPosition: {x: -7.1316328, y: .0117109865, z: 0}
   m_LocalScale: {x: .5, y: .5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
