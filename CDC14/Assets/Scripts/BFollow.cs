@@ -10,6 +10,7 @@ public class BFollow : MonoBehaviour {
 	
 
 	void Update () {
+		Debug.Log(MoveT.delayPos.Count);
 		for(int i=0; i<MoveT.delayPos.Count; i++){
 			MoveT.PosOb poso = (MoveT.PosOb) MoveT.delayPos[i];
 			if((Time.time - poso.time) <= 0.3f && (Time.time - poso.time) >= 0.25f){
