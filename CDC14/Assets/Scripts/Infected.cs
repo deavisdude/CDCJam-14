@@ -23,8 +23,22 @@ public class Infected : MonoBehaviour {
 	}
 
 	void Shoot(){
-		GameObject go = Instantiate(prefab, transform.position, transform.rotation)as GameObject;
-		go.rigidbody2D.AddForce((GameObject.Find("Player").transform.position-transform.position)*HIVPilot.speed);
+		GameObject[] go = new GameObject[5];
+		for(int i=0; i<5; i++){
+			go[i] = Instantiate(prefab, transform.position, transform.rotation)as GameObject;
+		}
+		go[0].rigidbody2D.AddForce((GameObject.Find("Target1").transform.position-transform.position)*HIVPilot.speed);
+		go[1].rigidbody2D.AddForce((GameObject.Find("Target2").transform.position-transform.position)*HIVPilot.speed);
+		go[2].rigidbody2D.AddForce((GameObject.Find("Target3").transform.position-transform.position)*HIVPilot.speed);
+		go[3].rigidbody2D.AddForce((GameObject.Find("Target4").transform.position-transform.position)*HIVPilot.speed);
+		go[4].rigidbody2D.AddForce((GameObject.Find("Target5").transform.position-transform.position)*HIVPilot.speed);
+	}
+
+	void OnTriggerEnter2D(Collider2D col){
+		if(col.gameObject.tag == "Antibody"){
+			Destroy(gameObject);
+			Destroy(col.gameObject);
+		}
 	}
 
 	void SwitchTarget(){

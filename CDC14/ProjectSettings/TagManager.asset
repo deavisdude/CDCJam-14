@@ -5,7 +5,11 @@ TagManager:
   tags:
   - HIV
   - Good
+<<<<<<< HEAD
   - EarlyInfected
+=======
+  - Antibody
+>>>>>>> 0a2d5e1262a5980d7c4997bedbc9f42d45fc6713
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
