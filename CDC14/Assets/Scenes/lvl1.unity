@@ -399,6 +399,7 @@ GameObject:
   - 4: {fileID: 2145713990}
   - 23: {fileID: 2145713989}
   - 33: {fileID: 2145713988}
+  - 114: {fileID: 2145713991}
   m_Layer: 0
   m_Name: Spawn1
   m_TagString: Untagged
@@ -445,3 +446,16 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+--- !u!114 &2145713991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2145713987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27a5450fafbe7bd4ea0726d0facbec7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyMultiplier: 0
+  prefabs: []
