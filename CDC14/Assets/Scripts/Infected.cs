@@ -3,10 +3,12 @@ using System.Collections;
 
 public class Infected : MonoBehaviour {
 
+	public int health = 10;
 	int target = 1;
 	Vector3 target1;
 	Vector3 target2;
 	float speed = 10f;
+	public float firespeed = 1.4f;
 	public GameObject prefab;
 
 	void Start () {
@@ -14,7 +16,7 @@ public class Infected : MonoBehaviour {
 		target2 = GameObject.Find("Waypoint2").transform.position;
 
 		InvokeRepeating("SwitchTarget", 0f, 7f);
-		InvokeRepeating("Shoot", 4f, 3.5f);
+		InvokeRepeating("Shoot", 3f, firespeed);
 	}
 
 	void Update () {
@@ -36,8 +38,12 @@ public class Infected : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D col){
 		if(col.gameObject.tag == "Antibody"){
-			Destroy(gameObject);
+			health--;
 			Destroy(col.gameObject);
+			if(health<1){
+				Destroy(gameObject);
+				Destroy(col.gameObject);
+			}
 		}
 	}
 

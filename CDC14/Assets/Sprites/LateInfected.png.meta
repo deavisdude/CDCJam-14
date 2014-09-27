@@ -49,30 +49,30 @@ TextureImporter:
     - name: LateInfected_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 7
-        width: 290
-        height: 280
+        x: 0
+        y: 0
+        width: 303
+        height: 320
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: LateInfected_1
       rect:
         serializedVersion: 2
-        x: 300
-        y: 33
-        width: 329
-        height: 256
+        x: 291
+        y: 0
+        width: 338
+        height: 320
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: LateInfected_2
       rect:
         serializedVersion: 2
-        x: 629
-        y: 21
-        width: 300
-        height: 280
+        x: 627
+        y: 0
+        width: 302
+        height: 320
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}

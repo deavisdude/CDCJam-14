@@ -1109,5 +1109,5 @@ MonoBehaviour:
   prefabs:
   - {fileID: 100000, guid: c50148482280bda479364216bf423fe8, type: 2}
   - {fileID: 100000, guid: 181de5470ba1e4c41aa2d2c89414b2ea, type: 2}
-  - {fileID: 100000, guid: c50148482280bda479364216bf423fe8, type: 2}
+  - {fileID: 100000, guid: 2602f46f6a27be643934b59152ec0308, type: 2}
   - {fileID: 100000, guid: c50148482280bda479364216bf423fe8, type: 2}

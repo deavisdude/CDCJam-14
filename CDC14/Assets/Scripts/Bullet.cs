@@ -17,9 +17,5 @@ public class Bullet : MonoBehaviour {
 			Destroy(col.gameObject);
 			Destroy(gameObject);
 		}
-		if (col.gameObject.tag == "EarlyInfected") {
-			Destroy(col.gameObject);
-			Destroy(gameObject);
-		}
 	}
 }

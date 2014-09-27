@@ -1,4 +1,5 @@
 ﻿<Properties>
+<<<<<<< HEAD
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Gun.cs">
     <Files>
@@ -7,6 +8,18 @@
       <File FileName="Assets\Scripts\Infected.cs" Line="49" Column="1" />
       <File FileName="Assets\Scripts\Player.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Gun.cs" Line="13" Column="41" />
+=======
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\OffScreenDelete.cs">
+    <Files>
+      <File FileName="Assets\Scripts\Infected.cs" Line="46" Column="29" />
+      <File FileName="Assets\Scripts\Killer.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Bullet.cs" Line="18" Column="24" />
+      <File FileName="Assets\Scripts\SpawnManager.cs" Line="57" Column="24" />
+      <File FileName="Assets\Scripts\HIVPilot.cs" Line="14" Column="3" />
+      <File FileName="Assets\Scripts\Gun.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\OffScreenDelete.cs" Line="1" Column="1" />
+>>>>>>> c55b8951a0399d2c2a07da0d12e11791fa6dc399
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
