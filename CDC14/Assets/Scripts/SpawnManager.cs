@@ -37,6 +37,7 @@ public class SpawnManager : MonoBehaviour {
 			spawnQueue.Add(new Enemy(type, prefabs[index])); 
 		}
 		InvokeRepeating("Sender", 0f, 1f);
+		InvokeRepeating("CheckForWin", 10f, 2f);
 	}
 
 	void Sender(){
@@ -56,14 +57,12 @@ public class SpawnManager : MonoBehaviour {
 		spawnQueue.Remove(g);
 	}
 
-	void Update () {
-		if(spawnQueue.Count == 0){
-			ChangeSceen ();
+	void CheckForWin () {
+		if(GameObject.FindGameObjectsWithTag("HIV").GetLength(0) < 1){
+			EndLevel();
 		}
 	}
-	void ChangeSceen(){
-		Invoke ("EndLevel", 9);
-	}
+
 	void EndLevel(){
 		Application.LoadLevel("BuyMenu");
 	}
