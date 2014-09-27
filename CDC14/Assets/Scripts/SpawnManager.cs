@@ -57,8 +57,14 @@ public class SpawnManager : MonoBehaviour {
 	}
 
 	void Update () {
-		int count = spawnQueue.Count;
-		Debug.Log (count);
+		if(spawnQueue.Count == 0){
+			ChangeSceen ();
+		}
 	}
-
+	void ChangeSceen(){
+		Invoke ("EndLevel", 9);
+	}
+	void EndLevel(){
+		Application.LoadLevel("BuyMenu");
+	}
 }
