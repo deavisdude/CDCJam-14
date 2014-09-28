@@ -2,7 +2,6 @@
 using System.Collections;
 
 public class Bullet : MonoBehaviour {
-	public GameObject Player;
 	// Use this for initialization
 	void Start () {
 		//Physics2D.IgnoreCollision(Player.collider2D, collider2D);

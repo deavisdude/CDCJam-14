@@ -459,7 +459,16 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: db2cf8aabefa5c941bb4dc0a824c4a75,
         type: 3}
-    m_RemovedComponents: []
+    - target: {fileID: 11400002, guid: 8cae9c30851b0af4abe47e54573a7a89, type: 2}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 100000, guid: 86d7567b721e88649907660baf384ed7, type: 2}
+    - target: {fileID: 5000000, guid: 8cae9c30851b0af4abe47e54573a7a89, type: 2}
+      propertyPath: m_FixedAngle
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 9500000, guid: 8cae9c30851b0af4abe47e54573a7a89, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 8cae9c30851b0af4abe47e54573a7a89, type: 2}
   m_RootGameObject: {fileID: 906956478}
   m_IsPrefabParent: 0
@@ -642,7 +651,6 @@ GameObject:
   - 50: {fileID: 906956482}
   - 58: {fileID: 906956480}
   - 212: {fileID: 906956481}
-  - 95: {fileID: 906956479}
   - 114: {fileID: 906956484}
   - 114: {fileID: 906956485}
   m_Layer: 0
@@ -652,22 +660,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!95 &906956479
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9500000, guid: 8cae9c30851b0af4abe47e54573a7a89,
-    type: 2}
-  m_PrefabInternal: {fileID: 491417591}
-  m_GameObject: {fileID: 906956478}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5bbb7d6df47bb3446a54ef06765e276c, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!58 &906956480
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -714,7 +706,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1
-  m_FixedAngle: 0
+  m_FixedAngle: 1
   m_IsKinematic: 1
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -758,7 +750,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d95fe04e2e8a10f428d11a95d8f91b1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 100000, guid: b3766734e943e734dbbbd923ad08fb01, type: 2}
+  projectile: {fileID: 100000, guid: 86d7567b721e88649907660baf384ed7, type: 2}
   shootSpeed: .100000001
 --- !u!1001 &967093793
 Prefab:
@@ -982,6 +974,7 @@ GameObject:
   - 212: {fileID: 1693574811}
   - 95: {fileID: 1693574810}
   - 114: {fileID: 1693574809}
+  - 114: {fileID: 1693574815}
   - 58: {fileID: 1693574814}
   m_Layer: 0
   m_Name: B-Cell
@@ -1052,7 +1045,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1
-  m_FixedAngle: 0
+  m_FixedAngle: 1
   m_IsKinematic: 1
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1080,6 +1073,21 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_Radius: 1.12
   m_Center: {x: 0, y: 0}
+--- !u!114 &1693574815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: 64ed0c811bcba0d47816cf1533e66d7a,
+    type: 2}
+  m_PrefabInternal: {fileID: 967093793}
+  m_GameObject: {fileID: 1693574808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef74c0b36eb2276478497deaddfd2c6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: .150000006
+  elapsedT: 0
+  prefab: {fileID: 100000, guid: b3766734e943e734dbbbd923ad08fb01, type: 2}
 --- !u!1 &1739091426
 GameObject:
   m_ObjectHideFlags: 0
