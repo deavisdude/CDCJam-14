@@ -9,11 +9,11 @@ GameObject:
   m_Component:
   - 4: {fileID: 400000}
   - 50: {fileID: 5000000}
-  - 58: {fileID: 5800000}
   - 212: {fileID: 21200000}
   - 114: {fileID: 11400000}
   - 114: {fileID: 11400002}
   - 95: {fileID: 9500004}
+  - 58: {fileID: 5800000}
   m_Layer: 0
   m_Name: Nano
   m_TagString: Good
@@ -75,7 +75,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .470623016, y: .637229204, z: 0}
+  m_LocalPosition: {x: .470623016, y: .637229204, z: -2.75999999}
   m_LocalScale: {x: .369425803, y: .369425893, z: 1}
   m_Children: []
   m_Father: {fileID: 400000}
@@ -116,7 +116,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Radius: 1.18499994
+  m_Radius: 1.20500004
   m_Center: {x: 0, y: 0}
 --- !u!95 &9500000
 Animator:
@@ -159,6 +159,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57c931a04c367804492fa0eb5d650157, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pews:
+  - {fileID: 100000, guid: 86d7567b721e88649907660baf384ed7, type: 2}
+  - {fileID: 100000, guid: 4821ac65ae44c4e43b7a69d9b9098084, type: 2}
+  - {fileID: 100000, guid: c1ac578edc9204e4fbafeed4fbf8fcc8, type: 2}
+  currIndex: 0
+  weapons:
+  - {fileID: 21300000, guid: 18013ef9056d28b4ab72cf6b4c5fdbf0, type: 3}
+  - {fileID: 21300000, guid: 066188176a92f344e84f7429e4d9c4b4, type: 3}
+  - {fileID: 21300000, guid: 682078626e3967b46b0b86056534ef1e, type: 3}
   speed: 5
 --- !u!114 &11400002
 MonoBehaviour:
@@ -237,7 +246,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 903a0ecef6d1e5f4895d9ab8eeaa7774, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 18013ef9056d28b4ab72cf6b4c5fdbf0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:

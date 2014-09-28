@@ -46,13 +46,16 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Barrier.cs" />
      <Compile Include="Assets\Scripts\AudioManager.cs" />
      <Compile Include="Assets\Scripts\BFollow.cs" />
      <Compile Include="Assets\Scripts\BShoot.cs" />
      <Compile Include="Assets\Scripts\Bullet.cs" />
      <Compile Include="Assets\Scripts\ButtonHover.cs" />
      <Compile Include="Assets\Scripts\DeleteHIV.cs" />
+     <Compile Include="Assets\Scripts\Description.cs" />
      <Compile Include="Assets\Scripts\ForeignParticle.cs" />
+     <Compile Include="Assets\Scripts\GenerateScreenBorders.cs" />
      <Compile Include="Assets\Scripts\Gun.cs" />
      <Compile Include="Assets\Scripts\HIVPilot.cs" />
      <Compile Include="Assets\Scripts\Infected.cs" />
@@ -64,8 +67,10 @@
      <Compile Include="Assets\Scripts\ScrollScript.cs" />
      <Compile Include="Assets\Scripts\ShopMouse.cs" />
      <Compile Include="Assets\Scripts\SpawnManager.cs" />
+     <Compile Include="Assets\Scripts\SrtuctureShow.cs" />
      <Compile Include="Assets\Scripts\TenofovirInfo.cs" />
      <Compile Include="Assets\Scripts\TestScript.cs" />
+     <Compile Include="Assets\Scripts\Title.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
