@@ -13,6 +13,8 @@ public class Player : MonoBehaviour {
 		}
 	}
 
+
+
 	public static ArrayList delayPos = new ArrayList();
 	public float speed = 5;
 	Vector3 acc;
@@ -26,5 +28,15 @@ public class Player : MonoBehaviour {
 		transform.position += acc;
 		Vector3 newPos = new Vector3(transform.position.x+1.5f, transform.position.y, 0);
 		delayPos.Add(new PosOb(newPos, Time.time));
+	}
+
+	void OnTriggerEnter2D(Collider2D col){
+		if(col.gameObject.tag != "Good" && col.gameObject.tag != "Antibody"){
+			Destroy(gameObject);
+		}
+	}
+
+	void OnDisable(){
+		Application.LoadLevel("lvl1");
 	}
 }

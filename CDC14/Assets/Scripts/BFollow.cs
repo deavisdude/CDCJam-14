@@ -2,12 +2,12 @@
 using System.Collections;
 
 public class BFollow : MonoBehaviour {
-
-
-	void Start () {
-		
-	}
 	
+	void OnTriggerEnter2D(Collider2D col){
+		if(col.gameObject.tag != "Good" && col.gameObject.tag != "Antibody"){
+			Destroy(gameObject);
+		}
+	}
 
 	void Update () {
 		for(int i=0; i<Player.delayPos.Count; i++){

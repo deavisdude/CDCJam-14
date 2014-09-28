@@ -25,6 +25,7 @@ public class SpawnManager : MonoBehaviour {
 
 	void Start () {
 		enemyMultiplier = Application.levelCount*20;
+		Debug.Log(enemyMultiplier);
 		for(int i=0; i<enemyMultiplier; i++){
 			Enemy.types type;
 			int index;
@@ -58,7 +59,10 @@ public class SpawnManager : MonoBehaviour {
 	}
 
 	void CheckForWin () {
-		if(GameObject.FindGameObjectsWithTag("HIV").GetLength(0) < 1){
+		if(GameObject.FindGameObjectsWithTag("HIV").GetLength(0) < 1 &&
+		   GameObject.FindGameObjectsWithTag("EarlyInfected").GetLength(0) < 1 &&
+		   GameObject.FindGameObjectsWithTag("LateInfected").GetLength(0) < 1 &&
+		   GameObject.FindGameObjectsWithTag("ForeignParticle").GetLength(0) < 1){
 			EndLevel();
 		}
 	}
