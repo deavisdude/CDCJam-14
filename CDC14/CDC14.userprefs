@@ -1,4 +1,12 @@
 ﻿<Properties>
+<<<<<<< HEAD
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ButtonHover.cs">
+    <Files>
+      <File FileName="CDC14.sln" Line="1" Column="1" />
+      <File FileName="Assets\TenofovirInfo.cs" Line="15" Column="3" />
+      <File FileName="Assets\Scripts\ButtonHover.cs" Line="15" Column="2" />
+=======
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Needle.cs">
     <Files>
@@ -12,6 +20,7 @@
       <File FileName="Assets\Scripts\SpawnManager.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\TestScript.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Needle.cs" Line="12" Column="4" />
+>>>>>>> 4779b9f9bbfcf77e7969c437f14b542d5f1f7361
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
