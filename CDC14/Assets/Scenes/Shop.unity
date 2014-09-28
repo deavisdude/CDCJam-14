@@ -560,8 +560,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1466821619}
-  - 132: {fileID: 1466821618}
   - 23: {fileID: 1466821617}
+  - 102: {fileID: 1466821618}
   - 114: {fileID: 1466821616}
   m_Layer: 0
   m_Name: Tenofovir info
@@ -581,8 +581,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76f63a14e3b32d047a8fdc9a4394c918, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  decription: A fixed dose combination of Emtricitabine, Efavirenz, and Tenofovir
-    all wrapped in one. It's super effective!
+  decription: "A fixed dose combination of \rEmtricitabine, \r\nEfavirenz, and \rTenofovir
+    all wrapped in one. \r\nIt's super effective!"
 --- !u!23 &1466821617
 Renderer:
   m_ObjectHideFlags: 0
@@ -595,7 +595,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -603,29 +603,27 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!132 &1466821618
-GUIText:
+--- !u!102 &1466821618
+TextMesh:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1466821615}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Text: HI IM over here
+  m_Text: HI I'm Over here
+  m_OffsetZ: 0
+  m_CharacterSize: 1
+  m_LineSpacing: 1
   m_Anchor: 0
   m_Alignment: 0
-  m_PixelOffset: {x: 0, y: 0}
-  m_LineSpacing: 1
   m_TabSize: 4
-  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-  m_Material: {fileID: 0}
-  m_FontSize: 0
+  m_FontSize: 9
   m_FontStyle: 0
+  m_RichText: 1
+  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
   m_Color:
     serializedVersion: 2
     rgba: 4294967295
-  m_PixelCorrect: 1
-  m_RichText: 1
 --- !u!4 &1466821619
 Transform:
   m_ObjectHideFlags: 0
@@ -633,8 +631,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1466821615}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .389999986, y: .269460678, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -2.09911752, y: -2.2190671, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6

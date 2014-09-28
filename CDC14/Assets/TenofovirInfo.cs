@@ -10,8 +10,14 @@ public class TenofovirInfo : MonoBehaviour {
 
 
 	void Start () {
-		guiText.fontSize = 19;
-		guiText.text = decription;
+		TextMesh tm = gameObject.GetComponent<TextMesh>();
+		tm.fontSize = 15;
+		tm.text = decription;
+
+		float pixelRatio = (Camera.main.orthographicSize * 2.0f) / Camera.main.pixelHeight;
+		tm.transform.localScale = new Vector3(pixelRatio * 10.0f, pixelRatio * 10.0f, pixelRatio * 0.1f);
+
+
 
 	}
 	
