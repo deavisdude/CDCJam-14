@@ -15,6 +15,7 @@ public class Bullet : MonoBehaviour {
 		if(col.gameObject.tag == "HIV"){
 			Destroy(col.gameObject);
 			Destroy(gameObject);
+			GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayEnemyHit();
 		}
 	}
 }
