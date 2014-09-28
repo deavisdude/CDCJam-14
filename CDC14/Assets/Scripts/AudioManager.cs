@@ -63,13 +63,21 @@ public class AudioManager : MonoBehaviour {
 		GameStartSrc.clip = GameStart;
 		GameStartSrc.loop = false;
 
+		ToggleSrc = gameObject.AddComponent<AudioSource>();
+		ToggleSrc.clip=Toggle;
+		ToggleSrc.loop = false;
+
 		PlayGameStart();
 		PlayMainLoop();
-		Application.LoadLevel("lvl1");
+		//Application.LoadLevel("lvl1");
 	}
 	
 	public void PlayEnemyHit(){
 		EnemyHitSrc.Play();
+	}
+
+	public void PlayToggle(){
+		ToggleSrc.Play();
 	}
 
 	public void PlayGameStart(){
