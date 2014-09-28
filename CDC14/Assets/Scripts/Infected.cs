@@ -40,6 +40,7 @@ public class Infected : MonoBehaviour {
 		if(col.gameObject.tag == "Antibody"){
 			health--;
 			Destroy(col.gameObject);
+			GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayEnemyHit();
 			if(health<1){
 				Destroy(gameObject);
 				Destroy(col.gameObject);

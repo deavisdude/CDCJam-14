@@ -11,6 +11,7 @@ public class Gun : MonoBehaviour {
 		if(Input.GetButton("Fire1") && elapsedT >= shootSpeed){
 			GameObject go = (GameObject)Instantiate(projectile, transform.position, transform.rotation);
 			go.rigidbody2D.AddForce(new Vector2(1000f, 0f));
+			GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayPewPew();
 			elapsedT = 0f;
 		}
 		elapsedT += Time.deltaTime;

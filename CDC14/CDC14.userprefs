@@ -1,14 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Killer.cs">
-    <Files>
-      <File FileName="Assets\Scripts\Killer.cs" Line="4" Column="36" />
-=======
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\AudioManager.cs">
     <Files>
-      <File FileName="Assets\Scripts\AudioManager.cs" Line="22" Column="3" />
->>>>>>> 6b9260bd1fa51934f424a07a574eba7116ee4c18
+      <File FileName="Assets\Scripts\AudioManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Bullet.cs" Line="18" Column="4" />
+      <File FileName="Assets\Scripts\Infected.cs" Line="43" Column="80" />
+      <File FileName="Assets\Scripts\Gun.cs" Line="14" Column="17" />
+      <File FileName="Assets\Scripts\BShoot.cs" Line="14" Column="6" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
