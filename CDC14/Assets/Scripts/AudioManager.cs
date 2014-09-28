@@ -44,7 +44,6 @@ public class AudioManager : MonoBehaviour {
 		
 		MainLoopSrc = gameObject.AddComponent<AudioSource>();
 		MainLoopSrc.clip = MainLoop;
-		MainLoopSrc.volume = .8f;
 		MainLoopSrc.loop = true;
 		
 		EnemyHitSrc = gameObject.AddComponent<AudioSource>();
@@ -55,6 +54,10 @@ public class AudioManager : MonoBehaviour {
 		PewPewSrc.clip = PewPew;
 		PewPewSrc.volume = .4f;
 		PewPewSrc.loop = false;
+
+		PlayerDeathSrc = gameObject.AddComponent<AudioSource>();
+		PlayerDeathSrc.clip = PlayerDeath;
+		PlayerDeathSrc.loop = false;
 		
 		PlayMainLoop();
 		Application.LoadLevel("lvl1");
@@ -62,6 +65,10 @@ public class AudioManager : MonoBehaviour {
 	
 	public void PlayEnemyHit(){
 		EnemyHitSrc.Play();
+	}
+
+	public void PlayPlayerDeath(){
+		PlayerDeathSrc.Play();
 	}
 
 	public void PlayPewPew(){

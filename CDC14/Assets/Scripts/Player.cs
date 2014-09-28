@@ -33,6 +33,7 @@ public class Player : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D col){
 		if(col.gameObject.tag != "Good" && col.gameObject.tag != "Antibody"){
 			Destroy(gameObject);
+			GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayPlayerDeath();
 		}
 	}
 
