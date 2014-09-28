@@ -40,6 +40,13 @@ public class AudioManager : MonoBehaviour {
 	public AudioSource WeaponChangeSrc;
 	
 	void Start () {
+
+		GameObject audioManager = GameObject.Find("AudioManager");
+		if(audioManager != null && audioManager != gameObject)
+		{
+			Destroy(gameObject);
+		}
+
 		GameObject.DontDestroyOnLoad (gameObject);
 		
 		MainLoopSrc = gameObject.AddComponent<AudioSource>();
