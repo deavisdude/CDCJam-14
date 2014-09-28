@@ -102,30 +102,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: beb1d5fb63444134582d3775dbe5b8d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainLoop: {fileID: 8300000, guid: 39f4f5dba25238347aaf9cb4bbcdc08f, type: 3}
+  MainLoop: {fileID: 8300000, guid: 34a9d4003ab1ad945b5c64d40fef1ec9, type: 3}
   MainLoopSrc: {fileID: 0}
   EnemyHit: {fileID: 8300000, guid: 4c5b76ee45154354d9fd4cf54a033274, type: 3}
   EnemyHitSrc: {fileID: 0}
-  BossRumble: {fileID: 0}
-  BossrumbleSrc: {fileID: 0}
-  LargeExplosion: {fileID: 0}
+  BossRumble: {fileID: 8300000, guid: 4a8c9e0515a7d4342adc2a1ac7495eb8, type: 3}
+  BossRumbleSrc: {fileID: 0}
+  LargeExplosion: {fileID: 8300000, guid: 11119dbf3a143f740a172fab614643af, type: 3}
   LargeExplosionSrc: {fileID: 0}
-  SmallExplosion: {fileID: 0}
+  SmallExplosion: {fileID: 8300000, guid: b43dace4bce8bcb4a8dadd9ed53e5bf7, type: 3}
   SmallExplosionSrc: {fileID: 0}
   GameStart: {fileID: 8300000, guid: b4173fa0fc28e3d47aaf4716b3619c79, type: 3}
   GameStartSrc: {fileID: 0}
-  ItemPurchase: {fileID: 0}
+  ItemPurchase: {fileID: 8300000, guid: 5be63a63932e8384eac31444a51ce4d4, type: 3}
   ItemPurchaseSrc: {fileID: 0}
   PewPew: {fileID: 8300000, guid: d041a910300037849914b845e823ce8c, type: 3}
   PewPewSrc: {fileID: 0}
   PlayerDeath: {fileID: 8300000, guid: 02a51d52dae1f9542a7566446a35f70f, type: 3}
   PlayerDeathSrc: {fileID: 0}
-  PowerUp: {fileID: 0}
+  PowerUp: {fileID: 8300000, guid: b3f66ba7f630f834b9bb8c609efcd503, type: 3}
   PowerUpSrc: {fileID: 0}
   Toggle: {fileID: 8300000, guid: 1cc61f94f08bfe646ae0dc0b946e2484, type: 3}
   ToggleSrc: {fileID: 0}
-  WeaponChange: {fileID: 0}
+  WeaponChange: {fileID: 8300000, guid: 4747e5e26227b7740b21b01037eade72, type: 3}
   WeaponChangeSrc: {fileID: 0}
+  MenuLoop: {fileID: 8300000, guid: 9f0d0362bc85a83468fe70a583e11d80, type: 3}
+  MenuLoopSrc: {fileID: 0}
 --- !u!4 &167804258
 Transform:
   m_ObjectHideFlags: 0
@@ -428,6 +430,38 @@ Prefab:
       propertyPath: Toggle
       value: 
       objectReference: {fileID: 8300000, guid: 1cc61f94f08bfe646ae0dc0b946e2484, type: 3}
+    - target: {fileID: 11400000, guid: a9ec80ea79a137e459938f3b3659804d, type: 2}
+      propertyPath: BossRumble
+      value: 
+      objectReference: {fileID: 8300000, guid: 4a8c9e0515a7d4342adc2a1ac7495eb8, type: 3}
+    - target: {fileID: 11400000, guid: a9ec80ea79a137e459938f3b3659804d, type: 2}
+      propertyPath: LargeExplosion
+      value: 
+      objectReference: {fileID: 8300000, guid: 11119dbf3a143f740a172fab614643af, type: 3}
+    - target: {fileID: 11400000, guid: a9ec80ea79a137e459938f3b3659804d, type: 2}
+      propertyPath: SmallExplosion
+      value: 
+      objectReference: {fileID: 8300000, guid: b43dace4bce8bcb4a8dadd9ed53e5bf7, type: 3}
+    - target: {fileID: 11400000, guid: a9ec80ea79a137e459938f3b3659804d, type: 2}
+      propertyPath: ItemPurchase
+      value: 
+      objectReference: {fileID: 8300000, guid: 5be63a63932e8384eac31444a51ce4d4, type: 3}
+    - target: {fileID: 11400000, guid: a9ec80ea79a137e459938f3b3659804d, type: 2}
+      propertyPath: PowerUp
+      value: 
+      objectReference: {fileID: 8300000, guid: b3f66ba7f630f834b9bb8c609efcd503, type: 3}
+    - target: {fileID: 11400000, guid: a9ec80ea79a137e459938f3b3659804d, type: 2}
+      propertyPath: WeaponChange
+      value: 
+      objectReference: {fileID: 8300000, guid: 4747e5e26227b7740b21b01037eade72, type: 3}
+    - target: {fileID: 11400000, guid: a9ec80ea79a137e459938f3b3659804d, type: 2}
+      propertyPath: MainLoop
+      value: 
+      objectReference: {fileID: 8300000, guid: 34a9d4003ab1ad945b5c64d40fef1ec9, type: 3}
+    - target: {fileID: 11400000, guid: a9ec80ea79a137e459938f3b3659804d, type: 2}
+      propertyPath: MenuLoop
+      value: 
+      objectReference: {fileID: 8300000, guid: 9f0d0362bc85a83468fe70a583e11d80, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a9ec80ea79a137e459938f3b3659804d, type: 2}
   m_RootGameObject: {fileID: 167804256}
@@ -624,7 +658,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 7a12eff3e510bce4fb69239b2390d7cd, type: 2}
+  - {fileID: 2100000, guid: b7cad280619cd2743bea98e7b27c66f6, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0

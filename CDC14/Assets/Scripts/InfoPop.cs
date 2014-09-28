@@ -14,7 +14,7 @@ public class InfoPop : MonoBehaviour {
 	void Update () {
 		if(Needle.bosstime){
 			rigidbody2D.velocity = (target.transform.position - transform.position)*speed*Time.deltaTime;
-			if(Mathf.Abs(this.transform.position.y - this.target.transform.position.y)<0.1)target.transform.position = startPos;
+			if(Mathf.Abs(this.transform.position.y - this.target.transform.position.y)<0.2)target.transform.position = startPos;
 		}
 	}
 }

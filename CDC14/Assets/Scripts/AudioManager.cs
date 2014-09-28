@@ -10,7 +10,7 @@ public class AudioManager : MonoBehaviour {
 	public AudioSource EnemyHitSrc;
 	
 	public AudioClip BossRumble;
-	public AudioSource BossrumbleSrc;
+	public AudioSource BossRumbleSrc;
 	
 	public AudioClip LargeExplosion;
 	public AudioSource LargeExplosionSrc;
@@ -38,6 +38,9 @@ public class AudioManager : MonoBehaviour {
 	
 	public AudioClip WeaponChange;
 	public AudioSource WeaponChangeSrc;
+
+	public AudioClip MenuLoop;
+	public AudioSource MenuLoopSrc;
 	
 	void Start () {
 
@@ -74,13 +77,45 @@ public class AudioManager : MonoBehaviour {
 		ToggleSrc.clip=Toggle;
 		ToggleSrc.loop = false;
 
+		ItemPurchaseSrc = gameObject.AddComponent<AudioSource>();
+		ItemPurchaseSrc.clip=ItemPurchase;
+		ItemPurchaseSrc.loop = false;
+
+		BossRumbleSrc = gameObject.AddComponent<AudioSource>();
+		BossRumbleSrc.clip=BossRumble;
+		BossRumbleSrc.loop = false;
+
+		MenuLoopSrc = gameObject.AddComponent<AudioSource>();
+		MenuLoopSrc.clip=MenuLoop;
+		MenuLoopSrc.loop = true;
+
+		WeaponChangeSrc = gameObject.AddComponent<AudioSource>();
+		WeaponChangeSrc.clip = WeaponChange;
+		WeaponChangeSrc.loop = false;
+
 		PlayGameStart();
-		PlayMainLoop();
+		//PlayMenuLoop();
 		//Application.LoadLevel("lvl1");
 	}
 	
 	public void PlayEnemyHit(){
 		EnemyHitSrc.Play();
+	}
+
+	public void PlayWeaponChange(){
+		WeaponChangeSrc.Play();
+	}
+
+	public void PlayMenuLoop(){
+		MenuLoopSrc.Play();
+	}
+
+	public void PlayBossRumble(){
+		BossRumbleSrc.Play();
+	}
+
+	public void PlayItemPurchase(){
+		ItemPurchaseSrc.Play();
 	}
 
 	public void PlayToggle(){
@@ -101,5 +136,9 @@ public class AudioManager : MonoBehaviour {
 	
 	public void PlayMainLoop(){
 		MainLoopSrc.Play();
+	}
+
+	public void StopMenuLoop(){
+		MenuLoopSrc.Stop();
 	}
 }

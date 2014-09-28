@@ -73,6 +73,6 @@ public class SpawnManager : MonoBehaviour {
 
 	void EndLevel(){
 		levelCount++;
-		Application.LoadLevel("BuyMenu");
+		Application.LoadLevel("Shop");
 	}
 }
