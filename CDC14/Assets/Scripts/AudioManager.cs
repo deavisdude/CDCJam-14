@@ -58,13 +58,22 @@ public class AudioManager : MonoBehaviour {
 		PlayerDeathSrc = gameObject.AddComponent<AudioSource>();
 		PlayerDeathSrc.clip = PlayerDeath;
 		PlayerDeathSrc.loop = false;
-		
+
+		GameStartSrc = gameObject.AddComponent<AudioSource>();
+		GameStartSrc.clip = GameStart;
+		GameStartSrc.loop = false;
+
+		PlayGameStart();
 		PlayMainLoop();
 		Application.LoadLevel("lvl1");
 	}
 	
 	public void PlayEnemyHit(){
 		EnemyHitSrc.Play();
+	}
+
+	public void PlayGameStart(){
+		GameStartSrc.Play();
 	}
 
 	public void PlayPlayerDeath(){
