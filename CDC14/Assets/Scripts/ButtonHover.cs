@@ -2,18 +2,24 @@
 using System.Collections;
 
 public class ButtonHover : MonoBehaviour {
-	public Texture texture;
+	public string scene;
+	public int difficulty;
+
+	//public Texture texture;
 	void OnMouseEnter(){
-		gameObject.GetComponent<GUITexture>().texture = texture;
+		//gameObject.GetComponent<GUITexture>().texture = texture;
+		gameObject.GetComponent<SpriteRenderer>().enabled = true;
 		GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayToggle();
 	}
 	
 	void OnMouseExit(){
-		gameObject.GetComponent<GUITexture>().texture = null;
+		gameObject.GetComponent<SpriteRenderer>().enabled = false;
+		//gameObject.GetComponent<GUITexture>().texture = null;
 	}
 
 	void OnMouseDown(){
+		Application.LoadLevel(scene);
 		GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayGameStart();
-		Application.LoadLevel("lvl1");
+		SpawnManager.enemyMultiplier = difficulty;
 	}
 }
