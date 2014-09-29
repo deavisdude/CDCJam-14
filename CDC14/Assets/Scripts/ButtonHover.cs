@@ -20,8 +20,8 @@ public class ButtonHover : MonoBehaviour {
 	void OnMouseDown(){
 		Application.LoadLevel(scene);
 		GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayGameStart();
-		//GameObject.Find("AudioManager").GetComponent<AudioManager>().StopMenuLoop();
-		//GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayMainLoop();
+		GameObject.Find("AudioManager").GetComponent<AudioManager>().StopMenuLoop();
+		GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayMainLoop();
 		SpawnManager.enemyMultiplier = difficulty;
 	}
 }
