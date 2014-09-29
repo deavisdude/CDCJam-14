@@ -93,8 +93,8 @@ public class AudioManager : MonoBehaviour {
 		WeaponChangeSrc.clip = WeaponChange;
 		WeaponChangeSrc.loop = false;
 
-		PlayGameStart();
-		//PlayMenuLoop();
+		//PlayGameStart();
+		PlayMenuLoop();
 		//Application.LoadLevel("lvl1");
 	}
 	
