@@ -31,7 +31,6 @@ public class SpawnManager : MonoBehaviour {
 			Enemy.types type;
 			int index;
 			float rand = Random.value;
-			Debug.Log(rand);
 			if(rand <= .70f){type = Enemy.types.HIV; index=0;}
 			else if(rand <=.80){type = Enemy.types.EarlyInfected; index=1;}
 			else if(rand <=.95){type = Enemy.types.LateInfected; index=2;}

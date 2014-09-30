@@ -13,7 +13,9 @@ public class Player : MonoBehaviour {
 		}
 	}
 
+	public GameObject smokePrefab;
 
+	public static bool dead = false;
 
 	public GameObject[] pews = new GameObject[3];
 	public int currIndex;
@@ -72,10 +74,20 @@ public class Player : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D col){
 		if(col.gameObject.tag != "Good" && col.gameObject.tag != "Antibody" && col.gameObject.tag != "Border"){
-			Destroy(gameObject);
+			dead = true;
+			GameObject smoke = (GameObject)Instantiate(smokePrefab, transform.position, transform.rotation);
+			smoke.transform.parent = transform;
+			GetComponent<SpriteRenderer>().enabled = false;
+			GameObject.Find("PlayerWeapon").GetComponent<Rigidbody2D>().gravityScale = 1;
+			Invoke("Kill", 2f);
 			GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayPlayerDeath();
 		}
 	}
+
+	void Kill(){
+		Application.LoadLevel("Shop");
+	}
+	
 
 	void OnTriggerEnter2D(Collision2D col){
 		if(col.gameObject.tag == "Border"){
@@ -83,7 +95,4 @@ public class Player : MonoBehaviour {
 		}
 	}
 
-	void OnDisable(){
-		//Application.LoadLevel("lvl1");
-	}
 }
