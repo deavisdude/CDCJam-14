@@ -73,7 +73,7 @@ public class Player : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D col){
-		if(col.gameObject.tag != "Good" && col.gameObject.tag != "Antibody" && col.gameObject.tag != "Border"){
+		if(col.gameObject.tag != "Good" && col.gameObject.tag != "Antibody" && col.gameObject.tag != "Pew" && col.gameObject.tag != "Border"){
 			dead = true;
 			GameObject smoke = (GameObject)Instantiate(smokePrefab, transform.position, transform.rotation);
 			smoke.transform.parent = transform;

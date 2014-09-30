@@ -17,6 +17,9 @@ public class ForeignParticle : MonoBehaviour {
 
 	void Update(){
 		rigidbody2D.velocity = (restSpot.transform.position - transform.position)*speed*Time.deltaTime;
+		if(health<1){
+			Destroy(gameObject);
+		}
 	}
 
 	void SpawnCell(){
@@ -28,10 +31,23 @@ public class ForeignParticle : MonoBehaviour {
 			health--;
 			Destroy(col.gameObject);
 			GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayEnemyHit();
-			if(health<1){
-				Destroy(gameObject);
-				Destroy(col.gameObject);
-			}
 		}
+
+		if(col.gameObject.tag == "Pew"){
+			
+			if(col.GetComponent<DamageControl>().getType() == 1){
+				gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+				Invoke("normalizeColor", 0.2f);
+			}
+			
+			health -= (int)col.GetComponent<DamageControl>().getDmgFor();
+			Destroy(col.gameObject);
+			GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayEnemyHit();
+		}
+
+	}
+
+	void normalizeColor(){
+		gameObject.GetComponent<SpriteRenderer>().color = Color.white;
 	}
 }

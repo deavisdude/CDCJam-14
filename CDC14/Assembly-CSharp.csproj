@@ -46,12 +46,13 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\DeathSplat.cs" />
      <Compile Include="Assets\Scripts\AudioManager.cs" />
      <Compile Include="Assets\Scripts\BFollow.cs" />
      <Compile Include="Assets\Scripts\BShoot.cs" />
      <Compile Include="Assets\Scripts\Bullet.cs" />
      <Compile Include="Assets\Scripts\ButtonHover.cs" />
+     <Compile Include="Assets\Scripts\DamageControl.cs" />
+     <Compile Include="Assets\Scripts\DeathSplat.cs" />
      <Compile Include="Assets\Scripts\DeleteHIV.cs" />
      <Compile Include="Assets\Scripts\Description.cs" />
      <Compile Include="Assets\Scripts\ForeignParticle.cs" />
