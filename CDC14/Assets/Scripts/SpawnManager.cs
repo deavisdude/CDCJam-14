@@ -43,10 +43,7 @@ public class SpawnManager : MonoBehaviour {
 		}
 
 		rand = Random.value;
-		if(rand <= .5f){
-			spawnQueue.Add(new Enemy(Enemy.types.oneUp, oneUp));
-			Debug.Log("ONE UP");
-		}
+		if(rand <= .25f)spawnQueue.Add(new Enemy(Enemy.types.oneUp, oneUp));
 
 		InvokeRepeating("Sender", 0f, 1f);
 		InvokeRepeating("CheckForWin", 10f, 2f);
