@@ -5,10 +5,10 @@ public class Balance : MonoBehaviour {
 	TextMesh texts;
 	private int total;
 	public GameObject noteno;
-	public bool hasAtripla = false;
-	public bool hasTenofovir = false;
-	public bool hasEmtricitabine = false;
-	public bool hasEfavirenz = false;
+	public static bool hasAtripla = false;
+	public static bool hasTenofovir = false;
+	public static bool hasEmtricitabine = false;
+	public static bool hasEfavirenz = false;
 	// Use this for initialization
 	void Start () {
 		total = 2500;
