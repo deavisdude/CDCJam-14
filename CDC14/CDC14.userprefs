@@ -1,10 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PaymentEmtricitabine.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Balance.cs">
     <Files>
-      <File FileName="Assets\Scripts\Score.cs" Line="9" Column="47" />
-      <File FileName="Assets\Scripts\Description.cs" Line="24" Column="54" />
-      <File FileName="Assets\Scripts\PaymentEmtricitabine.cs" Line="14" Column="21" />
+      <File FileName="Assets\Scripts\Balance.cs" Line="29" Column="13" />
+      <File FileName="Assets\Scripts\ShopMouse.cs" Line="59" Column="3" />
+      <File FileName="Assets\Scripts\Pay.cs" Line="42" Column="25" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

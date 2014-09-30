@@ -50,6 +50,7 @@
      <Compile Include="Assets\Scripts\AudioManager.cs" />
      <Compile Include="Assets\Scripts\BFollow.cs" />
      <Compile Include="Assets\Scripts\BShoot.cs" />
+     <Compile Include="Assets\Scripts\Balance.cs" />
      <Compile Include="Assets\Scripts\Bullet.cs" />
      <Compile Include="Assets\Scripts\ButtonHover.cs" />
      <Compile Include="Assets\Scripts\DeleteHIV.cs" />
@@ -62,10 +63,10 @@
      <Compile Include="Assets\Scripts\InfoPop.cs" />
      <Compile Include="Assets\Scripts\Killer.cs" />
      <Compile Include="Assets\Scripts\Needle.cs" />
+     <Compile Include="Assets\Scripts\NotEnough.cs" />
      <Compile Include="Assets\Scripts\OffScreenDelete.cs" />
-     <Compile Include="Assets\Scripts\PaymentEmtricitabine.cs" />
+     <Compile Include="Assets\Scripts\Pay.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
-     <Compile Include="Assets\Scripts\Score.cs" />
      <Compile Include="Assets\Scripts\ScrollScript.cs" />
      <Compile Include="Assets\Scripts\ShopMouse.cs" />
      <Compile Include="Assets\Scripts\SpawnManager.cs" />
