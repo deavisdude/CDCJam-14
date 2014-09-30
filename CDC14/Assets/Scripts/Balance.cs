@@ -5,6 +5,10 @@ public class Balance : MonoBehaviour {
 	TextMesh texts;
 	private int total;
 	public GameObject noteno;
+	public bool hasAtripla = false;
+	public bool hasTenofovir = false;
+	public bool hasEmtricitabine = false;
+	public bool hasEfavirenz = false;
 	// Use this for initialization
 	void Start () {
 		total = 2500;
@@ -20,29 +24,36 @@ public class Balance : MonoBehaviour {
 	}
 
 	void BuyEmtric(int cost){
-		if (total > cost)
+		if (total > cost){
 			total -= cost;
-		else
+			hasEmtricitabine = true;
+		}else{
 			noteno.SendMessage ("tomuch", SendMessageOptions.DontRequireReceiver);
-	}
+		}
+	}	
 	void BuyEfavir(int cost){
-		if (total > cost)
+		if (total > cost) {
 			total -= cost;
-		else
+			hasEfavirenz = true;
+		}else {
 			noteno.SendMessage ("tomuch", SendMessageOptions.DontRequireReceiver);
+		}
 	}
 	void BuyTenofiv(int cost){
-		if (total > cost)
+		if (total > cost) {
 			total -= cost;
-		else
+			hasTenofovir = true;
+		} else {
 			noteno.SendMessage ("tomuch", SendMessageOptions.DontRequireReceiver);
+		}
 	}
 	void BuyAtrip(int cost){
-		if (total > cost)
+		if (total > cost){
 			total -= cost;
-		else
-			Debug.Log("to");
+			hasAtripla = true;
+		}else{
 			noteno.SendMessage ("tomuch", SendMessageOptions.DontRequireReceiver);
+		}
 	}
 		// Update is called once per frame
 	void Update () {
