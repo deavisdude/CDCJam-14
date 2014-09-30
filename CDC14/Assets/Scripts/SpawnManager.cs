@@ -27,14 +27,14 @@ public class SpawnManager : MonoBehaviour {
 
 	void Start () {
 		enemies = levelCount*enemyMultiplier;
-		Debug.Log(enemies);
 		for(int i=0; i<enemies; i++){
 			Enemy.types type;
 			int index;
 			float rand = Random.value;
-			if(rand <= .75f){type = Enemy.types.HIV; index=0;}
-			else if(rand <=.90){type = Enemy.types.EarlyInfected; index=1;}
-			else if(rand <=.97){type = Enemy.types.LateInfected; index=2;}
+			Debug.Log(rand);
+			if(rand <= .70f){type = Enemy.types.HIV; index=0;}
+			else if(rand <=.80){type = Enemy.types.EarlyInfected; index=1;}
+			else if(rand <=.95){type = Enemy.types.LateInfected; index=2;}
 			else {type = Enemy.types.ForeignParticle; index=3;}
 
 			spawnQueue.Add(new Enemy(type, prefabs[index])); 
