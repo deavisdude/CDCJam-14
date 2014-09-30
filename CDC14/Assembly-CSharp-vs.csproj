@@ -62,6 +62,7 @@
      <Compile Include="Assets\Scripts\Infected.cs" />
      <Compile Include="Assets\Scripts\InfoPop.cs" />
      <Compile Include="Assets\Scripts\Killer.cs" />
+     <Compile Include="Assets\Scripts\LivesManager.cs" />
      <Compile Include="Assets\Scripts\Needle.cs" />
      <Compile Include="Assets\Scripts\OffScreenDelete.cs" />
      <Compile Include="Assets\Scripts\PaymentEmtricitabine.cs" />
@@ -74,6 +75,7 @@
      <Compile Include="Assets\Scripts\TenofovirInfo.cs" />
      <Compile Include="Assets\Scripts\TestScript.cs" />
      <Compile Include="Assets\Scripts\Title.cs" />
+     <Compile Include="Assets\Scripts\oneUp.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

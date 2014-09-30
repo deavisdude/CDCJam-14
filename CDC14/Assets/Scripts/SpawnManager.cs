@@ -7,7 +7,7 @@ public class SpawnManager : MonoBehaviour {
 	public class Enemy {
 		public string Type;
 		public GameObject GOB;
-		public enum types  {HIV, EarlyInfected, LateInfected, ForeignParticle};
+		public enum types  {HIV, EarlyInfected, LateInfected, ForeignParticle, oneUp};
 
 		public Enemy(types type, GameObject gameOB){
 			Type = type.ToString();
@@ -19,6 +19,8 @@ public class SpawnManager : MonoBehaviour {
 		}
 	}
 
+	public GameObject oneUp;
+
 	public static List<Enemy> spawnQueue = new List<Enemy>();
 	public static int levelCount = 1;
 	public static int enemyMultiplier;
@@ -27,10 +29,11 @@ public class SpawnManager : MonoBehaviour {
 
 	void Start () {
 		enemies = levelCount*enemyMultiplier;
+		float rand;
 		for(int i=0; i<enemies; i++){
 			Enemy.types type;
 			int index;
-			float rand = Random.value;
+			rand = Random.value;
 			if(rand <= .70f){type = Enemy.types.HIV; index=0;}
 			else if(rand <=.80){type = Enemy.types.EarlyInfected; index=1;}
 			else if(rand <=.95){type = Enemy.types.LateInfected; index=2;}
@@ -38,6 +41,13 @@ public class SpawnManager : MonoBehaviour {
 
 			spawnQueue.Add(new Enemy(type, prefabs[index])); 
 		}
+
+		rand = Random.value;
+		if(rand <= .5f){
+			spawnQueue.Add(new Enemy(Enemy.types.oneUp, oneUp));
+			Debug.Log("ONE UP");
+		}
+
 		InvokeRepeating("Sender", 0f, 1f);
 		InvokeRepeating("CheckForWin", 10f, 2f);
 	}
