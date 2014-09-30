@@ -3,6 +3,9 @@ using System.Collections;
 
 public class Infected : MonoBehaviour {
 
+	public bool early;
+
+
 	public int health = 10;
 	int target = 1;
 	Vector3 target1;
@@ -22,6 +25,10 @@ public class Infected : MonoBehaviour {
 	void Update () {
 		if(target == 1)rigidbody2D.velocity = (target1 - transform.position)*speed*Time.deltaTime;
 		else if(target == 2)rigidbody2D.velocity = (target2 - transform.position)*speed*Time.deltaTime;
+
+		if(health<1){
+			Destroy(gameObject);
+		}
 	}
 
 	void Shoot(){
@@ -41,11 +48,34 @@ public class Infected : MonoBehaviour {
 			health--;
 			Destroy(col.gameObject);
 			GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayEnemyHit();
-			if(health<1){
-				Destroy(gameObject);
-				Destroy(col.gameObject);
-			}
 		}
+
+		if(col.gameObject.tag == "Pew" && early){
+			if(col.GetComponent<DamageControl>().getType() == 3){
+				gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+				Invoke("normalizeColor", 0.2f);
+			}
+
+			health -= (int)col.GetComponent<DamageControl>().getDmgEarly();
+			Destroy(col.gameObject);
+			GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayEnemyHit();
+		}
+
+		if(col.gameObject.tag == "Pew" && !early){
+
+			if(col.GetComponent<DamageControl>().getType() == 2){
+				gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+				Invoke("normalizeColor", 0.2f);
+			}
+
+			health -= (int)col.GetComponent<DamageControl>().getDmgLate();
+			Destroy(col.gameObject);
+			GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayEnemyHit();
+		}
+	}
+
+	void normalizeColor(){
+		gameObject.GetComponent<SpriteRenderer>().color = Color.white;
 	}
 
 	void SwitchTarget(){
