@@ -11,7 +11,7 @@ public class Needle : MonoBehaviour {
 
 	void Start(){
 		health = SpawnManager.enemyMultiplier*4;
-		InvokeRepeating("SpawnEnemy", 1f, 1.5f);
+		InvokeRepeating("SpawnEnemy", 1f, 3f);
 	}
 
 	void Update () {
