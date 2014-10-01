@@ -21,6 +21,7 @@ public class SpawnManager : MonoBehaviour {
 
 	public GameObject oneUp;
 
+	public static string prevLevel;
 	public static List<Enemy> spawnQueue = new List<Enemy>();
 	public static int levelCount = 1;
 	public static int enemyMultiplier;
@@ -83,6 +84,7 @@ public class SpawnManager : MonoBehaviour {
 	void EndLevel(){
 		Needle.bosstime = false;
 		levelCount++;
+		prevLevel = Application.loadedLevelName;
 		Application.LoadLevel("Shop");
 	}
 }

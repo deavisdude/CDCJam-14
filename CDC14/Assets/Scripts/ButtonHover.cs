@@ -4,7 +4,7 @@ using System.Collections;
 public class ButtonHover : MonoBehaviour {
 	public string scene;
 	public int difficulty;
-
+	
 	//public Texture texture;
 	void OnMouseEnter(){
 		//gameObject.GetComponent<GUITexture>().texture = texture;
