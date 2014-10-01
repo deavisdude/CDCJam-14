@@ -12,7 +12,7 @@ public class ShopMouse : MonoBehaviour {
 		//gameObject.GetComponent<GUITexture>().texture = texture;
 		GetComponent<SpriteRenderer>().enabled = true;
 		highlighted = true;
-		//		GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayToggle();
+				GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayToggle();
 	}
 	
 	void Update(){
@@ -22,6 +22,7 @@ public class ShopMouse : MonoBehaviour {
 		//button 1
 		if (gameObject.name == "Highlighter1") {
 			if (Input.GetMouseButtonDown (0)) {
+				GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayItemPurchase();
 				bought = true;
 			}else{
 				bought = false;
@@ -30,6 +31,7 @@ public class ShopMouse : MonoBehaviour {
 		//button 2
 		if (gameObject.name == "Highlighter2") {
 			if (Input.GetMouseButtonDown (0)) {
+				GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayItemPurchase();
 				bought = true;
 			}else{
 				bought = false;
@@ -38,6 +40,7 @@ public class ShopMouse : MonoBehaviour {
 		//button 3
 		if (gameObject.name == "Highlighter3") {
 			if (Input.GetMouseButtonDown (0)) {
+				GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayItemPurchase();
 				bought = true;
 			}else{
 				bought = false;
@@ -46,6 +49,7 @@ public class ShopMouse : MonoBehaviour {
 		//button 4
 		if (gameObject.name == "Highlighter4") {
 			if (Input.GetMouseButtonDown (0)) {
+				GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayItemPurchase();
 				bought = true;
 			}else{
 				bought = false;
@@ -62,7 +66,6 @@ public class ShopMouse : MonoBehaviour {
 	}
 	
 	//	void OnMouseDown(){
-	//GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayItemPurchase();
 	//bought = true;
 	
 	//	}
