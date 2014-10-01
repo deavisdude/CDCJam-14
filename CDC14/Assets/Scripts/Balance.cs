@@ -9,6 +9,7 @@ public class Balance : MonoBehaviour {
 	public static bool hasTenofovir = false;
 	public static bool hasEmtricitabine = false;
 	public static bool hasEfavirenz = false;
+	public static bool hasTest = false;
 	// Use this for initialization
 	void Start () {
 		total = 2500;
@@ -51,6 +52,14 @@ public class Balance : MonoBehaviour {
 		if (total > cost){
 			total -= cost;
 			hasAtripla = true;
+		}else{
+			noteno.SendMessage ("tomuch", SendMessageOptions.DontRequireReceiver);
+		}
+	}
+	void BuyTest(int cost){
+		if (total > cost){
+			total -= cost;
+			hasTest = true;
 		}else{
 			noteno.SendMessage ("tomuch", SendMessageOptions.DontRequireReceiver);
 		}

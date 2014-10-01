@@ -10,6 +10,8 @@ public class Pay : MonoBehaviour {
 	public int cost3 = 543;
 	public GameObject controller4;
 	public int cost4 = 651;
+	public GameObject controller5;
+	public int cost5 = 651;
 	public GameObject balance;
 	TextMesh texts;
 	MeshRenderer mesh;
@@ -68,6 +70,15 @@ public class Pay : MonoBehaviour {
 
 			if (controller4.GetComponent<ShopMouse> ().bought) {	
 				balance.SendMessage("BuyAtrip",cost4,SendMessageOptions.DontRequireReceiver);
+			}
+		}
+		if (controller5.GetComponent<ShopMouse> ().highlighted) {
+			//GetComponent<MeshRenderer> ().enabled = true;
+			//Emtricitabine
+			texts.text="Cost: "+ cost5;
+			
+			if (controller4.GetComponent<ShopMouse> ().bought) {	
+				balance.SendMessage("BuyTest",cost5,SendMessageOptions.DontRequireReceiver);
 			}
 		}
 

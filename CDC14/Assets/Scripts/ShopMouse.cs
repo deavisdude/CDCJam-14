@@ -56,6 +56,14 @@ public class ShopMouse : MonoBehaviour {
 				bought = false;
 			}
 		}
+		if (gameObject.name == "Highlighter5") {
+			if (Input.GetMouseButtonDown (0)) {
+				GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayItemPurchase();
+				bought = true;
+			}else{
+				bought = false;
+			}
+		}
 	}
 	
 	
