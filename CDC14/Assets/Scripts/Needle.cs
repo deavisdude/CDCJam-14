@@ -10,7 +10,7 @@ public class Needle : MonoBehaviour {
 	public GameObject prefab;
 
 	void Start(){
-		health = SpawnManager.enemyMultiplier*4;
+		health = SpawnManager.enemyMultiplier*50;
 		InvokeRepeating("SpawnEnemy", 1f, 3f);
 	}
 

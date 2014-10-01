@@ -17,7 +17,8 @@ public class ShopMouse : MonoBehaviour {
 	
 	void Update(){
 		if(Input.GetKeyDown(KeyCode.Escape)){
-			Application.LoadLevel("lvl1");
+			if(SpawnManager.prevLevel == "noBoss")Application.LoadLevel("lvl1");
+			else Application.LoadLevel("lvl1");
 		}
 		//button 1
 		if (gameObject.name == "Highlighter1") {

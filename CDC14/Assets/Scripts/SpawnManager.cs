@@ -21,14 +21,17 @@ public class SpawnManager : MonoBehaviour {
 
 	public GameObject oneUp;
 
+	public static string prevLevel;
 	public static List<Enemy> spawnQueue = new List<Enemy>();
 	public static int levelCount = 1;
 	public static int enemyMultiplier;
 	public int enemies;
 	public GameObject[] prefabs;
+	public static float spawnRate = 1;
 
 	void Start () {
-		enemies = levelCount*enemyMultiplier;
+		enemies = levelCount*enemyMultiplier*10;
+		spawnRate /= levelCount;
 		float rand;
 		for(int i=0; i<enemies; i++){
 			Enemy.types type;
@@ -45,7 +48,7 @@ public class SpawnManager : MonoBehaviour {
 		rand = Random.value;
 		if(rand <= .25f)spawnQueue.Add(new Enemy(Enemy.types.oneUp, oneUp));
 
-		InvokeRepeating("Sender", 0f, 1f);
+		InvokeRepeating("Sender", 0f, spawnRate);
 		InvokeRepeating("CheckForWin", 10f, 2f);
 	}
 
@@ -70,7 +73,8 @@ public class SpawnManager : MonoBehaviour {
 		if(GameObject.FindGameObjectsWithTag("HIV").GetLength(0) < 1 &&
 		   GameObject.FindGameObjectsWithTag("EarlyInfected").GetLength(0) < 1 &&
 		   GameObject.FindGameObjectsWithTag("LateInfected").GetLength(0) < 1 &&
-		   GameObject.FindGameObjectsWithTag("ForeignParticle").GetLength(0) < 1){
+		   GameObject.FindGameObjectsWithTag("ForeignParticle").GetLength(0) < 1 &&
+		   spawnQueue.Count == 0){
 			Needle.bosstime = true;
 			if(GameObject.FindGameObjectsWithTag("Boss").GetLength(0) < 1)EndLevel();
 			
@@ -78,7 +82,9 @@ public class SpawnManager : MonoBehaviour {
 	}
 
 	void EndLevel(){
+		Needle.bosstime = false;
 		levelCount++;
+		prevLevel = Application.loadedLevelName;
 		Application.LoadLevel("Shop");
 	}
 }

@@ -169,8 +169,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d34f446d04d763645868d616ad25b747, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: lvl1
-  difficulty: 10
+  scene: noBoss
+  difficulty: 1
 --- !u!212 &683722342
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -323,8 +323,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d34f446d04d763645868d616ad25b747, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: lvl1
-  difficulty: 25
+  scene: noBoss
+  difficulty: 2
 --- !u!4 &1016794569
 Transform:
   m_ObjectHideFlags: 0
@@ -530,8 +530,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d34f446d04d763645868d616ad25b747, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: lvl1
-  difficulty: 55
+  scene: noBoss
+  difficulty: 3
 --- !u!4 &1168661196
 Transform:
   m_ObjectHideFlags: 0
