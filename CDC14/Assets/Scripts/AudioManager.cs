@@ -107,12 +107,12 @@ public class AudioManager : MonoBehaviour {
 	}
 
 	public void PlayBossLoop(){
-		HOTween.To(BossLoopSrc, 1,"volume", 1);
+		//HOTween.To(BossLoopSrc, 1,"volume", 1);
 		BossLoopSrc.Play();
 	}
 
 	public void StopBossLoop(){
-		HOTween.To(BossLoopSrc, 1,"volume", 0);
+		//HOTween.To(BossLoopSrc, 1,"volume", 0);
 		BossLoopSrc.Stop();
 	}
 	
@@ -125,7 +125,7 @@ public class AudioManager : MonoBehaviour {
 	}
 
 	public void PlayMenuLoop(){
-		HOTween.To(MenuLoopSrc, 1,"volume", 1);
+		//HOTween.To(MenuLoopSrc, 1,"volume", 1);
 		MenuLoopSrc.Play();
 	}
 
@@ -154,17 +154,17 @@ public class AudioManager : MonoBehaviour {
 	}
 	
 	public void PlayMainLoop(){
-		HOTween.To(MainLoopSrc, 1,"volume", 1);
+		//HOTween.To(MainLoopSrc, 1,"volume", 1);
 		MainLoopSrc.Play();
 	}
 
 	public void StopMainLoop(){
-		HOTween.To(MainLoopSrc, 1,"volume", 0);
+		//HOTween.To(MainLoopSrc, 1,"volume", 0);
 		MainLoopSrc.Pause();
 	}
 
 	public void StopMenuLoop(){
-		HOTween.To(MenuLoopSrc, 1,"volume", 0);
+		//HOTween.To(MenuLoopSrc, 1,"volume", 0);
 		MenuLoopSrc.Stop();
 	}
 }

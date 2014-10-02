@@ -128,6 +128,8 @@ MonoBehaviour:
   WeaponChangeSrc: {fileID: 0}
   MenuLoop: {fileID: 8300000, guid: 9f0d0362bc85a83468fe70a583e11d80, type: 3}
   MenuLoopSrc: {fileID: 0}
+  BossLoop: {fileID: 8300000, guid: 5c1e790bd2266fe4a95837a696198ec8, type: 3}
+  BossLoopSrc: {fileID: 0}
 --- !u!4 &167804258
 Transform:
   m_ObjectHideFlags: 0
@@ -462,6 +464,10 @@ Prefab:
       propertyPath: MenuLoop
       value: 
       objectReference: {fileID: 8300000, guid: 9f0d0362bc85a83468fe70a583e11d80, type: 3}
+    - target: {fileID: 11400000, guid: a9ec80ea79a137e459938f3b3659804d, type: 2}
+      propertyPath: BossLoop
+      value: 
+      objectReference: {fileID: 8300000, guid: 5c1e790bd2266fe4a95837a696198ec8, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a9ec80ea79a137e459938f3b3659804d, type: 2}
   m_RootGameObject: {fileID: 167804256}
