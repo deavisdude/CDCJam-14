@@ -21,45 +21,47 @@ public class ShopMouse : MonoBehaviour {
 			else Application.LoadLevel("lvl1");
 		}
 		//button 1
-		if (gameObject.name == "Highlighter1") {
+		if (gameObject.name == "Vitamin") {
 			if (Input.GetMouseButtonDown (0)) {
-				GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayItemPurchase();
+				//GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayItemPurchase();
 				bought = true;
 			}else{
 				bought = false;
 			}
 		}
 		//button 2
-		if (gameObject.name == "Highlighter2") {
+		if (gameObject.name == "Test") {
 			if (Input.GetMouseButtonDown (0)) {
-				GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayItemPurchase();
+				//GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayItemPurchase();
 				bought = true;
 			}else{
 				bought = false;
 			}
 		}
 		//button 3
-		if (gameObject.name == "Highlighter3") {
+		if (gameObject.name == "BCell") {
 			if (Input.GetMouseButtonDown (0)) {
-				GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayItemPurchase();
+				//GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayItemPurchase();
 				bought = true;
 			}else{
 				bought = false;
 			}
 		}
 		//button 4
-		if (gameObject.name == "Highlighter4") {
+		if (gameObject.name == "AddLife") {
 			if (Input.GetMouseButtonDown (0)) {
-				GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayItemPurchase();
+				//GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayItemPurchase();
 				bought = true;
 			}else{
 				bought = false;
 			}
 		}
-		if (gameObject.name == "Highlighter5") {
+
+		if (gameObject.name == "Continue") {
 			if (Input.GetMouseButtonDown (0)) {
-				GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayItemPurchase();
-				bought = true;
+				//GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayToggle();
+				//if(SpawnManager.prevLevel == "noBoss")Application.LoadLevel("lvl1");
+				//else Application.LoadLevel("lvl1");
 			}else{
 				bought = false;
 			}
