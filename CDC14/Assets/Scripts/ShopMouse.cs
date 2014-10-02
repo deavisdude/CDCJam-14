@@ -60,10 +60,10 @@ public class ShopMouse : MonoBehaviour {
 		if (gameObject.name == "Continue") {
 			if (Input.GetMouseButtonDown (0)) {
 				//GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayToggle();
-				//if(SpawnManager.prevLevel == "noBoss")Application.LoadLevel("lvl1");
-				//else Application.LoadLevel("lvl1");
+
+					
+
 			}else{
-				bought = false;
 			}
 		}
 	}
