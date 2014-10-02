@@ -17,6 +17,8 @@ public class Player : MonoBehaviour {
 
 	public static bool dead = false;
 
+	public GameObject bcell;
+
 	public GameObject[] pews = new GameObject[3];
 	public int currIndex;
 	public Sprite[] weapons = new Sprite[3];
@@ -33,6 +35,11 @@ public class Player : MonoBehaviour {
 	float downLimitation;
 
 	void Start(){
+		if(PurchaseHolder.HasBCell){
+			Instantiate(bcell);
+		}
+
+
 		acc = new Vector3();
 
 		dist = (transform.position.z - Camera.main.transform.position.z);
