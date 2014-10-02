@@ -57,6 +57,7 @@ public class ShopMouse : MonoBehaviour {
 			if (Input.GetMouseButtonDown (0)) {
 				GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayItemPurchase();
 				bought = true;
+				PurchaseHolder.HasBCell = true;
 			}else{
 				bought = false;
 			}
@@ -66,6 +67,7 @@ public class ShopMouse : MonoBehaviour {
 			if (Input.GetMouseButtonDown (0)) {
 				GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayItemPurchase();
 				bought = true;
+				PurchaseHolder.NewLives++;
 			}else{
 				bought = false;
 			}

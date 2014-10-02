@@ -39,10 +39,10 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>F:/Apps/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>E:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>F:/Apps/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>E:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
@@ -67,8 +67,8 @@
      <Compile Include="Assets\Scripts\Needle.cs" />
      <Compile Include="Assets\Scripts\NotEnough.cs" />
      <Compile Include="Assets\Scripts\OffScreenDelete.cs" />
-     <Compile Include="Assets\Scripts\Pay.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
+     <Compile Include="Assets\Scripts\PurchaseHolder.cs" />
      <Compile Include="Assets\Scripts\ScrollScript.cs" />
      <Compile Include="Assets\Scripts\ShopMouse.cs" />
      <Compile Include="Assets\Scripts\SpawnManager.cs" />
@@ -79,7 +79,7 @@
      <Compile Include="Assets\Scripts\oneUp.cs" />
      <None Include="Assets\HOTween\HOTween_License.txt" />
  <Reference Include="HOTween">
- <HintPath>F:/Game Jam 2014/CDC14/Assets/HOTween/HOTween.dll</HintPath>
+ <HintPath>E:/Workspace/GameJam/CDC14/Assets/HOTween/HOTween.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
