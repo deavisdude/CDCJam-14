@@ -514,6 +514,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlighted: 0
   bought: 0
+  leave: 0
 --- !u!212 &736885142
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -591,6 +592,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlighted: 0
   bought: 0
+  leave: 0
 --- !u!212 &891566950
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -659,6 +661,7 @@ MonoBehaviour:
   controller2: {fileID: 1869236975}
   controller3: {fileID: 1781823243}
   controller4: {fileID: 736885139}
+  controller5: {fileID: 891566947}
 --- !u!102 &1077667502
 TextMesh:
   serializedVersion: 3
@@ -1091,6 +1094,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlighted: 0
   bought: 0
+  leave: 0
 --- !u!212 &1781823246
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1168,6 +1172,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlighted: 0
   bought: 0
+  leave: 0
 --- !u!212 &1869236978
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1245,6 +1250,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlighted: 0
   bought: 0
+  leave: 0
 --- !u!212 &1998008402
 SpriteRenderer:
   m_ObjectHideFlags: 0

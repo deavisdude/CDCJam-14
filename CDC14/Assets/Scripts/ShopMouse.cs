@@ -6,6 +6,8 @@ public class ShopMouse : MonoBehaviour {
 	public bool highlighted = false;
 	public bool bought = false;
 	private int num;
+	public bool leave = false;
+
 	//public GameObject item;
 	//public Texture texture;
 	void OnMouseEnter(){
@@ -16,6 +18,18 @@ public class ShopMouse : MonoBehaviour {
 	}
 	
 	void Update(){
+		if (name == "Continue") {
+			if (Input.GetMouseButtonDown (0)) {
+				GameObject.Find ("AudioManager").GetComponent<AudioManager> ().PlayToggle ();
+				leave =true;
+				//Debug.Log ("Bug");
+				//if(SpawnManager.prevLevel == "noBoss")Application.LoadLevel("lvl1");
+				//else Application.LoadLevel("lvl1");
+
+			}else{
+				leave =false;
+			}
+		}
 		if(Input.GetKeyDown(KeyCode.Escape)){
 			if(SpawnManager.prevLevel == "noBoss")Application.LoadLevel("lvl1");
 			else Application.LoadLevel("lvl1");
@@ -57,15 +71,7 @@ public class ShopMouse : MonoBehaviour {
 			}
 		}
 
-		if (gameObject.name == "Continue") {
-			if (Input.GetMouseButtonDown (0)) {
-				GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayToggle();
 
-					
-
-			}else{
-			}
-		}
 	}
 	
 	

@@ -9,6 +9,8 @@ public class Balance : MonoBehaviour {
 	public GameObject controller2;
 	public GameObject controller3;
 	public GameObject controller4;
+	public GameObject controller5;
+
 	public static bool hasVitamin = false;
 	public static bool hasTest = false;
 	public static bool hasBCell = false;
@@ -91,6 +93,13 @@ public class Balance : MonoBehaviour {
 			//ExtraLife
 			if (controller4.GetComponent<ShopMouse> ().bought) {	
 				BuyExtraLife(150);
+			}
+		}
+		if (controller5.GetComponent<ShopMouse> ().highlighted) {
+			//ExtraLife
+			if (controller5.GetComponent<ShopMouse> ().leave) {	
+				if(SpawnManager.prevLevel == "noBoss")Application.LoadLevel("lvl1");
+				else Application.LoadLevel("lvl1");
 			}
 		}
 	}
