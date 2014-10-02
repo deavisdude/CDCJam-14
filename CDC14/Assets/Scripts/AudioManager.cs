@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using Holoville.HOTween;
 
 public class AudioManager : MonoBehaviour {
 	
@@ -41,6 +42,9 @@ public class AudioManager : MonoBehaviour {
 
 	public AudioClip MenuLoop;
 	public AudioSource MenuLoopSrc;
+
+	public AudioClip BossLoop;
+	public AudioSource BossLoopSrc;
 	
 	void Start () {
 
@@ -93,9 +97,23 @@ public class AudioManager : MonoBehaviour {
 		WeaponChangeSrc.clip = WeaponChange;
 		WeaponChangeSrc.loop = false;
 
+		BossLoopSrc = gameObject.AddComponent<AudioSource>();
+		BossLoopSrc.clip=BossLoop;
+		BossLoopSrc.loop = true;
+
 		//PlayGameStart();
 		PlayMenuLoop();
 		//Application.LoadLevel("lvl1");
+	}
+
+	public void PlayBossLoop(){
+		//HOTween.To(BossLoopSrc, 1,"volume", 1);
+		BossLoopSrc.Play();
+	}
+
+	public void StopBossLoop(){
+		//HOTween.To(BossLoopSrc, 1,"volume", 0);
+		BossLoopSrc.Stop();
 	}
 	
 	public void PlayEnemyHit(){
@@ -107,6 +125,7 @@ public class AudioManager : MonoBehaviour {
 	}
 
 	public void PlayMenuLoop(){
+		//HOTween.To(MenuLoopSrc, 1,"volume", 1);
 		MenuLoopSrc.Play();
 	}
 
@@ -135,10 +154,17 @@ public class AudioManager : MonoBehaviour {
 	}
 	
 	public void PlayMainLoop(){
+		//HOTween.To(MainLoopSrc, 1,"volume", 1);
 		MainLoopSrc.Play();
 	}
 
+	public void StopMainLoop(){
+		//HOTween.To(MainLoopSrc, 1,"volume", 0);
+		MainLoopSrc.Pause();
+	}
+
 	public void StopMenuLoop(){
+		//HOTween.To(MenuLoopSrc, 1,"volume", 0);
 		MenuLoopSrc.Stop();
 	}
 }
