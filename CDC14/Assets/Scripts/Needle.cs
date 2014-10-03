@@ -9,10 +9,15 @@ public class Needle : MonoBehaviour {
 	public static int health;
 	public GameObject prefab;
 	bool soundPlayed = false;
+	float scaleFactor;
 
 	void Start(){
 		health = SpawnManager.enemyMultiplier*50;
 		InvokeRepeating("SpawnEnemy", 1f, 3f);
+		if(Application.loadedLevelName == "lvl1" && GameObject.Find("Needle") != null){
+			GameObject lb = GameObject.Find("LifeBar");
+			scaleFactor = lb.transform.localScale.x/health;
+		}
 	}
 
 	void Update () {
@@ -30,6 +35,12 @@ public class Needle : MonoBehaviour {
 			GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayMainLoop();
 		}
 		//Debug.Log(health);
+
+		if(Application.loadedLevelName == "lvl1" && GameObject.Find("Needle") != null){
+			GameObject lb = GameObject.Find("LifeBar");
+			lb.transform.localScale = new Vector3(scaleFactor*health, lb.transform.localScale.y, lb.transform.localScale.z);
+		}
+
 	}
 
 	void SpawnEnemy(){
