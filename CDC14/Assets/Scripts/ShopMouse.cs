@@ -63,11 +63,12 @@ public class ShopMouse : MonoBehaviour {
 			}
 		}
 		//button 4
-		if (gameObject.name == "AddLife") {
+		if (gameObject.name == "ExtraLife") {
 			if (Input.GetMouseButtonDown (0)) {
 				GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayItemPurchase();
 				bought = true;
 				PurchaseHolder.NewLives++;
+				Debug.Log(PurchaseHolder.NewLives);
 			}else{
 				bought = false;
 			}

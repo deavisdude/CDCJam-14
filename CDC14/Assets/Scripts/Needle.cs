@@ -24,7 +24,11 @@ public class Needle : MonoBehaviour {
 			rigidbody2D.velocity = (target.transform.position - transform.position)*speed*Time.deltaTime;
 			//Debug.Log(target.transform.position - transform.position);
 		}
-		if(health < 1){Destroy(gameObject); bosstime =false;}
+		if(health < 1){
+			Destroy(gameObject); bosstime =false;
+			GameObject.Find("AudioManager").GetComponent<AudioManager>().StopBossLoop();
+			GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayMainLoop();
+		}
 		//Debug.Log(health);
 	}
 
@@ -45,8 +49,6 @@ public class Needle : MonoBehaviour {
 		if(col.gameObject.tag == "Antibody" || col.gameObject.tag == "Pew"){
 			health--;
 			Destroy(col.gameObject);
-			GameObject.Find("AudioManager").GetComponent<AudioManager>().StopBossLoop();
-			GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayMainLoop();
 		}
 	}
 }
