@@ -67,6 +67,8 @@ public class ShopMouse : MonoBehaviour {
 			if (Input.GetMouseButtonDown (0)) {
 				GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayItemPurchase();
 				bought = true;
+				PurchaseHolder.NewLives++;
+				Debug.Log(PurchaseHolder.NewLives);
 			}else{
 				bought = false;
 			}
