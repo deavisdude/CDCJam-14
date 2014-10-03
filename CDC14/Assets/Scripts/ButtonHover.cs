@@ -14,7 +14,7 @@ public class ButtonHover : MonoBehaviour {
 			Destroy(GameObject.Find("Prompt"));
 			Destroy(GameObject.Find("NO"));
 			Destroy(GameObject.Find("OK"));
-			Destroy(GameObject.Find("Info"));
+			Destroy(GameObject.Find("InfoTut"));
 			Destroy(GameObject.Find("Return"));
 		}
 	}
@@ -46,7 +46,7 @@ public class ButtonHover : MonoBehaviour {
 			SpawnManager.enemyMultiplier = difficulty;
 		}else{
 			if(gameObject.name == "Return"){
-				Destroy(GameObject.Find("Info"));
+				Destroy(GameObject.Find("InfoTut"));
 				Destroy(gameObject);
 				Time.timeScale = 1.0f;
 			}
@@ -54,14 +54,14 @@ public class ButtonHover : MonoBehaviour {
 				Destroy(GameObject.Find("Prompt"));
 				Destroy(gameObject);
 				Destroy(GameObject.Find("NO"));
-				GameObject.Find("Info").GetComponent<GUITexture>().enabled = true;
+				GameObject.Find("InfoTut").GetComponent<GUITexture>().enabled = true;
 				GameObject.Find("Return").GetComponent<BoxCollider>().enabled = true;
 			}
 			if(gameObject.name == "NO"){
 				Destroy(GameObject.Find("Prompt"));
 				Destroy(gameObject);
 				Destroy(GameObject.Find("OK"));
-				Destroy(GameObject.Find("Info"));
+				Destroy(GameObject.Find("InfoTut"));
 				Destroy(GameObject.Find("Return"));
 				Time.timeScale = 1.0f;
 			}
