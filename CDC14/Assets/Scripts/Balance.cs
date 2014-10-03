@@ -10,7 +10,7 @@ public class Balance : MonoBehaviour {
 	public GameObject controller3;
 	public GameObject controller4;
 	public GameObject controller5;
-
+	public GameObject Holder;
 	public static bool hasVitamin = false;
 	public static bool hasTest = false;
 	public static bool hasBCell = false;
@@ -59,7 +59,7 @@ public class Balance : MonoBehaviour {
 	void BuyExtraLife(int cost){
 		if (total > cost){
 			total -= cost;
-			hasExtraLife++;
+			PurchaseHolder.NewLives++;
 		}else{
 			noteno.SendMessage ("tomuch", SendMessageOptions.DontRequireReceiver);
 		}
@@ -102,6 +102,7 @@ public class Balance : MonoBehaviour {
 				else Application.LoadLevel("lvl1");
 			}
 		}
+
 	}
 }
 
