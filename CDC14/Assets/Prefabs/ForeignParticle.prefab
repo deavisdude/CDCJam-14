@@ -11,6 +11,7 @@ GameObject:
   - 50: {fileID: 5000000}
   - 212: {fileID: 21200000}
   - 58: {fileID: 5800000}
+  - 114: {fileID: 11400000}
   m_Layer: 0
   m_Name: ForeignParticle
   m_TagString: Untagged
@@ -56,6 +57,20 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_Radius: .75
   m_Center: {x: 0, y: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e54f2ffc30897f145b2dc546cac58daf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 50
+  spawnSpeed: 1.39999998
+  prefab: {fileID: 100000, guid: 181de5470ba1e4c41aa2d2c89414b2ea, type: 2}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

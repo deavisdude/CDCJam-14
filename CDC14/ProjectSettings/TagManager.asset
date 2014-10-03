@@ -9,6 +9,9 @@ TagManager:
   - LateInfected
   - Antibody
   - ForeignParticle
+  - Boss
+  - Border
+  - Pew
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX

@@ -7,7 +7,7 @@ public class SpawnManager : MonoBehaviour {
 	public class Enemy {
 		public string Type;
 		public GameObject GOB;
-		public enum types  {HIV, EarlyInfected, LateInfected, ForeignParticle};
+		public enum types  {HIV, EarlyInfected, LateInfected, ForeignParticle, oneUp};
 
 		public Enemy(types type, GameObject gameOB){
 			Type = type.ToString();
@@ -19,25 +19,36 @@ public class SpawnManager : MonoBehaviour {
 		}
 	}
 
+	public GameObject oneUp;
+
+	public static string prevLevel;
 	public static List<Enemy> spawnQueue = new List<Enemy>();
-	public int enemyMultiplier;
+	public static int levelCount = 1;
+	public static int enemyMultiplier;
+	public int enemies;
 	public GameObject[] prefabs;
+	public static float spawnRate = 1;
 
 	void Start () {
-		enemyMultiplier = Application.levelCount*20;
-		Debug.Log(enemyMultiplier);
-		for(int i=0; i<enemyMultiplier; i++){
+		enemies = levelCount*enemyMultiplier*10;
+		spawnRate /= levelCount;
+		float rand;
+		for(int i=0; i<enemies; i++){
 			Enemy.types type;
 			int index;
-			float rand = Random.value;
-			if(rand <= .75f){type = Enemy.types.HIV; index=0;}
-			else if(rand <=.90){type = Enemy.types.EarlyInfected; index=1;}
-			else if(rand <=.97){type = Enemy.types.LateInfected; index=2;}
+			rand = Random.value;
+			if(rand <= .70f){type = Enemy.types.HIV; index=0;}
+			else if(rand <=.80){type = Enemy.types.EarlyInfected; index=1;}
+			else if(rand <=.95){type = Enemy.types.LateInfected; index=2;}
 			else {type = Enemy.types.ForeignParticle; index=3;}
 
 			spawnQueue.Add(new Enemy(type, prefabs[index])); 
 		}
-		InvokeRepeating("Sender", 0f, 1f);
+
+		rand = Random.value;
+		if(rand <= .25f)spawnQueue.Add(new Enemy(Enemy.types.oneUp, oneUp));
+
+		InvokeRepeating("Sender", 0f, spawnRate);
 		InvokeRepeating("CheckForWin", 10f, 2f);
 	}
 
@@ -62,12 +73,18 @@ public class SpawnManager : MonoBehaviour {
 		if(GameObject.FindGameObjectsWithTag("HIV").GetLength(0) < 1 &&
 		   GameObject.FindGameObjectsWithTag("EarlyInfected").GetLength(0) < 1 &&
 		   GameObject.FindGameObjectsWithTag("LateInfected").GetLength(0) < 1 &&
-		   GameObject.FindGameObjectsWithTag("ForeignParticle").GetLength(0) < 1){
-			EndLevel();
+		   GameObject.FindGameObjectsWithTag("ForeignParticle").GetLength(0) < 1 &&
+		   spawnQueue.Count == 0){
+			Needle.bosstime = true;
+			if(GameObject.FindGameObjectsWithTag("Boss").GetLength(0) < 1)EndLevel();
+			
 		}
 	}
 
 	void EndLevel(){
-		Application.LoadLevel("BuyMenu");
+		Needle.bosstime = false;
+		levelCount++;
+		prevLevel = Application.loadedLevelName;
+		Application.LoadLevel("Shop");
 	}
 }

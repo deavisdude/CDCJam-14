@@ -4,8 +4,9 @@ using System.Collections;
 public class BFollow : MonoBehaviour {
 	
 	void OnTriggerEnter2D(Collider2D col){
-		if(col.gameObject.tag != "Good" && col.gameObject.tag != "Antibody"){
+		if(col.gameObject.tag != "Good" && col.gameObject.tag != "Antibody" && col.gameObject.tag != "Pew"){
 			Destroy(gameObject);
+			PurchaseHolder.HasBCell = false;
 		}
 	}
 
