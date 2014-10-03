@@ -38,7 +38,7 @@ public class Player : MonoBehaviour {
 		if(PurchaseHolder.HasBCell){
 			Instantiate(bcell);
 		}
-
+		dead = false;
 
 		acc = new Vector3();
 
@@ -95,10 +95,10 @@ public class Player : MonoBehaviour {
 	void Kill(){
 		LivesManager.lives--;
 		if(LivesManager.lives < 0){
-			dead = false;
+			dead = true;
 			Application.LoadLevel("Credits");
 		}else{
-			dead = false;
+			dead = true;
 			Application.LoadLevel("Shop");
 		}
 	}

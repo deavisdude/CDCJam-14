@@ -98,7 +98,7 @@ public class Balance : MonoBehaviour {
 		if (controller5.GetComponent<ShopMouse> ().highlighted) {
 			//ExtraLife
 			if (controller5.GetComponent<ShopMouse> ().leave) {	
-				if(SpawnManager.prevLevel == "noBoss")Application.LoadLevel("lvl1");
+				if(SpawnManager.prevLevel == "noBoss" && Player.dead != true)Application.LoadLevel("lvl1");
 				else Application.LoadLevel("lvl1");
 			}
 		}
