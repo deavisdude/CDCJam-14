@@ -59,7 +59,7 @@ public class Balance : MonoBehaviour {
 	void BuyExtraLife(int cost){
 		if (total > cost){
 			total -= cost;
-			PurchaseHolder.NewLives++;
+			//PurchaseHolder.NewLives++;
 		}else{
 			noteno.SendMessage ("tomuch", SendMessageOptions.DontRequireReceiver);
 		}
