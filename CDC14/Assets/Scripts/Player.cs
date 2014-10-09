@@ -62,18 +62,20 @@ public class Player : MonoBehaviour {
 	}
 
 	void Update () {
-		if(!dead){
-			acc = new Vector3(Input.GetAxis("Horizontal")*speed*Time.deltaTime, Input.GetAxis("Vertical")*speed*Time.deltaTime,0);
-			transform.position += acc;
-			Vector3 pos = transform.position;
+		if (Application.loadedLevelName != "Menu") {
+			if (!dead) {
+				acc = new Vector3 (Input.GetAxis ("Horizontal") * speed * Time.deltaTime, Input.GetAxis ("Vertical") * speed * Time.deltaTime, 0);
+				transform.position += acc;
+				Vector3 pos = transform.position;
 
-			pos.x = Mathf.Clamp(pos.x, leftLimitation, rightLimitation);
-			pos.y = Mathf.Clamp(pos.y, downLimitation, upLimitation);
+				pos.x = Mathf.Clamp (pos.x, leftLimitation, rightLimitation);
+				pos.y = Mathf.Clamp (pos.y, downLimitation, upLimitation);
 
-			transform.position = pos;
+				transform.position = pos;
 
-			Vector3 newPos = new Vector3(transform.position.x+1.5f, transform.position.y, 0);
-			delayPos.Add(new PosOb(newPos, Time.time));
+				Vector3 newPos = new Vector3 (transform.position.x + 1.5f, transform.position.y, 0);
+				delayPos.Add (new PosOb (newPos, Time.time));
+			}
 		}
 		if(Input.GetMouseButtonDown(1)){
 			CycleWeapon();
