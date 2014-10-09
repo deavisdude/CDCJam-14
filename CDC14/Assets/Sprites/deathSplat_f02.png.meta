@@ -1,7 +1,8 @@
 fileFormatVersion: 2
 guid: 72fc9bcd57c5a2e42bc57ad530665dfc
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: deathSplat_f02
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0

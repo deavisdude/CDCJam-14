@@ -1,7 +1,8 @@
 fileFormatVersion: 2
 guid: 49a2074a758a8fa44b4fa753a6293602
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Tenofovir
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0

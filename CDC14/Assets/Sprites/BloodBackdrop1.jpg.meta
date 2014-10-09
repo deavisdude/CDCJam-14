@@ -1,7 +1,8 @@
 fileFormatVersion: 2
 guid: 466b485fe391439488346a57e0c28569
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: BloodBackdrop1
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
