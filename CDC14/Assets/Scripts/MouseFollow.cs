@@ -7,9 +7,12 @@ public class MouseFollow : MonoBehaviour {
 	// Use this for initialization
 
 	void Start () {
-	
+		InvokeRepeating("addOffset", 0f, 1f);
 	}
-	
+
+	public GameObject leader;
+	Vector3 offset;
+
 	// Update is called once per frame
 	void FixedUpdate () {
 		if(Application.loadedLevelName == "Menu") {
@@ -17,9 +20,19 @@ public class MouseFollow : MonoBehaviour {
 
 			mousePosition = Input.mousePosition;
 			mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
-			mousePosition += new Vector3(.5f,-.5f,0);
-			//transform.RotateAround(mousePosition,Vector3.forward,5 * 10*Time.deltaTime);
-			transform.position = Vector2.Lerp(transform.position,mousePosition,moveSpeed);
+			//mousePosition += new Vector3(.5f,-.5f,0);
+			if(gameObject == leader){
+				transform.position = Vector2.Lerp(transform.position,mousePosition,moveSpeed);
+			}else{
+				offset = leader.transform.position - gameObject.transform.position;
+
+				transform.position = Vector2.Lerp(transform.position,mousePosition-offset,moveSpeed);
+			}
 		}
 	}
+
+	void addOffset(){
+		offset = new Vector3(offset.x + Random.Range(-15, 15),offset.y + Random.Range(-15, 15),offset.z);
+	}
+
 }

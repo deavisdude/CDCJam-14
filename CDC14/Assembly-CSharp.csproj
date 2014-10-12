@@ -62,6 +62,7 @@
      <Compile Include="Assets\Scripts\HIVPilot.cs" />
      <Compile Include="Assets\Scripts\Infected.cs" />
      <Compile Include="Assets\Scripts\InfoPop.cs" />
+     <Compile Include="Assets\Scripts\IngameMouse.cs" />
      <Compile Include="Assets\Scripts\Killer.cs" />
      <Compile Include="Assets\Scripts\LivesManager.cs" />
      <Compile Include="Assets\Scripts\MouseFollow.cs" />
@@ -69,6 +70,8 @@
      <Compile Include="Assets\Scripts\NotEnough.cs" />
      <Compile Include="Assets\Scripts\OffScreenBlock.cs" />
      <Compile Include="Assets\Scripts\OffScreenDelete.cs" />
+     <Compile Include="Assets\Scripts\PauseDescription.cs" />
+     <Compile Include="Assets\Scripts\Paused.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\PurchaseHolder.cs" />
      <Compile Include="Assets\Scripts\ScrollScript.cs" />

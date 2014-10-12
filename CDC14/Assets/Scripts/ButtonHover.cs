@@ -65,6 +65,7 @@ public class ButtonHover : MonoBehaviour {
 				Destroy(GameObject.Find("Return"));
 				Time.timeScale = 1.0f;
 			}
+
 		}
 	}
 }

@@ -8,8 +8,9 @@ public class Gun : MonoBehaviour {
 	public float shootSpeed = 0.1f;
 
 	void Update () {
+
 		if (Application.loadedLevelName != "Menu") {
-			if (Input.GetButton ("Fire1") && elapsedT >= shootSpeed) {
+			if (Input.GetButton ("Fire1") && elapsedT >= shootSpeed && Player.gamepause == false) {//!pause.activeSelf
 				GameObject go = (GameObject)Instantiate (projectile, new Vector3 (transform.position.x, transform.position.y, transform.position.z + 1), transform.rotation);
 				go.rigidbody2D.AddForce (new Vector2 (1000f, 0f));
 				GameObject.Find ("AudioManager").GetComponent<AudioManager> ().PlayPewPew ();

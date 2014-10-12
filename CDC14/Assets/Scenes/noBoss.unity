@@ -939,6 +939,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   smokePrefab: {fileID: 100000, guid: 6103a588117e79d46a1de9a09145e00b, type: 2}
+  PausePrefab: {fileID: 100000, guid: 8c011b7685fa7fb4c9a1e2e4ea660f8d, type: 2}
   bcell: {fileID: 100000, guid: 64ed0c811bcba0d47816cf1533e66d7a, type: 2}
   pews:
   - {fileID: 100000, guid: 86d7567b721e88649907660baf384ed7, type: 2}
@@ -1279,6 +1280,26 @@ Prefab:
       propertyPath: bcell
       value: 
       objectReference: {fileID: 100000, guid: 64ed0c811bcba0d47816cf1533e66d7a, type: 2}
+    - target: {fileID: 11400002, guid: 8cae9c30851b0af4abe47e54573a7a89, type: 2}
+      propertyPath: pause
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 8cae9c30851b0af4abe47e54573a7a89, type: 2}
+      propertyPath: PausePrefab
+      value: 
+      objectReference: {fileID: 100000, guid: 8c011b7685fa7fb4c9a1e2e4ea660f8d, type: 2}
+    - target: {fileID: 11400000, guid: 8cae9c30851b0af4abe47e54573a7a89, type: 2}
+      propertyPath: ContinuePrefab
+      value: 
+      objectReference: {fileID: 100000, guid: 6401884abdd77124aac67820b2d4811f, type: 2}
+    - target: {fileID: 11400000, guid: 8cae9c30851b0af4abe47e54573a7a89, type: 2}
+      propertyPath: QuitPrefab
+      value: 
+      objectReference: {fileID: 100000, guid: 6132c36c45ea7fd429b37619832fd65f, type: 2}
+    - target: {fileID: 11400000, guid: 8cae9c30851b0af4abe47e54573a7a89, type: 2}
+      propertyPath: MainMenuPrefab
+      value: 
+      objectReference: {fileID: 100000, guid: ab01d9e732ccae54db3d3a6f4872136d, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8cae9c30851b0af4abe47e54573a7a89, type: 2}
   m_RootGameObject: {fileID: 906956478}
