@@ -71,6 +71,7 @@ public class ButtonHover : MonoBehaviour {
 				Time.timeScale = 1.0f;
 				GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayGameStart();
 			}
+
 		}
 	}
 }

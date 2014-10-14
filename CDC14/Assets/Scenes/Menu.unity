@@ -309,6 +309,7 @@ Prefab:
     - {fileID: 11400004, guid: c50148482280bda479364216bf423fe8, type: 2}
     - {fileID: 11400000, guid: c50148482280bda479364216bf423fe8, type: 2}
     - {fileID: 5000000, guid: c50148482280bda479364216bf423fe8, type: 2}
+    - {fileID: 5800000, guid: c50148482280bda479364216bf423fe8, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: c50148482280bda479364216bf423fe8, type: 2}
   m_RootGameObject: {fileID: 1869389576}
   m_IsPrefabParent: 0
@@ -598,10 +599,16 @@ Prefab:
       propertyPath: m_Radius
       value: .25999999
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c50148482280bda479364216bf423fe8, type: 2}
+      propertyPath: m_TagString
+      value: Leader
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11400002, guid: c50148482280bda479364216bf423fe8, type: 2}
     - {fileID: 11400004, guid: c50148482280bda479364216bf423fe8, type: 2}
     - {fileID: 11400000, guid: c50148482280bda479364216bf423fe8, type: 2}
+    - {fileID: 5000000, guid: c50148482280bda479364216bf423fe8, type: 2}
+    - {fileID: 5800000, guid: c50148482280bda479364216bf423fe8, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: c50148482280bda479364216bf423fe8, type: 2}
   m_RootGameObject: {fileID: 1897697489}
   m_IsPrefabParent: 0
@@ -759,6 +766,7 @@ Prefab:
     - {fileID: 11400004, guid: c50148482280bda479364216bf423fe8, type: 2}
     - {fileID: 11400000, guid: c50148482280bda479364216bf423fe8, type: 2}
     - {fileID: 5000000, guid: c50148482280bda479364216bf423fe8, type: 2}
+    - {fileID: 5800000, guid: c50148482280bda479364216bf423fe8, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: c50148482280bda479364216bf423fe8, type: 2}
   m_RootGameObject: {fileID: 1113768300}
   m_IsPrefabParent: 0
@@ -1055,6 +1063,7 @@ Prefab:
     - {fileID: 11400004, guid: c50148482280bda479364216bf423fe8, type: 2}
     - {fileID: 11400000, guid: c50148482280bda479364216bf423fe8, type: 2}
     - {fileID: 5000000, guid: c50148482280bda479364216bf423fe8, type: 2}
+    - {fileID: 5800000, guid: c50148482280bda479364216bf423fe8, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: c50148482280bda479364216bf423fe8, type: 2}
   m_RootGameObject: {fileID: 1358336973}
   m_IsPrefabParent: 0
@@ -1274,9 +1283,9 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1113768305}
-  - 58: {fileID: 1113768303}
   - 212: {fileID: 1113768302}
   - 114: {fileID: 1113768301}
+  - 114: {fileID: 1113768303}
   m_Layer: 0
   m_Name: HIV
   m_TagString: HIV
@@ -1318,18 +1327,19 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300006, guid: 1c09b2bc3d64e964b9d4df031b529ea1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!58 &1113768303
-CircleCollider2D:
+--- !u!114 &1113768303
+MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 5800000, guid: c50148482280bda479364216bf423fe8,
-    type: 2}
-  m_PrefabInternal: {fileID: 673666097}
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1113768300}
-  m_Enabled: 0
-  m_Material: {fileID: 6200000, guid: dd58f85cab153e147a6a323003cabbe2, type: 2}
-  m_IsTrigger: 0
-  m_Radius: .25999999
-  m_Center: {x: 0, y: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84eee3da243007e42a5eb18091ad9f1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: .00999999978
+  leader: {fileID: 1897697489}
 --- !u!4 &1113768305
 Transform:
   m_ObjectHideFlags: 0
@@ -1612,9 +1622,9 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1358336978}
-  - 58: {fileID: 1358336976}
   - 212: {fileID: 1358336975}
   - 114: {fileID: 1358336974}
+  - 114: {fileID: 1358336976}
   m_Layer: 0
   m_Name: HIV
   m_TagString: HIV
@@ -1656,18 +1666,19 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300006, guid: 1c09b2bc3d64e964b9d4df031b529ea1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!58 &1358336976
-CircleCollider2D:
+--- !u!114 &1358336976
+MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 5800000, guid: c50148482280bda479364216bf423fe8,
-    type: 2}
-  m_PrefabInternal: {fileID: 911259320}
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1358336973}
-  m_Enabled: 0
-  m_Material: {fileID: 6200000, guid: dd58f85cab153e147a6a323003cabbe2, type: 2}
-  m_IsTrigger: 0
-  m_Radius: .25999999
-  m_Center: {x: 0, y: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84eee3da243007e42a5eb18091ad9f1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: .00999999978
+  leader: {fileID: 1897697489}
 --- !u!4 &1358336978
 Transform:
   m_ObjectHideFlags: 0
@@ -1868,9 +1879,9 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1869389581}
-  - 58: {fileID: 1869389579}
   - 212: {fileID: 1869389578}
   - 114: {fileID: 1869389577}
+  - 114: {fileID: 1869389579}
   m_Layer: 0
   m_Name: HIV
   m_TagString: HIV
@@ -1912,18 +1923,19 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300006, guid: 1c09b2bc3d64e964b9d4df031b529ea1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!58 &1869389579
-CircleCollider2D:
+--- !u!114 &1869389579
+MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 5800000, guid: c50148482280bda479364216bf423fe8,
-    type: 2}
-  m_PrefabInternal: {fileID: 149207289}
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1869389576}
-  m_Enabled: 0
-  m_Material: {fileID: 6200000, guid: dd58f85cab153e147a6a323003cabbe2, type: 2}
-  m_IsTrigger: 0
-  m_Radius: .25999999
-  m_Center: {x: 0, y: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84eee3da243007e42a5eb18091ad9f1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: .00999999978
+  leader: {fileID: 1897697489}
 --- !u!4 &1869389581
 Transform:
   m_ObjectHideFlags: 0
@@ -1944,13 +1956,11 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1897697494}
-  - 50: {fileID: 1897697493}
-  - 58: {fileID: 1897697492}
   - 212: {fileID: 1897697491}
   - 114: {fileID: 1897697490}
   m_Layer: 0
   m_Name: HIV
-  m_TagString: HIV
+  m_TagString: Leader
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1966,7 +1976,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84eee3da243007e42a5eb18091ad9f1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: .100000001
+  moveSpeed: .00999999978
+  leader: {fileID: 1897697489}
 --- !u!212 &1897697491
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1990,34 +2001,6 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300006, guid: 1c09b2bc3d64e964b9d4df031b529ea1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!58 &1897697492
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 5800000, guid: c50148482280bda479364216bf423fe8,
-    type: 2}
-  m_PrefabInternal: {fileID: 584797919}
-  m_GameObject: {fileID: 1897697489}
-  m_Enabled: 1
-  m_Material: {fileID: 6200000, guid: dd58f85cab153e147a6a323003cabbe2, type: 2}
-  m_IsTrigger: 0
-  m_Radius: .25999999
-  m_Center: {x: 0, y: 0}
---- !u!50 &1897697493
-Rigidbody2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 5000000, guid: c50148482280bda479364216bf423fe8,
-    type: 2}
-  m_PrefabInternal: {fileID: 584797919}
-  m_GameObject: {fileID: 1897697489}
-  m_Mass: 1
-  m_LinearDrag: 3.71000004
-  m_AngularDrag: .5
-  m_GravityScale: 0
-  m_FixedAngle: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
 --- !u!4 &1897697494
 Transform:
   m_ObjectHideFlags: 0
