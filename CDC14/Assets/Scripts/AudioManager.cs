@@ -115,22 +115,6 @@ public class AudioManager : MonoBehaviour {
 		return current;
 	}
 
-
-	public bool paused = false;
-
-	public void Pause(){
-		if(!paused){
-			Time.timeScale = 0.0f;
-
-		}
-	}
-
-	void Update(){
-		if(Input.GetKeyDown(KeyCode.Escape)){
-			Pause();
-		}
-	}
-
 	public void PlayBossLoop(){
 		//HOTween.To(BossLoopSrc, 1,"volume", 1);
 		BossLoopSrc.Play();

@@ -370,7 +370,6 @@ MonoBehaviour:
   MenuLoopSrc: {fileID: 0}
   BossLoop: {fileID: 8300000, guid: 5c1e790bd2266fe4a95837a696198ec8, type: 3}
   BossLoopSrc: {fileID: 0}
-  paused: 0
 --- !u!4 &167804258
 Transform:
   m_ObjectHideFlags: 0
@@ -2220,6 +2219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   smokePrefab: {fileID: 100000, guid: 6103a588117e79d46a1de9a09145e00b, type: 2}
+  PausePrefab: {fileID: 0}
   bcell: {fileID: 100000, guid: 64ed0c811bcba0d47816cf1533e66d7a, type: 2}
   pews:
   - {fileID: 100000, guid: 86d7567b721e88649907660baf384ed7, type: 2}
