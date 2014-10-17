@@ -1,16 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ButtonHover.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Needle.cs">
     <Files>
-      <File FileName="Assets\Scripts\ButtonHover.cs" Line="47" Column="15" />
-      <File FileName="Assets\Scripts\MouseFollow.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Player.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Gun.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\OffScreenDelete.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\OffScreenBlock.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\AudioManager.cs" Line="107" Column="27" />
-      <File FileName="Assets\Scripts\SceneFadeInOut.cs" Line="45" Column="4" />
-      <File FileName="Assets\Scripts\TestScript.cs" Line="14" Column="80" />
+      <File FileName="Assets\Scripts\PurchaseHolder.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ShopMouse.cs" Line="50" Column="5" />
+      <File FileName="Assets\Scripts\LivesManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\NotEnough.cs" Line="24" Column="19" />
+      <File FileName="Assets\Scripts\Player.cs" Line="101" Column="33" />
+      <File FileName="Assets\Scripts\Needle.cs" Line="51" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

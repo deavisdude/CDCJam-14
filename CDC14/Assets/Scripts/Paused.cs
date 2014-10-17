@@ -21,8 +21,6 @@ public class Paused : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		Debug.Log(Player.gamepause);
-
 		if (Player.gamepause == false) {
 			Destroy(gameObject);
 			Time.timeScale = 1.0f;

@@ -98,6 +98,7 @@ public class Player : MonoBehaviour {
 			GameObject smoke = (GameObject)Instantiate(smokePrefab, transform.position, transform.rotation);
 			smoke.transform.parent = transform;
 			GetComponent<SpriteRenderer>().enabled = false;
+			GetComponent<CircleCollider2D>().enabled = false;
 			GameObject.Find("PlayerWeapon").GetComponent<Rigidbody2D>().gravityScale = 1;
 			Invoke("Kill", 2f);
 			GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayPlayerDeath();

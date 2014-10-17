@@ -64,6 +64,10 @@ public class Balance : MonoBehaviour {
 			noteno.SendMessage ("tomuch", SendMessageOptions.DontRequireReceiver);
 		}
 	}
+	void leaving(){
+		if(SpawnManager.prevLevel == "noBoss" && Player.dead != true)Application.LoadLevel("lvl1");
+		else Application.LoadLevel("lvl1");
+	}
 		// Update is called once per frame
 	void Update () {
 		texts.text = total +" P";
@@ -98,8 +102,7 @@ public class Balance : MonoBehaviour {
 		if (controller5.GetComponent<ShopMouse> ().highlighted) {
 			//ExtraLife
 			if (controller5.GetComponent<ShopMouse> ().leave) {	
-				if(SpawnManager.prevLevel == "noBoss" && Player.dead != true)Application.LoadLevel("lvl1");
-				else Application.LoadLevel("lvl1");
+				leaving();
 			}
 		}
 

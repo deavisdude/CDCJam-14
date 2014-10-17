@@ -17,64 +17,39 @@ public class ShopMouse : MonoBehaviour {
 		GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayToggle();
 	}
 	
-	void Update(){
+	void OnMouseDown(){
 		if (name == "Continue") {
-			if (Input.GetMouseButtonDown (0)) {
 				GameObject.Find ("AudioManager").GetComponent<AudioManager> ().PlayToggle ();
 				leave =true;
 				//Debug.Log ("Bug");
 				//if(SpawnManager.prevLevel == "noBoss")Application.LoadLevel("lvl1");
 				//else Application.LoadLevel("lvl1");
+		}
 
-			}else{
-				leave =false;
-			}
-		}
-		if(Input.GetKeyDown(KeyCode.Escape)){
-			if(SpawnManager.prevLevel == "noBoss")Application.LoadLevel("lvl1");
-			else Application.LoadLevel("lvl1");
-		}
 		//button 1
 		if (gameObject.name == "Vitamin") {
-			if (Input.GetMouseButtonDown (0)) {
 				GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayItemPurchase();
 				bought = true;
-			}else{
-				bought = false;
-			}
+			
 		}
 		//button 2
 		if (gameObject.name == "Test") {
-			if (Input.GetMouseButtonDown (0)) {
 				GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayItemPurchase();
 				bought = true;
-			}else{
-				bought = false;
-			}
 		}
 		//button 3
 		if (gameObject.name == "BCell") {
-			if (Input.GetMouseButtonDown (0)) {
 				GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayItemPurchase();
 				bought = true;
 				PurchaseHolder.HasBCell = true;
-			}else{
-				bought = false;
-			}
 		}
 		//button 4
 		if (gameObject.name == "ExtraLife") {
-			if (Input.GetMouseButtonDown (0)) {
 				GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayItemPurchase();
 				bought = true;
 				PurchaseHolder.NewLives++;
 				//Debug.Log(PurchaseHolder.NewLives);
-			}else{
-				bought = false;
-			}
 		}
-
-
 	}
 	
 	
