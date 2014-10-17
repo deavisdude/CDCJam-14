@@ -45,6 +45,8 @@ public class AudioManager : MonoBehaviour {
 
 	public AudioClip BossLoop;
 	public AudioSource BossLoopSrc;
+
+	AudioSource current;
 	
 	void Start () {
 
@@ -59,6 +61,7 @@ public class AudioManager : MonoBehaviour {
 		MainLoopSrc = gameObject.AddComponent<AudioSource>();
 		MainLoopSrc.clip = MainLoop;
 		MainLoopSrc.loop = true;
+		MainLoopSrc.volume = 0f;
 		
 		EnemyHitSrc = gameObject.AddComponent<AudioSource>();
 		EnemyHitSrc.clip = EnemyHit;
@@ -92,6 +95,7 @@ public class AudioManager : MonoBehaviour {
 		MenuLoopSrc = gameObject.AddComponent<AudioSource>();
 		MenuLoopSrc.clip=MenuLoop;
 		MenuLoopSrc.loop = true;
+		MenuLoopSrc.volume = 0f;
 
 		WeaponChangeSrc = gameObject.AddComponent<AudioSource>();
 		WeaponChangeSrc.clip = WeaponChange;
@@ -100,15 +104,21 @@ public class AudioManager : MonoBehaviour {
 		BossLoopSrc = gameObject.AddComponent<AudioSource>();
 		BossLoopSrc.clip=BossLoop;
 		BossLoopSrc.loop = true;
+		BossLoopSrc.volume = 0f;
 
 		//PlayGameStart();
 		PlayMenuLoop();
 		//Application.LoadLevel("lvl1");
 	}
 
+	public AudioSource CurrentSrc(){
+		return current;
+	}
+
 	public void PlayBossLoop(){
 		//HOTween.To(BossLoopSrc, 1,"volume", 1);
 		BossLoopSrc.Play();
+		current = BossLoopSrc;
 	}
 
 	public void StopBossLoop(){
@@ -127,6 +137,7 @@ public class AudioManager : MonoBehaviour {
 	public void PlayMenuLoop(){
 		//HOTween.To(MenuLoopSrc, 1,"volume", 1);
 		MenuLoopSrc.Play();
+		current = MenuLoopSrc;
 	}
 
 	public void PlayBossRumble(){
@@ -156,6 +167,7 @@ public class AudioManager : MonoBehaviour {
 	public void PlayMainLoop(){
 		//HOTween.To(MainLoopSrc, 1,"volume", 1);
 		MainLoopSrc.Play();
+		current = MainLoopSrc;
 	}
 
 	public void StopMainLoop(){

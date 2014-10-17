@@ -72,6 +72,7 @@
      <Compile Include="Assets\Scripts\Paused.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\PurchaseHolder.cs" />
+     <Compile Include="Assets\Scripts\SceneFadeInOut.cs" />
      <Compile Include="Assets\Scripts\ScrollScript.cs" />
      <Compile Include="Assets\Scripts\ShopMouse.cs" />
      <Compile Include="Assets\Scripts\SpawnManager.cs" />
