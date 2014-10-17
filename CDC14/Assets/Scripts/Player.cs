@@ -14,8 +14,8 @@ public class Player : MonoBehaviour {
 	}
 
 	public GameObject smokePrefab;
-	public GameObject PausePrefab;
-	public static bool gamepause = false;
+	public GameObject PauseMenu;
+	public static bool gamepause;
 
 	public static bool dead = false;
 
@@ -41,7 +41,7 @@ public class Player : MonoBehaviour {
 			Instantiate(bcell);
 		}
 		dead = false;
-
+		gamepause = false;
 		acc = new Vector3();
 
 		dist = (transform.position.z - Camera.main.transform.position.z);
@@ -77,11 +77,13 @@ public class Player : MonoBehaviour {
 
 				Vector3 newPos = new Vector3 (transform.position.x + 1.5f, transform.position.y, 0);
 				delayPos.Add (new PosOb (newPos, Time.time));
-				if (Input.GetKeyDown (KeyCode.Escape)) {
-					Instantiate (PausePrefab);
-					//Time.timeScale = 0.0f;
-					//gamepause = true;
-
+				if(Input.GetKeyDown(KeyCode.Escape)){
+					if(!gamepause){
+					Instantiate(PauseMenu);
+						gamepause = true;
+					}else{
+						gamepause = !gamepause;
+					}
 				}
 			}
 		}

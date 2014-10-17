@@ -1,25 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\IngameMouse.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\TestMouse.cs">
     <Files>
-      <File FileName="Assets\Scripts\ShopMouse.cs" Line="24" Column="17" />
-      <File FileName="Assets\Scripts\PauseDescription.cs" Line="18" Column="2" />
-      <File FileName="Assets\Scripts\IngameMouse.cs" Line="22" Column="16" />
-      <File FileName="Assets\Scripts\ButtonHover.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Player.cs" Line="81" Column="32" />
-      <File FileName="Assets\Scripts\Paused.cs" Line="11" Column="1" />
+      <File FileName="Assets\Scripts\TestMouse.cs" Line="41" Column="4" />
+      <File FileName="Assets\Scripts\Paused.cs" Line="15" Column="1" />
+      <File FileName="Assets\Scripts\Player.cs" Line="86" Column="1" />
+      <File FileName="Assets\Scripts\ShopMouse.cs" Line="39" Column="39" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State expanded="True">
-          <Node name="Assembly-CSharp" expanded="True">
-            <Node name="Scripts" expanded="True">
-              <Node name="IngameMouse.cs" selected="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

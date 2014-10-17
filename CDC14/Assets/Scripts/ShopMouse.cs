@@ -14,7 +14,7 @@ public class ShopMouse : MonoBehaviour {
 		//gameObject.GetComponent<GUITexture>().texture = texture;
 		GetComponent<SpriteRenderer>().enabled = true;
 		highlighted = true;
-				GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayToggle();
+		GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayToggle();
 	}
 	
 	void Update(){

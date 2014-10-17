@@ -6,19 +6,27 @@ public class Paused : MonoBehaviour {
 	public GameObject ContinuePrefab;
 	public GameObject MainMenuPrefab;
 	public GameObject QuitPrefab;
+	public Texture texture;
 	void Start () {
-		//GetComponent<GUITexture>().enabled = true;
-		Instantiate (ContinuePrefab);
-		Instantiate (MainMenuPrefab);
-		Instantiate (QuitPrefab);
-		Time.timeScale = 0.0f;
-		Debug.Log ("paused");
+		if (GetComponent<GUITexture> ().texture == null){
+			GetComponent<GUITexture> ().texture = texture;	
+		}
+		GetComponent<GUITexture>().enabled = true;
 
+		ContinuePrefab.SetActive (true);
+		MainMenuPrefab.SetActive (true);
+		QuitPrefab.SetActive (true);
+		Time.timeScale = 0.0f;
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
+		Debug.Log(Player.gamepause);
 
+		if (Player.gamepause == false) {
+			Destroy(gameObject);
+			Time.timeScale = 1.0f;
+		}
 	
 	}
 }
