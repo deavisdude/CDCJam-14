@@ -65,7 +65,6 @@
      <Compile Include="Assets\Scripts\LivesManager.cs" />
      <Compile Include="Assets\Scripts\MouseFollow.cs" />
      <Compile Include="Assets\Scripts\Needle.cs" />
-     <Compile Include="Assets\Scripts\NotEnough.cs" />
      <Compile Include="Assets\Scripts\OffScreenBlock.cs" />
      <Compile Include="Assets\Scripts\OffScreenDelete.cs" />
      <Compile Include="Assets\Scripts\Paused.cs" />

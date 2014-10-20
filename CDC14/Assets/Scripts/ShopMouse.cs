@@ -78,7 +78,5 @@ public class ShopMouse : MonoBehaviour {
 			GameObject.Find ("ExtraLifeDec").GetComponent<GUITexture> ().enabled = false;
 			GameObject.Find ("ExtraLifePre").GetComponent<GUITexture> ().enabled = false;
 		}
-		//gameObject.GetComponentInChildren<GUITexture> ().enabled = false;
-
 	}
 }

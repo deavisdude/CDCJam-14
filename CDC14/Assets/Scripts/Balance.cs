@@ -64,6 +64,7 @@ public class Balance : MonoBehaviour {
 					if (total > price) {
 						total -= price;
 						hasBCell = true;
+						PurchaseHolder.HasBCell = true; 
 					} else {
 						StartCoroutine(FlashWarning());
 						wcount = 0;
