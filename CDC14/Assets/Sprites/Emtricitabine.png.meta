@@ -1,7 +1,8 @@
 fileFormatVersion: 2
 guid: 35993c3218d63454c91d396e410c5eac
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Emtricitabine
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
