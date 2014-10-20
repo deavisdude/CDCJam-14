@@ -15,5 +15,3 @@ EditorBuildSettings:
     path: Assets/Scenes/Shop.unity
   - enabled: 1
     path: Assets/Scenes/noBoss.unity
-  - enabled: 0
-    path: Assets/Scenes/ShoptoRemove.unity

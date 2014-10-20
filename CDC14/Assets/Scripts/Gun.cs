@@ -9,7 +9,7 @@ public class Gun : MonoBehaviour {
 
 	void Update () {
 
-		if (Application.loadedLevelName != "Menu") {
+		if (Application.loadedLevelName != "Menu" && !Player.dead) {
 			if (Input.GetButton ("Fire1") && elapsedT >= shootSpeed) {//!pause.activeSelf
 				GameObject go = (GameObject)Instantiate (projectile, new Vector3 (transform.position.x, transform.position.y, transform.position.z + 1), transform.rotation);
 				go.rigidbody2D.AddForce (new Vector2 (1000f, 0f));
