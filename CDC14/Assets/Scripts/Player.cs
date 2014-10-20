@@ -38,7 +38,7 @@ public class Player : MonoBehaviour {
 
 	void Start(){
 		if(PurchaseHolder.HasBCell){
-			Instantiate(bcell);
+			Instantiate(bcell,new Vector3(-2.048895f, 1.436302f, 0),Quaternion.identity);
 		}
 		dead = false;
 		gamepause = false;
