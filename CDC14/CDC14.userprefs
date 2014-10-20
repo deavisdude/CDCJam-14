@@ -1,14 +1,18 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Needle.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\SpawnManager.cs">
     <Files>
-      <File FileName="Assets\Scripts\PurchaseHolder.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\ShopMouse.cs" Line="50" Column="5" />
-      <File FileName="Assets\Scripts\LivesManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\NotEnough.cs" Line="24" Column="19" />
-      <File FileName="Assets\Scripts\Player.cs" Line="101" Column="33" />
-      <File FileName="Assets\Scripts\Needle.cs" Line="51" Column="2" />
+      <File FileName="Assets\Scripts\Balance.cs" Line="65" Column="18" />
+      <File FileName="Assets\Scripts\ShopMouse.cs" Line="83" Column="3" />
+      <File FileName="Assets\Scripts\SpawnManager.cs" Line="80" Column="4" />
     </Files>
+    <Pads>
+      <Pad Id="ClassPad">
+        <State expanded="True">
+          <Node name="Assembly-CSharp" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

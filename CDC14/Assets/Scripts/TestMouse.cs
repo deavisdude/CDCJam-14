@@ -18,8 +18,6 @@ public class TestMouse : MonoBehaviour {
 			GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayToggle();
 			Time.timeScale = 1.0f;
 			Destroy(Menu);
-
-
 		}
 		if (gameObject.name == "MainMenu") {
 			GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayToggle();

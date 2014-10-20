@@ -2,110 +2,115 @@
 using System.Collections;
 
 public class Balance : MonoBehaviour {
-	TextMesh texts;
+	GUIText texts;
 	private int total;
-	public GameObject noteno;
-	public GameObject controller1;
-	public GameObject controller2;
-	public GameObject controller3;
-	public GameObject controller4;
-	public GameObject controller5;
-	public GameObject Holder;
+	private int wcount = 0;
+	private int hcount = 0;
+	private int price;
 	public static bool hasVitamin = false;
 	public static bool hasTest = false;
 	public static bool hasBCell = false;
 	public static int hasExtraLife = 0;
-
 	// Use this for initialization
 	void Start () {
 		total = 500;
-		texts = gameObject.GetComponent<TextMesh>();
-		Font Arial = (Font)Resources.GetBuiltinResource (typeof(Font), "Arial.ttf");
+		texts = gameObject.GetComponent<GUIText>();
+		texts.color = Color.white;
+		//Font Agency = (Font)Resources.Load("Assets/Sprites/Font/4822485673.ttf");
 		float pixelRatio = (Camera.main.orthographicSize * 2.0f) / Camera.main.pixelHeight;
 		texts.transform.localScale = new Vector3(pixelRatio * 10.0f, pixelRatio * 10.0f, pixelRatio * 0.1f);
 		texts.text = total + " P";
-		texts.font = Arial;
+		//texts.font = Agency;
 		texts.fontStyle = FontStyle.Normal;
-		texts.fontSize = 35;
+		texts.fontSize = 29;
 	
 	}
 
-
-	void BuyVitamin(int cost){
-		if (total > cost && !hasVitamin == true) {
-			total -= cost;
-			hasVitamin = true;
-		}else{
-			noteno.SendMessage ("tomuch", SendMessageOptions.DontRequireReceiver);
+	void Buy(string item){
+		switch(item){
+			case "Vitamin":
+				price = 200;
+				if(!hasVitamin){
+					if (total > price) {
+						total -= price;
+						hasVitamin = true;
+					} else {
+						StartCoroutine(FlashWarning());
+						wcount = 0;
+					}
+				}else{
+					StartCoroutine(FlashHave());
+					hcount = 0;
+				}
+			break;
+			case "Test":
+				price = 200;
+				if(!hasTest){
+					if (total > price) {
+						total -= price;
+						hasTest = true;
+					} else {
+						StartCoroutine(FlashWarning());
+						wcount = 0;
+					}
+				}else{
+					StartCoroutine(FlashHave());
+					hcount = 0;
+				}
+			break;
+			case "BCell":
+				price = 350;
+				if(!hasBCell){
+					if (total > price) {
+						total -= price;
+						hasBCell = true;
+					} else {
+						StartCoroutine(FlashWarning());
+						wcount = 0;
+					}
+				}else{
+					StartCoroutine(FlashHave());
+					hcount = 0;
+				}
+				break;
+			case "ExtraLife":
+				price = 150;
+					if (total > price) {
+						total -= price;
+						PurchaseHolder.NewLives++;
+						//hasExtraLife++;
+					} else {
+						StartCoroutine(FlashWarning());
+						wcount = 0;
+					}
+			break;
 		}
+	}
+	IEnumerator FlashWarning(){
+		while (wcount < 2){
+			GameObject.Find ("Warning").GetComponent<GUIText> ().enabled = true;
+			GameObject.Find ("Warning").GetComponent<GUIText> ().color = Color.red;
+			yield return new WaitForSeconds (.5f);
+			GameObject.Find ("Warning").GetComponent<GUIText> ().color = Color.white;
+			yield return new WaitForSeconds (.5f);
+			wcount++;
+		}
+		GameObject.Find ("Warning").GetComponent<GUIText> ().enabled = false;
 	}	
-	void BuyTest(int cost){
-		if (total > cost && !hasTest == true) {
-			total -= cost;
-			hasTest = true;
-		}else {
-			noteno.SendMessage ("tomuch", SendMessageOptions.DontRequireReceiver);
+	IEnumerator FlashHave(){
+		while (hcount < 2){
+			GameObject.Find ("Have").GetComponent<GUIText> ().enabled = true;
+			GameObject.Find ("Have").GetComponent<GUIText> ().color = Color.red;
+			yield return new WaitForSeconds (1);
+			GameObject.Find ("Have").GetComponent<GUIText> ().color = Color.white;
+			yield return new WaitForSeconds (1);
+			hcount++;
 		}
-	}
-	void BuyBCell(int cost){
-		if (total > cost && !hasBCell == true) {
-			total -= cost;
-			hasBCell = true;
-		} else {
-			noteno.SendMessage ("tomuch", SendMessageOptions.DontRequireReceiver);
-		}
-	}
+		GameObject.Find ("Have").GetComponent<GUIText> ().enabled = false;
+	}	
 
-	void BuyExtraLife(int cost){
-		if (total > cost){
-			total -= cost;
-			//PurchaseHolder.NewLives++;
-		}else{
-			noteno.SendMessage ("tomuch", SendMessageOptions.DontRequireReceiver);
-		}
-	}
-	void leaving(){
-		if(SpawnManager.prevLevel == "noBoss" && Player.dead != true)Application.LoadLevel("lvl1");
-		else Application.LoadLevel("lvl1");
-	}
-		// Update is called once per frame
-	void Update () {
-		texts.text = total +" P";
-
-		if (controller1.GetComponent<ShopMouse> ().highlighted) {
-			//Vitamin
-			if (controller1.GetComponent<ShopMouse> ().bought) {	
-				BuyVitamin (200);
-			}
-		}
-		//button2
-		if (controller2.GetComponent<ShopMouse> ().highlighted) {
-			//Test
-			if (controller2.GetComponent<ShopMouse> ().bought) {	
-				BuyTest(200);
-			}
-		} 
-		//button2
-		if (controller3.GetComponent<ShopMouse> ().highlighted) {
-			//BCell
-			if (controller3.GetComponent<ShopMouse> ().bought) {	
-				BuyBCell(350);
-			}
-		}
-		//button2
-		if (controller4.GetComponent<ShopMouse> ().highlighted) {
-			//ExtraLife
-			if (controller4.GetComponent<ShopMouse> ().bought) {	
-				BuyExtraLife(150);
-			}
-		}
-		if (controller5.GetComponent<ShopMouse> ().highlighted) {
-			//ExtraLife
-			if (controller5.GetComponent<ShopMouse> ().leave) {	
-				leaving();
-			}
-		}
-
+	void Update(){
+		texts.text = total+" P";
 	}
 }
 
