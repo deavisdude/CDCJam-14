@@ -88,7 +88,8 @@ public class Player : MonoBehaviour {
 			}
 		}
 		if(Input.GetMouseButtonDown(1)){
-			CycleWeapon();
+			if(!dead)
+				CycleWeapon();
 		}
 	}
 
