@@ -737,7 +737,7 @@ GUIText:
   m_PixelOffset: {x: -7.88999987, y: 16.1000004}
   m_LineSpacing: 1
   m_TabSize: 4
-  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Font: {fileID: 12800000, guid: 5f9cad1b05ed3da48b86f7772487234f, type: 3}
   m_Material: {fileID: 0}
   m_FontSize: 30
   m_FontStyle: 0
@@ -753,7 +753,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 791275338}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .115078211, y: .914531827, z: .579999983}
+  m_LocalPosition: {x: .115078211, y: .920000017, z: .579999983}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
