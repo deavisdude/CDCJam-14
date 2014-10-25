@@ -1,9 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\TestMouse.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Player.cs">
     <Files>
-      <File FileName="Assets\Scripts\TestMouse.cs" Line="4" Column="20" />
-      <File FileName="Assets\Scripts\Player.cs" Line="114" Column="9" />
+      <File FileName="Assets\Scripts\Needle.cs" Line="15" Column="17" />
+      <File FileName="Assets\Scripts\Player.cs" Line="17" Column="30" />
     </Files>
     <Pads>
       <Pad Id="ClassPad">

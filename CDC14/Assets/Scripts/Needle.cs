@@ -54,6 +54,9 @@ public class Needle : MonoBehaviour {
 		am.PlayBossRumble();
 		am.StopMainLoop();
 		am.PlayBossLoop();
+		GameObject lb = GameObject.Find("LifeBar");
+		lb.GetComponent<GUITexture>().enabled = true;
+
 	}
 
 	void OnTriggerEnter2D(Collider2D col){
