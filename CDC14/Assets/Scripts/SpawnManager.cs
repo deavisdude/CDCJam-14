@@ -7,7 +7,7 @@ public class SpawnManager : MonoBehaviour {
 	public class Enemy {
 		public string Type;
 		public GameObject GOB;
-		public enum types  {HIV, EarlyInfected, LateInfected, ForeignParticle, oneUp};
+		public enum types  {HIV, EarlyInfected, LateInfected, ForeignParticle, oneUp, atripla};
 
 		public Enemy(types type, GameObject gameOB){
 			Type = type.ToString();
@@ -20,6 +20,7 @@ public class SpawnManager : MonoBehaviour {
 	}
 
 	public GameObject oneUp;
+	public GameObject atripla;
 
 	public static string prevLevel;
 	public static List<Enemy> spawnQueue = new List<Enemy>();

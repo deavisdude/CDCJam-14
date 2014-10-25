@@ -148,6 +148,7 @@ Prefab:
     m_RemovedComponents:
     - {fileID: 11400002, guid: 8cae9c30851b0af4abe47e54573a7a89, type: 2}
     - {fileID: 5800000, guid: 8cae9c30851b0af4abe47e54573a7a89, type: 2}
+    - {fileID: 11400000, guid: 8cae9c30851b0af4abe47e54573a7a89, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 8cae9c30851b0af4abe47e54573a7a89, type: 2}
   m_RootGameObject: {fileID: 2021509989}
   m_IsPrefabParent: 0
@@ -2196,7 +2197,6 @@ GameObject:
   - 4: {fileID: 2021509990}
   - 50: {fileID: 2021509994}
   - 212: {fileID: 2021509993}
-  - 114: {fileID: 2021509992}
   - 95: {fileID: 2021509991}
   - 114: {fileID: 2021509995}
   m_Layer: 0
@@ -2236,31 +2236,6 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &2021509992
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 8cae9c30851b0af4abe47e54573a7a89,
-    type: 2}
-  m_PrefabInternal: {fileID: 33442770}
-  m_GameObject: {fileID: 2021509989}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57c931a04c367804492fa0eb5d650157, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  smokePrefab: {fileID: 100000, guid: 6103a588117e79d46a1de9a09145e00b, type: 2}
-  PauseMenu: {fileID: 100006, guid: 9ca6d4a0b2311e3448cee2d29f4f1d98, type: 2}
-  bcell: {fileID: 100000, guid: 64ed0c811bcba0d47816cf1533e66d7a, type: 2}
-  pews:
-  - {fileID: 100000, guid: 86d7567b721e88649907660baf384ed7, type: 2}
-  - {fileID: 100000, guid: 4821ac65ae44c4e43b7a69d9b9098084, type: 2}
-  - {fileID: 100000, guid: c1ac578edc9204e4fbafeed4fbf8fcc8, type: 2}
-  currIndex: 0
-  weapons:
-  - {fileID: 21300000, guid: 18013ef9056d28b4ab72cf6b4c5fdbf0, type: 3}
-  - {fileID: 21300000, guid: 066188176a92f344e84f7429e4d9c4b4, type: 3}
-  - {fileID: 21300000, guid: 682078626e3967b46b0b86056534ef1e, type: 3}
-  speed: 5
 --- !u!212 &2021509993
 SpriteRenderer:
   m_ObjectHideFlags: 0
