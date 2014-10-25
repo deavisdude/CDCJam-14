@@ -520,6 +520,7 @@ GameObject:
   - 4: {fileID: 511575885}
   - 212: {fileID: 511575884}
   - 50: {fileID: 511575887}
+  - 50: {fileID: 511575888}
   - 50: {fileID: 511575886}
   m_Layer: 0
   m_Name: PlayerWeapon
@@ -582,6 +583,22 @@ Rigidbody2D:
 Rigidbody2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 5000002, guid: 8cae9c30851b0af4abe47e54573a7a89,
+    type: 2}
+  m_PrefabInternal: {fileID: 1716628456}
+  m_GameObject: {fileID: 511575883}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 0
+  m_FixedAngle: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+--- !u!50 &511575888
+Rigidbody2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5000004, guid: 8cae9c30851b0af4abe47e54573a7a89,
     type: 2}
   m_PrefabInternal: {fileID: 1716628456}
   m_GameObject: {fileID: 511575883}
@@ -919,7 +936,7 @@ Transform:
   m_PrefabInternal: {fileID: 1716628456}
   m_GameObject: {fileID: 906956478}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.54889464, y: 1.43630219, z: 0}
+  m_LocalPosition: {x: -7.45564365, y: -.597789764, z: 0}
   m_LocalScale: {x: .5, y: .5, z: 1}
   m_Children:
   - {fileID: 1723057748}
@@ -939,7 +956,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   smokePrefab: {fileID: 100000, guid: 6103a588117e79d46a1de9a09145e00b, type: 2}
-  PausePrefab: {fileID: 100000, guid: 8c011b7685fa7fb4c9a1e2e4ea660f8d, type: 2}
+  PauseMenu: {fileID: 100006, guid: 9ca6d4a0b2311e3448cee2d29f4f1d98, type: 2}
   bcell: {fileID: 100000, guid: 64ed0c811bcba0d47816cf1533e66d7a, type: 2}
   pews:
   - {fileID: 100000, guid: 86d7567b721e88649907660baf384ed7, type: 2}
@@ -1227,7 +1244,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5790675fbc7f65644a52aca5e53893df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeSpeed: 1
+  fadeSpeed: .0250000004
+  end: 0
+  scene: 
 --- !u!131 &1398464425
 GUITexture:
   m_ObjectHideFlags: 0
@@ -1296,11 +1315,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 8cae9c30851b0af4abe47e54573a7a89, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -3.54889464
+      value: -7.45564365
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8cae9c30851b0af4abe47e54573a7a89, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.43630219
+      value: -.597789764
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8cae9c30851b0af4abe47e54573a7a89, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1324,7 +1343,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8cae9c30851b0af4abe47e54573a7a89, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 8cae9c30851b0af4abe47e54573a7a89, type: 2}
       propertyPath: m_Name
@@ -1378,6 +1397,7 @@ GameObject:
   - 212: {fileID: 1723057749}
   - 95: {fileID: 1723057750}
   - 114: {fileID: 1723057752}
+  - 114: {fileID: 1723057753}
   - 114: {fileID: 1723057751}
   m_Layer: 0
   m_Name: Killer_0
@@ -1452,6 +1472,18 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400004, guid: 8cae9c30851b0af4abe47e54573a7a89,
+    type: 2}
+  m_PrefabInternal: {fileID: 1716628456}
+  m_GameObject: {fileID: 1723057747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6709038a10382b34e9df0df5462494cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1723057753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400006, guid: 8cae9c30851b0af4abe47e54573a7a89,
     type: 2}
   m_PrefabInternal: {fileID: 1716628456}
   m_GameObject: {fileID: 1723057747}
@@ -1835,6 +1867,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   oneUp: {fileID: 100000, guid: 2199d0ac5a3f12c4eb0223845547b467, type: 2}
+  atripla: {fileID: 0}
   enemies: 0
   prefabs:
   - {fileID: 100000, guid: c50148482280bda479364216bf423fe8, type: 2}
