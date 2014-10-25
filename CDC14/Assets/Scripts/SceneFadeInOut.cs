@@ -55,7 +55,7 @@ public class SceneFadeInOut : MonoBehaviour
 		FadeToClear();
 		
 		// If the texture is almost clear...
-		if(guiTexture.color.a <= 0.05f)
+		if(guiTexture.color.a <= 0.05f || end == true)
 		{
 			// ... set the colour to clear and disable the GUITexture.
 			guiTexture.color = Color.clear;
