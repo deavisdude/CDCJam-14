@@ -48,27 +48,33 @@ public class DamageControl : MonoBehaviour {
 			dmgFor = 1;
 			break;
 		}
-		if(atripla){
+		}
+
+	void Update(){
+		if(PurchaseHolder.AtriplaTime >0f){
 			switch(ARType){
-			case 1:
-				dmgHIV = 1;
-				dmgEarly = 1.5f;
-				dmgLate = 1.5f;
-				dmgFor = 2.5f;
-				break;
-			case 2:
-				dmgHIV = 1;
-				dmgEarly = 1.5f;
-				dmgLate = 2.5f;
-				dmgFor = 1.5f;
-				break;
-			case 3:
-				dmgHIV = 1;
-				dmgEarly = 2.5f;
-				dmgLate = 1;
-				dmgFor = 1.5f;
-				break;
+				case 1:
+					dmgHIV = 1;
+					dmgEarly = 1.5f;
+					dmgLate = 1.5f;
+					dmgFor = 2.5f;
+					break;
+				case 2:
+					dmgHIV = 1;
+					dmgEarly = 1.5f;
+					dmgLate = 2.5f;
+					dmgFor = 1.5f;
+					break;
+				case 3:
+					dmgHIV = 1;
+					dmgEarly = 2.5f;
+					dmgLate = 1;
+					dmgFor = 1.5f;
+					break;
 			}
+			PurchaseHolder.AtriplaTime-=Time.deltaTime;
 		}
 	}
+
 }
+

@@ -1428,6 +1428,14 @@ Prefab:
       propertyPath: MainMenuPrefab
       value: 
       objectReference: {fileID: 100000, guid: ab01d9e732ccae54db3d3a6f4872136d, type: 2}
+    - target: {fileID: 21200000, guid: 8cae9c30851b0af4abe47e54573a7a89, type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 21200000, guid: 8cae9c30851b0af4abe47e54573a7a89, type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8cae9c30851b0af4abe47e54573a7a89, type: 2}
   m_RootGameObject: {fileID: 906956478}
@@ -1914,7 +1922,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   oneUp: {fileID: 100000, guid: 2199d0ac5a3f12c4eb0223845547b467, type: 2}
-  atripla: {fileID: 0}
+  atripla: {fileID: 100000, guid: f8a66a7475d647e46bd22a3d96c1f1ba, type: 2}
   enemies: 0
   prefabs:
   - {fileID: 100000, guid: c50148482280bda479364216bf423fe8, type: 2}

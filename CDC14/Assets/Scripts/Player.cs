@@ -69,6 +69,13 @@ public class Player : MonoBehaviour {
 	}
 
 	void Update () {
+		if(PurchaseHolder.AtriplaTime > 0){
+			GetComponent<SpriteRenderer>().color = Color.yellow;
+		}else{
+			GetComponent<SpriteRenderer>().color = Color.white;
+		}
+
+
 		if (Application.loadedLevelName != "Menu") {
 			if (!dead) {
 				acc = new Vector3 (Input.GetAxis ("Horizontal") * speed * Time.deltaTime, Input.GetAxis ("Vertical") * speed * Time.deltaTime, 0);
