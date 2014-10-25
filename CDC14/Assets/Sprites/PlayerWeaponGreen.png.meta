@@ -1,7 +1,8 @@
 fileFormatVersion: 2
 guid: 18013ef9056d28b4ab72cf6b4c5fdbf0
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: PlayerWeaponGreen
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0

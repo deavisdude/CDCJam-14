@@ -2,92 +2,81 @@
 using System.Collections;
 
 public class ShopMouse : MonoBehaviour {
-	
+
+	public Texture texture;
+	public GameObject balance;
 	public bool highlighted = false;
 	public bool bought = false;
-	private int num;
+	private GUITexture appear;
 	public bool leave = false;
 
-	//public GameObject item;
-	//public Texture texture;
 	void OnMouseEnter(){
-		//gameObject.GetComponent<GUITexture>().texture = texture;
-		GetComponent<SpriteRenderer>().enabled = true;
-		highlighted = true;
-				GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayToggle();
-	}
-	
-	void Update(){
-		if (name == "Continue") {
-			if (Input.GetMouseButtonDown (0)) {
-				GameObject.Find ("AudioManager").GetComponent<AudioManager> ().PlayToggle ();
-				leave =true;
-				//Debug.Log ("Bug");
-				//if(SpawnManager.prevLevel == "noBoss")Application.LoadLevel("lvl1");
-				//else Application.LoadLevel("lvl1");
-
-			}else{
-				leave =false;
-			}
+		if (GetComponent<GUITexture> ().texture == null) {
+			GetComponent<GUITexture> ().texture = texture;	
 		}
-		if(Input.GetKeyDown(KeyCode.Escape)){
+		//GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayToggle();
+		if (gameObject.name == "Vitamin") {
+			GameObject.Find ("VitaminDec").GetComponent<GUITexture> ().enabled = true;
+			GameObject.Find ("VitaminPre").GetComponent<GUITexture> ().enabled = true;
+		}
+		if (gameObject.name == "Test") {
+			GameObject.Find ("TestDec").GetComponent<GUITexture> ().enabled = true;
+			GameObject.Find ("TestPre").GetComponent<GUITexture> ().enabled = true;
+		}
+		if (gameObject.name == "BCell") {
+			GameObject.Find ("BCellDec").GetComponent<GUITexture> ().enabled = true;
+			GameObject.Find ("BCellPre").GetComponent<GUITexture> ().enabled = true;
+		}
+		if (gameObject.name == "ExtraLife") {
+			GameObject.Find ("ExtraLifeDec").GetComponent<GUITexture> ().enabled = true;
+			GameObject.Find ("ExtraLifePre").GetComponent<GUITexture> ().enabled = true;
+		}
+		GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayToggle();
+	}
+
+	void OnMouseDown(){
+		if (gameObject.name == "Continue") {
+			GameObject.Find ("AudioManager").GetComponent<AudioManager> ().PlayToggle ();
 			if(SpawnManager.prevLevel == "noBoss")Application.LoadLevel("lvl1");
 			else Application.LoadLevel("lvl1");
 		}
-		//button 1
+
 		if (gameObject.name == "Vitamin") {
-			if (Input.GetMouseButtonDown (0)) {
-				GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayItemPurchase();
-				bought = true;
-			}else{
-				bought = false;
-			}
+			GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayItemPurchase();
+			balance.SendMessage("Buy","Vitamin",SendMessageOptions.DontRequireReceiver);
 		}
-		//button 2
 		if (gameObject.name == "Test") {
-			if (Input.GetMouseButtonDown (0)) {
-				GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayItemPurchase();
-				bought = true;
-			}else{
-				bought = false;
-			}
+			GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayItemPurchase();
+			balance.SendMessage("Buy","Test",SendMessageOptions.DontRequireReceiver);
 		}
-		//button 3
 		if (gameObject.name == "BCell") {
-			if (Input.GetMouseButtonDown (0)) {
-				GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayItemPurchase();
-				bought = true;
-				PurchaseHolder.HasBCell = true;
-			}else{
-				bought = false;
-			}
+			GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayItemPurchase();
+			balance.SendMessage("Buy","BCell",SendMessageOptions.DontRequireReceiver);
 		}
-		//button 4
 		if (gameObject.name == "ExtraLife") {
-			if (Input.GetMouseButtonDown (0)) {
-				GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayItemPurchase();
-				bought = true;
-				PurchaseHolder.NewLives++;
-				//Debug.Log(PurchaseHolder.NewLives);
-			}else{
-				bought = false;
-			}
+			GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayItemPurchase();
+			balance.SendMessage("Buy","ExtraLife",SendMessageOptions.DontRequireReceiver);
 		}
-
-
 	}
-	
-	
-	
 	void OnMouseExit(){
-		GetComponent<SpriteRenderer>().enabled = false;
-		highlighted = false;
-		//gameObject.GetComponent<GUITexture>().texture = null;
+		if (GetComponent<GUITexture> ().texture == texture) {
+			GetComponent<GUITexture> ().texture = null;	
+		}
+		if (gameObject.name == "Vitamin") {
+			GameObject.Find ("VitaminDec").GetComponent<GUITexture> ().enabled = false;
+			GameObject.Find ("VitaminPre").GetComponent<GUITexture> ().enabled = false;
+		}
+		if (gameObject.name == "Test") {
+			GameObject.Find ("TestDec").GetComponent<GUITexture> ().enabled = false;
+			GameObject.Find ("TestPre").GetComponent<GUITexture> ().enabled = false;
+		}
+		if (gameObject.name == "BCell") {
+			GameObject.Find ("BCellDec").GetComponent<GUITexture> ().enabled = false;
+			GameObject.Find ("BCellPre").GetComponent<GUITexture> ().enabled = false;
+		}
+		if (gameObject.name == "ExtraLife") {
+			GameObject.Find ("ExtraLifeDec").GetComponent<GUITexture> ().enabled = false;
+			GameObject.Find ("ExtraLifePre").GetComponent<GUITexture> ().enabled = false;
+		}
 	}
-	
-	//	void OnMouseDown(){
-	//bought = true;
-	
-	//	}
-	
 }

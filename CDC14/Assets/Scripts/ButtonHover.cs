@@ -71,7 +71,22 @@ public class ButtonHover : MonoBehaviour {
 				Time.timeScale = 1.0f;
 				GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayGameStart();
 			}
-
+			if(gameObject.name == "Continue"){
+				Debug.Log("continue");
+				GameObject.Find("PauseMenu").SetActive(false);
+				GameObject.Find("MainMenu").SetActive(false);
+				GameObject.Find("Quit").SetActive(false);
+				Time.timeScale = 1.0f;
+			}
+			if(gameObject.name == "MainMenu"){
+				GameObject.Find("Continue").SetActive(false);
+				GameObject.Find("PauseMenu").SetActive(false);
+				GameObject.Find("Quit").SetActive(false);
+				Application.LoadLevel("Menu");
+			}
+			if(gameObject.name == "Quit"){
+				Application.Quit();
+			}
 		}
 	}
 }

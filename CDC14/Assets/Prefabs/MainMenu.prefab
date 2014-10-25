@@ -54,7 +54,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   highlighted: 0
-  sprite: {fileID: 2800000, guid: 10ec3023c97486c4e9640e46601ee874, type: 3}
+  texture: {fileID: 2800000, guid: 10ec3023c97486c4e9640e46601ee874, type: 3}
 --- !u!131 &13100000
 GUITexture:
   m_ObjectHideFlags: 1

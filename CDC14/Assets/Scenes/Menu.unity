@@ -392,6 +392,7 @@ GameObject:
   - 4: {fileID: 277690236}
   - 212: {fileID: 277690238}
   - 50: {fileID: 277690237}
+  - 50: {fileID: 277690239}
   m_Layer: 0
   m_Name: PlayerWeapon
   m_TagString: Untagged
@@ -450,6 +451,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 18013ef9056d28b4ab72cf6b4c5fdbf0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!50 &277690239
+Rigidbody2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5000004, guid: 8cae9c30851b0af4abe47e54573a7a89,
+    type: 2}
+  m_PrefabInternal: {fileID: 33442770}
+  m_GameObject: {fileID: 277690235}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 0
+  m_FixedAngle: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
 --- !u!1 &369900635
 GameObject:
   m_ObjectHideFlags: 0
@@ -461,6 +478,7 @@ GameObject:
   - 212: {fileID: 369900638}
   - 95: {fileID: 369900637}
   - 114: {fileID: 369900636}
+  - 114: {fileID: 369900640}
   m_Layer: 0
   m_Name: Killer_0
   m_TagString: Untagged
@@ -531,6 +549,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2021509990}
   m_RootOrder: 0
+--- !u!114 &369900640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400006, guid: 8cae9c30851b0af4abe47e54573a7a89,
+    type: 2}
+  m_PrefabInternal: {fileID: 33442770}
+  m_GameObject: {fileID: 369900635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6709038a10382b34e9df0df5462494cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &584797919
 Prefab:
   m_ObjectHideFlags: 0
@@ -2219,7 +2249,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   smokePrefab: {fileID: 100000, guid: 6103a588117e79d46a1de9a09145e00b, type: 2}
-  PausePrefab: {fileID: 0}
+  PauseMenu: {fileID: 100006, guid: 9ca6d4a0b2311e3448cee2d29f4f1d98, type: 2}
   bcell: {fileID: 100000, guid: 64ed0c811bcba0d47816cf1533e66d7a, type: 2}
   pews:
   - {fileID: 100000, guid: 86d7567b721e88649907660baf384ed7, type: 2}

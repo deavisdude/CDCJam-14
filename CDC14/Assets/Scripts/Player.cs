@@ -14,8 +14,8 @@ public class Player : MonoBehaviour {
 	}
 
 	public GameObject smokePrefab;
-	public GameObject PausePrefab;
-	public static bool gamepause = false;
+	public GameObject PauseMenu;
+	public static bool gamepause;
 
 	public static bool dead = false;
 
@@ -38,10 +38,10 @@ public class Player : MonoBehaviour {
 
 	void Start(){
 		if(PurchaseHolder.HasBCell){
-			Instantiate(bcell);
+			Instantiate(bcell,new Vector3(-2.048895f, 1.436302f, 0),Quaternion.identity);
 		}
 		dead = false;
-
+		gamepause = false;
 		acc = new Vector3();
 
 		dist = (transform.position.z - Camera.main.transform.position.z);
@@ -77,16 +77,19 @@ public class Player : MonoBehaviour {
 
 				Vector3 newPos = new Vector3 (transform.position.x + 1.5f, transform.position.y, 0);
 				delayPos.Add (new PosOb (newPos, Time.time));
-				if (Input.GetKeyDown (KeyCode.Escape)) {
-					Instantiate (PausePrefab);
-					//Time.timeScale = 0.0f;
-					//gamepause = true;
-
+				if(Input.GetKeyDown(KeyCode.Escape)){
+					if(!gamepause){
+					Instantiate(PauseMenu);
+						gamepause = true;
+					}else{
+						gamepause = !gamepause;
+					}
 				}
 			}
 		}
 		if(Input.GetMouseButtonDown(1)){
-			CycleWeapon();
+			if(!dead)
+				CycleWeapon();
 		}
 	}
 
@@ -96,6 +99,7 @@ public class Player : MonoBehaviour {
 			GameObject smoke = (GameObject)Instantiate(smokePrefab, transform.position, transform.rotation);
 			smoke.transform.parent = transform;
 			GetComponent<SpriteRenderer>().enabled = false;
+			GetComponent<CircleCollider2D>().enabled = false;
 			GameObject.Find("PlayerWeapon").GetComponent<Rigidbody2D>().gravityScale = 1;
 			Invoke("Kill", 2f);
 			GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayPlayerDeath();
