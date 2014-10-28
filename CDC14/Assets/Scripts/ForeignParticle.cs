@@ -6,6 +6,7 @@ public class ForeignParticle : MonoBehaviour {
 	float speed = 5f;
 	public float spawnSpeed = 1.4f;
 	public GameObject prefab;
+	int spawnCount = 0;
 
 	GameObject restSpot;
 
@@ -23,7 +24,10 @@ public class ForeignParticle : MonoBehaviour {
 	}
 
 	void SpawnCell(){
-		Instantiate(prefab, transform.position, transform.rotation);
+		if(spawnCount < 3){
+			Instantiate(prefab, transform.position, transform.rotation);
+			spawnCount++;
+		}
 	}
 
 	void OnTriggerEnter2D(Collider2D col){
@@ -37,6 +41,11 @@ public class ForeignParticle : MonoBehaviour {
 			
 			if(col.GetComponent<DamageControl>().getType() == 1){
 				gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+				Invoke("normalizeColor", 0.2f);
+			}else{
+				Color c = renderer.material.color;
+				c.a = c.a/2;
+				gameObject.GetComponent<SpriteRenderer>().color = c;
 				Invoke("normalizeColor", 0.2f);
 			}
 			

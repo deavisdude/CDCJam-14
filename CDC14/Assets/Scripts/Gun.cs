@@ -5,7 +5,7 @@ public class Gun : MonoBehaviour {
 
 	public GameObject projectile;
 	float elapsedT = 0f;
-	public float shootSpeed = 0.1f;
+	public float shootSpeed = 0.05f;
 
 	void Update () {
 
@@ -15,6 +15,7 @@ public class Gun : MonoBehaviour {
 				go.rigidbody2D.AddForce (new Vector2 (1000f, 0f));
 				GameObject.Find ("AudioManager").GetComponent<AudioManager> ().PlayPewPew ();
 				elapsedT = 0f;
+				transform.position = new Vector3(transform.position.x-.1f,transform.position.y,transform.position.z);
 			}
 			elapsedT += Time.deltaTime;
 		}

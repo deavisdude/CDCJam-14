@@ -12,6 +12,7 @@ GameObject:
   - 114: {fileID: 11400000}
   - 50: {fileID: 5000000}
   - 61: {fileID: 6100000}
+  - 114: {fileID: 11400002}
   m_Layer: 0
   m_Name: Needle
   m_TagString: Boss
@@ -99,6 +100,18 @@ MonoBehaviour:
   target: {fileID: 0}
   speed: 25
   prefab: {fileID: 100000, guid: a4096a2524218e14284e867bcaccbdf5, type: 2}
+--- !u!114 &11400002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 211c5be00f70f2f44804a2b24a333132, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shrink: 0
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
