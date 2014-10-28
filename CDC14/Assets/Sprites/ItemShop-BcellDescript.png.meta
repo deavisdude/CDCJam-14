@@ -1,7 +1,8 @@
 fileFormatVersion: 2
 guid: 81c64315f93b6304fafcab6b983e3abd
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: ItemShop-BcellDescript
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
