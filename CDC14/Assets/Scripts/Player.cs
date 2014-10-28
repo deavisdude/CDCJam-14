@@ -16,7 +16,7 @@ public class Player : MonoBehaviour {
 	public GameObject smokePrefab;
 	public GameObject PauseMenu;
 	public static bool gamepause;
-
+	
 	public static bool dead = false;
 
 	public GameObject bcell;
@@ -35,10 +35,15 @@ public class Player : MonoBehaviour {
 	float rightLimitation;
 	float upLimitation;
 	float downLimitation;
+	float health = 10;
+	float scaleFactor;
 
 	void Start(){
+		GameObject lb = GameObject.Find("LifeBar");
+		scaleFactor = lb.transform.localScale.x/health;
+
 		if(PurchaseHolder.HasBCell){
-			Instantiate(bcell);
+			Instantiate(bcell,new Vector3(transform.position.x+2f, transform.position.y, 0),Quaternion.identity);
 		}
 		dead = false;
 		gamepause = false;
@@ -64,6 +69,13 @@ public class Player : MonoBehaviour {
 	}
 
 	void Update () {
+		if(PurchaseHolder.AtriplaTime > 0){
+			GetComponent<SpriteRenderer>().color = Color.yellow;
+		}else{
+			GetComponent<SpriteRenderer>().color = Color.white;
+		}
+
+
 		if (Application.loadedLevelName != "Menu") {
 			if (!dead) {
 				acc = new Vector3 (Input.GetAxis ("Horizontal") * speed * Time.deltaTime, Input.GetAxis ("Vertical") * speed * Time.deltaTime, 0);
@@ -91,18 +103,24 @@ public class Player : MonoBehaviour {
 			if(!dead)
 				CycleWeapon();
 		}
+
+		GameObject lb = GameObject.Find("LifeBar");
+		lb.transform.localScale = new Vector3(scaleFactor*health, lb.transform.localScale.y, lb.transform.localScale.z);
 	}
 
 	void OnTriggerEnter2D(Collider2D col){
 		if(col.gameObject.tag != "Good" && col.gameObject.tag != "Antibody" && col.gameObject.tag != "Pew" && col.gameObject.tag != "Border"){
-			dead = true;
-			GameObject smoke = (GameObject)Instantiate(smokePrefab, transform.position, transform.rotation);
-			smoke.transform.parent = transform;
-			GetComponent<SpriteRenderer>().enabled = false;
-			GetComponent<CircleCollider2D>().enabled = false;
-			GameObject.Find("PlayerWeapon").GetComponent<Rigidbody2D>().gravityScale = 1;
-			Invoke("Kill", 2f);
-			GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayPlayerDeath();
+			health--;
+			if(health<1){
+				dead = true;
+				GameObject smoke = (GameObject)Instantiate(smokePrefab, transform.position, transform.rotation);
+				smoke.transform.parent = transform;
+				GetComponent<SpriteRenderer>().enabled = false;
+				GetComponent<CircleCollider2D>().enabled = false;
+				GameObject.Find("PlayerWeapon").GetComponent<Rigidbody2D>().gravityScale = 1;
+				Invoke("Kill", 2f);
+				GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayPlayerDeath();
+			}
 		}
 	}
 

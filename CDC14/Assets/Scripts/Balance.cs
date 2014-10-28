@@ -31,7 +31,7 @@ public class Balance : MonoBehaviour {
 			case "Vitamin":
 				price = 200;
 				if(!hasVitamin){
-					if (total > price) {
+					if (total >= price) {
 						total -= price;
 						hasVitamin = true;
 					} else {
@@ -46,7 +46,7 @@ public class Balance : MonoBehaviour {
 			case "Test":
 				price = 200;
 				if(!hasTest){
-					if (total > price) {
+					if (total >= price) {
 						total -= price;
 						hasTest = true;
 					} else {
@@ -61,7 +61,7 @@ public class Balance : MonoBehaviour {
 			case "BCell":
 				price = 350;
 				if(!hasBCell){
-					if (total > price) {
+					if (total >= price) {
 						total -= price;
 						hasBCell = true;
 						PurchaseHolder.HasBCell = true; 
@@ -76,7 +76,7 @@ public class Balance : MonoBehaviour {
 				break;
 			case "ExtraLife":
 				price = 150;
-					if (total > price) {
+					if (total >= price) {
 						total -= price;
 						PurchaseHolder.NewLives++;
 						//hasExtraLife++;

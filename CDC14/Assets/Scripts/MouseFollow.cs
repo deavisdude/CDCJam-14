@@ -7,7 +7,7 @@ public class MouseFollow : MonoBehaviour {
 	// Use this for initialization
 
 	void Start () {
-		InvokeRepeating("addOffset", 0f, 1f);
+		//addOffset();
 	}
 
 	public GameObject leader;
@@ -25,14 +25,13 @@ public class MouseFollow : MonoBehaviour {
 				transform.position = Vector2.Lerp(transform.position,mousePosition,moveSpeed);
 			}else{
 				offset = leader.transform.position - gameObject.transform.position;
-
 				transform.position = Vector2.Lerp(transform.position,mousePosition-offset,moveSpeed);
 			}
 		}
 	}
 
 	void addOffset(){
-		offset = new Vector3(offset.x + Random.Range(-15, 15),offset.y + Random.Range(-15, 15),offset.z);
+		moveSpeed += Random.Range(0.01f, 0.1f);
 	}
 
 }
