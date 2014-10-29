@@ -57,14 +57,22 @@ public class Infected : MonoBehaviour {
 			health--;
 			Destroy(col.gameObject);
 			GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayEnemyHit();
+			Color c = renderer.material.color;
+			c.a = c.a/2;
+			gameObject.GetComponent<SpriteRenderer>().color = c;
+			Invoke("normalizeColor", 0.2f);
 		}
 
 		if(col.gameObject.tag == "Pew" && early){
 			if(col.GetComponent<DamageControl>().getType() == 3){
 				gameObject.GetComponent<SpriteRenderer>().color = Color.red;
 				Invoke("normalizeColor", 0.2f);
+			}else{
+				Color c = renderer.material.color;
+				c.a = c.a/2;
+				gameObject.GetComponent<SpriteRenderer>().color = c;
+				Invoke("normalizeColor", 0.2f);
 			}
-
 			health -= (int)col.GetComponent<DamageControl>().getDmgEarly();
 			Destroy(col.gameObject);
 			GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayEnemyHit();
@@ -75,6 +83,11 @@ public class Infected : MonoBehaviour {
 
 			if(col.GetComponent<DamageControl>().getType() == 2){
 				gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+				Invoke("normalizeColor", 0.2f);
+			}else{
+				Color c = renderer.material.color;
+				c.a = c.a/2;
+				gameObject.GetComponent<SpriteRenderer>().color = c;
 				Invoke("normalizeColor", 0.2f);
 			}
 			health -= (int)col.GetComponent<DamageControl>().getDmgLate();

@@ -9,6 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400000}
   - 114: {fileID: 11400000}
+  - 114: {fileID: 11400002}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -41,6 +42,44 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MainLoop: {fileID: 8300000, guid: 39f4f5dba25238347aaf9cb4bbcdc08f, type: 3}
   MainLoopSrc: {fileID: 0}
+  EnemyHit: {fileID: 0}
+  EnemyHitSrc: {fileID: 0}
+  BossRumble: {fileID: 0}
+  BossRumbleSrc: {fileID: 0}
+  LargeExplosion: {fileID: 0}
+  LargeExplosionSrc: {fileID: 0}
+  SmallExplosion: {fileID: 0}
+  SmallExplosionSrc: {fileID: 0}
+  GameStart: {fileID: 0}
+  GameStartSrc: {fileID: 0}
+  ItemPurchase: {fileID: 0}
+  ItemPurchaseSrc: {fileID: 0}
+  PewPew: {fileID: 0}
+  PewPewSrc: {fileID: 0}
+  PlayerDeath: {fileID: 0}
+  PlayerDeathSrc: {fileID: 0}
+  PowerUp: {fileID: 0}
+  PowerUpSrc: {fileID: 0}
+  Toggle: {fileID: 0}
+  ToggleSrc: {fileID: 0}
+  WeaponChange: {fileID: 0}
+  WeaponChangeSrc: {fileID: 0}
+  MenuLoop: {fileID: 0}
+  MenuLoopSrc: {fileID: 0}
+  BossLoop: {fileID: 0}
+  BossLoopSrc: {fileID: 0}
+--- !u!114 &11400002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 211c5be00f70f2f44804a2b24a333132, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shrink: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

@@ -6,15 +6,12 @@ public class ForeignParticle : MonoBehaviour {
 	float speed = 5f;
 	public float spawnSpeed = 1.4f;
 	public GameObject prefab;
-	public Sprite hpbar;
+	int spawnCount = 0;
 
 	GameObject restSpot;
-	float scaleFactor;
 
 
 	void Start(){
-		scaleFactor = transform.FindChild ("EnemyHp").GetComponent<Transform>().transform.localScale.x/health;
-	
 		restSpot = GameObject.Find("ForeignSpot");
 		InvokeRepeating("SpawnCell", 3f, spawnSpeed);
 	}
@@ -24,15 +21,13 @@ public class ForeignParticle : MonoBehaviour {
 		if(health<1){
 			Destroy(gameObject);
 		}
-		if(health <= 49){
-			transform.FindChild ("EnemyHp").GetComponent<SpriteRenderer>().sprite = hpbar;
-		}
-		transform.FindChild ("EnemyHp").GetComponent<Transform>().transform.localScale = new Vector3(scaleFactor*health, transform.FindChild ("EnemyHp").GetComponent<Transform>().transform.localScale.y, transform.FindChild ("EnemyHp").GetComponent<Transform>().transform.localScale.z);
-
 	}
 
 	void SpawnCell(){
-		Instantiate(prefab, transform.position, transform.rotation);
+		if(spawnCount < 3){
+			Instantiate(prefab, transform.position, transform.rotation);
+			spawnCount++;
+		}
 	}
 
 	void OnTriggerEnter2D(Collider2D col){
@@ -47,8 +42,13 @@ public class ForeignParticle : MonoBehaviour {
 			if(col.GetComponent<DamageControl>().getType() == 1){
 				gameObject.GetComponent<SpriteRenderer>().color = Color.red;
 				Invoke("normalizeColor", 0.2f);
+			}else{
+				Color c = renderer.material.color;
+				c.a = c.a/2;
+				gameObject.GetComponent<SpriteRenderer>().color = c;
+				Invoke("normalizeColor", 0.2f);
 			}
-
+			
 			health -= (int)col.GetComponent<DamageControl>().getDmgFor();
 			Destroy(col.gameObject);
 			GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayEnemyHit();
