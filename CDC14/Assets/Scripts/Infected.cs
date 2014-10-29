@@ -13,8 +13,12 @@ public class Infected : MonoBehaviour {
 	float speed = 10f;
 	public float firespeed = 1.4f;
 	public GameObject prefab;
+	float scaleFactor;
+	public Sprite hpbar;
 
 	void Start () {
+		scaleFactor = transform.FindChild ("EnemyHp").GetComponent<Transform>().transform.localScale.x/health;
+
 		target1 = GameObject.Find("Waypoint1").transform.position;
 		target2 = GameObject.Find("Waypoint2").transform.position;
 
@@ -25,11 +29,15 @@ public class Infected : MonoBehaviour {
 	void Update () {
 		if(target == 1)rigidbody2D.velocity = (target1 - transform.position)*speed*Time.deltaTime;
 		else if(target == 2)rigidbody2D.velocity = (target2 - transform.position)*speed*Time.deltaTime;
-
 		if(health<1){
 			Destroy(gameObject);
 		}
+		if(health <= 9){
+			transform.FindChild ("EnemyHp").GetComponent<SpriteRenderer>().sprite = hpbar;
+		}
+		transform.FindChild ("EnemyHp").GetComponent<Transform>().transform.localScale = new Vector3(scaleFactor*health, transform.FindChild ("EnemyHp").GetComponent<Transform>().transform.localScale.y, transform.FindChild ("EnemyHp").GetComponent<Transform>().transform.localScale.z);
 	}
+
 
 	void Shoot(){
 		GameObject[] go = new GameObject[5];
@@ -44,6 +52,7 @@ public class Infected : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D col){
+
 		if(col.gameObject.tag == "Antibody"){
 			health--;
 			Destroy(col.gameObject);
@@ -59,6 +68,7 @@ public class Infected : MonoBehaviour {
 			health -= (int)col.GetComponent<DamageControl>().getDmgEarly();
 			Destroy(col.gameObject);
 			GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayEnemyHit();
+
 		}
 
 		if(col.gameObject.tag == "Pew" && !early){
@@ -67,10 +77,10 @@ public class Infected : MonoBehaviour {
 				gameObject.GetComponent<SpriteRenderer>().color = Color.red;
 				Invoke("normalizeColor", 0.2f);
 			}
-
 			health -= (int)col.GetComponent<DamageControl>().getDmgLate();
 			Destroy(col.gameObject);
 			GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayEnemyHit();
+
 		}
 	}
 

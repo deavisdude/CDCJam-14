@@ -6,11 +6,15 @@ public class ForeignParticle : MonoBehaviour {
 	float speed = 5f;
 	public float spawnSpeed = 1.4f;
 	public GameObject prefab;
+	public Sprite hpbar;
 
 	GameObject restSpot;
+	float scaleFactor;
 
 
 	void Start(){
+		scaleFactor = transform.FindChild ("EnemyHp").GetComponent<Transform>().transform.localScale.x/health;
+	
 		restSpot = GameObject.Find("ForeignSpot");
 		InvokeRepeating("SpawnCell", 3f, spawnSpeed);
 	}
@@ -20,6 +24,11 @@ public class ForeignParticle : MonoBehaviour {
 		if(health<1){
 			Destroy(gameObject);
 		}
+		if(health <= 49){
+			transform.FindChild ("EnemyHp").GetComponent<SpriteRenderer>().sprite = hpbar;
+		}
+		transform.FindChild ("EnemyHp").GetComponent<Transform>().transform.localScale = new Vector3(scaleFactor*health, transform.FindChild ("EnemyHp").GetComponent<Transform>().transform.localScale.y, transform.FindChild ("EnemyHp").GetComponent<Transform>().transform.localScale.z);
+
 	}
 
 	void SpawnCell(){
@@ -39,7 +48,7 @@ public class ForeignParticle : MonoBehaviour {
 				gameObject.GetComponent<SpriteRenderer>().color = Color.red;
 				Invoke("normalizeColor", 0.2f);
 			}
-			
+
 			health -= (int)col.GetComponent<DamageControl>().getDmgFor();
 			Destroy(col.gameObject);
 			GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayEnemyHit();

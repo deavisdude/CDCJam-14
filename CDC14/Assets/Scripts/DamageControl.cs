@@ -44,7 +44,7 @@ public class DamageControl : MonoBehaviour {
 		case 3:
 			dmgHIV = 1;
 			dmgEarly = 2;
-			dmgLate = 0.5f;
+			dmgLate = 1;//0.5f;
 			dmgFor = 1;
 			break;
 		}
