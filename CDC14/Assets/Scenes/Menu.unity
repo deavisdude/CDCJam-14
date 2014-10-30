@@ -529,7 +529,7 @@ GameObject:
   - 95: {fileID: 369900637}
   - 114: {fileID: 369900636}
   - 114: {fileID: 369900640}
-  - 114: {fileID: 369900641}
+  - 114: {fileID: 2021509992}
   m_Layer: 0
   m_Name: Killer_0
   m_TagString: Untagged
@@ -604,18 +604,6 @@ Transform:
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400006, guid: 8cae9c30851b0af4abe47e54573a7a89,
-    type: 2}
-  m_PrefabInternal: {fileID: 33442770}
-  m_GameObject: {fileID: 369900635}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6709038a10382b34e9df0df5462494cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &369900641
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400008, guid: 8cae9c30851b0af4abe47e54573a7a89,
     type: 2}
   m_PrefabInternal: {fileID: 33442770}
   m_GameObject: {fileID: 369900635}
@@ -4586,7 +4574,6 @@ GameObject:
   - 50: {fileID: 2021509994}
   - 212: {fileID: 2021509993}
   - 95: {fileID: 2021509991}
-  - 114: {fileID: 2021509992}
   - 114: {fileID: 2021509995}
   m_Layer: 0
   m_Name: Player
@@ -4633,13 +4620,12 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 11400008, guid: 8cae9c30851b0af4abe47e54573a7a89,
     type: 2}
   m_PrefabInternal: {fileID: 33442770}
-  m_GameObject: {fileID: 2021509989}
+  m_GameObject: {fileID: 369900635}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 211c5be00f70f2f44804a2b24a333132, type: 3}
+  m_Script: {fileID: 11500000, guid: 6709038a10382b34e9df0df5462494cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shrink: 0
 --- !u!212 &2021509993
 SpriteRenderer:
   m_ObjectHideFlags: 0

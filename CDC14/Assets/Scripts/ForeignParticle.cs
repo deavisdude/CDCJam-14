@@ -7,11 +7,14 @@ public class ForeignParticle : MonoBehaviour {
 	public float spawnSpeed = 1.4f;
 	public GameObject prefab;
 	int spawnCount = 0;
+	float scaleFactor;
+	public Sprite hpbar;
 
 	GameObject restSpot;
 
 
 	void Start(){
+		scaleFactor = transform.FindChild ("EnemyHp").GetComponent<Transform>().transform.localScale.x/health;
 		restSpot = GameObject.Find("ForeignSpot");
 		InvokeRepeating("SpawnCell", 3f, spawnSpeed);
 	}
@@ -21,6 +24,7 @@ public class ForeignParticle : MonoBehaviour {
 		if(health<1){
 			Destroy(gameObject);
 		}
+		transform.FindChild ("EnemyHp").GetComponent<Transform>().transform.localScale = new Vector3(scaleFactor*health, transform.FindChild ("EnemyHp").GetComponent<Transform>().transform.localScale.y, transform.FindChild ("EnemyHp").GetComponent<Transform>().transform.localScale.z);
 	}
 
 	void SpawnCell(){

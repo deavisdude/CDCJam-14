@@ -55,7 +55,7 @@ public class SpawnManager : MonoBehaviour {
 
 	void Sender(){
 		try{
-			Send(spawnQueue[0]);
+			Send(spawnQueue[Random.Range(0,spawnQueue.Count)]);
 		}catch{
 			CancelInvoke("Send");
 		}
