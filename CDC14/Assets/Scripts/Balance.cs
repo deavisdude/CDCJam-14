@@ -88,7 +88,7 @@ public class Balance : MonoBehaviour {
 		}
 	}
 	IEnumerator FlashWarning(){
-		while (wcount < 2){
+		while (wcount < 3){
 			GameObject.Find ("Warning").GetComponent<GUIText> ().enabled = true;
 			GameObject.Find ("Warning").GetComponent<GUIText> ().color = Color.red;
 			yield return new WaitForSeconds (.5f);
@@ -102,9 +102,9 @@ public class Balance : MonoBehaviour {
 		while (hcount < 2){
 			GameObject.Find ("Have").GetComponent<GUIText> ().enabled = true;
 			GameObject.Find ("Have").GetComponent<GUIText> ().color = Color.red;
-			yield return new WaitForSeconds (1);
+			yield return new WaitForSeconds (.5f);
 			GameObject.Find ("Have").GetComponent<GUIText> ().color = Color.white;
-			yield return new WaitForSeconds (1);
+			yield return new WaitForSeconds (.5f);
 			hcount++;
 		}
 		GameObject.Find ("Have").GetComponent<GUIText> ().enabled = false;
