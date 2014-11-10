@@ -11,6 +11,10 @@ public class DamageControl : MonoBehaviour {
 
 	public static bool atripla;
 
+	public float getDmgHIV(){
+		return dmgHIV;
+	}
+
 	public float getDmgEarly(){
 		return dmgEarly;
 	}
@@ -30,7 +34,7 @@ public class DamageControl : MonoBehaviour {
 	void Start () {
 		switch(ARType){
 		case 1:
-			dmgHIV = 1;
+			dmgHIV = 2;
 			dmgEarly = 1;
 			dmgLate = 1;
 			dmgFor = 2;
@@ -54,19 +58,19 @@ public class DamageControl : MonoBehaviour {
 		if(PurchaseHolder.AtriplaTime >0f){
 			switch(ARType){
 				case 1:
-					dmgHIV = 1;
+					dmgHIV = 4;
 					dmgEarly = 1.5f;
 					dmgLate = 1.5f;
 					dmgFor = 2.5f;
 					break;
 				case 2:
-					dmgHIV = 1;
+					dmgHIV = 2;
 					dmgEarly = 1.5f;
 					dmgLate = 2.5f;
 					dmgFor = 1.5f;
 					break;
 				case 3:
-					dmgHIV = 1;
+					dmgHIV = 2;
 					dmgEarly = 2.5f;
 					dmgLate = 1;
 					dmgFor = 1.5f;
