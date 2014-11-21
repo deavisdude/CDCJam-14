@@ -1,7 +1,8 @@
 fileFormatVersion: 2
 guid: 1a48532373d700742b9bba5ab80ee248
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: itemVitamin
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0

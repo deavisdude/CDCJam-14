@@ -1,7 +1,8 @@
 fileFormatVersion: 2
 guid: a6a7a90b2ad99794aa1684ba004a9032
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: pewCyan
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0

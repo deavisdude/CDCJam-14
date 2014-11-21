@@ -4,6 +4,12 @@ using System.Collections;
 public class ObjectUtil : MonoBehaviour {
 	public bool shrink = false;
 
+	public Vector3 startPos;
+
+	void Start(){
+		startPos = transform.position;
+	}
+
 	void Update(){
 		if(shrink){
 			Vector3 s = transform.localScale;

@@ -86,6 +86,7 @@ GameObject:
   - 114: {fileID: 110924353}
   - 50: {fileID: 110924356}
   - 61: {fileID: 110924357}
+  - 114: {fileID: 110924358}
   m_Layer: 0
   m_Name: Needle
   m_TagString: Boss
@@ -172,6 +173,19 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_Size: {x: 1.40999997, y: 5.21999979}
   m_Center: {x: -2.01999998, y: 1.40999997}
+--- !u!114 &110924358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: 38a72f1ca9aebba43a2eb6725bd4d419,
+    type: 2}
+  m_PrefabInternal: {fileID: 983622027}
+  m_GameObject: {fileID: 110924352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 211c5be00f70f2f44804a2b24a333132, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shrink: 0
 --- !u!1 &238374627
 GameObject:
   m_ObjectHideFlags: 0
@@ -583,6 +597,7 @@ GameObject:
   - 92: {fileID: 582665373}
   - 124: {fileID: 582665372}
   - 81: {fileID: 582665371}
+  - 114: {fileID: 582665376}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -655,6 +670,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!114 &582665376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 582665370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 211c5be00f70f2f44804a2b24a333132, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shrink: 0
 --- !u!1 &791275338
 GameObject:
   m_ObjectHideFlags: 0
@@ -896,6 +923,7 @@ GameObject:
   - 114: {fileID: 906956485}
   - 95: {fileID: 906956479}
   - 58: {fileID: 906956480}
+  - 114: {fileID: 906956486}
   m_Layer: 0
   m_Name: Player
   m_TagString: Good
@@ -1023,6 +1051,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 100000, guid: 86d7567b721e88649907660baf384ed7, type: 2}
   shootSpeed: .100000001
+--- !u!114 &906956486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400008, guid: 8cae9c30851b0af4abe47e54573a7a89,
+    type: 2}
+  m_PrefabInternal: {fileID: 1716026780}
+  m_GameObject: {fileID: 906956478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 211c5be00f70f2f44804a2b24a333132, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shrink: 0
 --- !u!1001 &983622027
 Prefab:
   m_ObjectHideFlags: 0

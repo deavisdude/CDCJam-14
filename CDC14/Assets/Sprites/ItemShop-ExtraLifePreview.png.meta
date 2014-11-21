@@ -1,7 +1,8 @@
 fileFormatVersion: 2
 guid: c8d588093f56769459df942bb9631fb6
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: ItemShop-ExtraLifePreview
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0

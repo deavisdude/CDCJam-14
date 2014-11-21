@@ -520,6 +520,7 @@ GameObject:
   - 4: {fileID: 511575885}
   - 212: {fileID: 511575884}
   - 50: {fileID: 511575887}
+  - 50: {fileID: 511575888}
   - 50: {fileID: 511575886}
   m_Layer: 0
   m_Name: PlayerWeapon
@@ -594,6 +595,22 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+--- !u!50 &511575888
+Rigidbody2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5000004, guid: 8cae9c30851b0af4abe47e54573a7a89,
+    type: 2}
+  m_PrefabInternal: {fileID: 1716628456}
+  m_GameObject: {fileID: 511575883}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 0
+  m_FixedAngle: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
 --- !u!1 &582665370
 GameObject:
   m_ObjectHideFlags: 0
@@ -606,6 +623,7 @@ GameObject:
   - 92: {fileID: 582665373}
   - 124: {fileID: 582665372}
   - 81: {fileID: 582665371}
+  - 114: {fileID: 582665376}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -678,6 +696,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+--- !u!114 &582665376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 582665370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 211c5be00f70f2f44804a2b24a333132, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shrink: 0
 --- !u!1 &791275338
 GameObject:
   m_ObjectHideFlags: 0
@@ -838,6 +868,7 @@ GameObject:
   - 114: {fileID: 906956485}
   - 95: {fileID: 906956479}
   - 58: {fileID: 906956480}
+  - 114: {fileID: 906956486}
   m_Layer: 0
   m_Name: Player
   m_TagString: Good
@@ -939,7 +970,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   smokePrefab: {fileID: 100000, guid: 6103a588117e79d46a1de9a09145e00b, type: 2}
-  PausePrefab: {fileID: 100000, guid: 8c011b7685fa7fb4c9a1e2e4ea660f8d, type: 2}
+  PauseMenu: {fileID: 100006, guid: 9ca6d4a0b2311e3448cee2d29f4f1d98, type: 2}
   bcell: {fileID: 100000, guid: 64ed0c811bcba0d47816cf1533e66d7a, type: 2}
   pews:
   - {fileID: 100000, guid: 86d7567b721e88649907660baf384ed7, type: 2}
@@ -965,6 +996,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 100000, guid: 86d7567b721e88649907660baf384ed7, type: 2}
   shootSpeed: .100000001
+--- !u!114 &906956486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400008, guid: 8cae9c30851b0af4abe47e54573a7a89,
+    type: 2}
+  m_PrefabInternal: {fileID: 1716628456}
+  m_GameObject: {fileID: 906956478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 211c5be00f70f2f44804a2b24a333132, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shrink: 0
 --- !u!1 &1081381606
 GameObject:
   m_ObjectHideFlags: 0
@@ -1255,6 +1299,7 @@ GameObject:
   - 4: {fileID: 1398464426}
   - 131: {fileID: 1398464425}
   - 114: {fileID: 1398464424}
+  - 114: {fileID: 1398464427}
   m_Layer: 0
   m_Name: ScreenFader
   m_TagString: Fader
@@ -1274,7 +1319,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5790675fbc7f65644a52aca5e53893df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeSpeed: 1
+  fadeSpeed: .0250000004
+  end: 0
+  scene: 
 --- !u!131 &1398464425
 GUITexture:
   m_ObjectHideFlags: 0
@@ -1307,6 +1354,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &1398464427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: 6e5addb06c31384468170550310871f0,
+    type: 2}
+  m_PrefabInternal: {fileID: 2061605553}
+  m_GameObject: {fileID: 1398464423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 211c5be00f70f2f44804a2b24a333132, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shrink: 0
 --- !u!1 &1615950062
 GameObject:
   m_ObjectHideFlags: 0
@@ -1433,6 +1493,7 @@ GameObject:
   - 212: {fileID: 1723057749}
   - 95: {fileID: 1723057750}
   - 114: {fileID: 1723057752}
+  - 114: {fileID: 1723057753}
   - 114: {fileID: 1723057751}
   m_Layer: 0
   m_Name: Killer_0
@@ -1507,6 +1568,18 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400004, guid: 8cae9c30851b0af4abe47e54573a7a89,
+    type: 2}
+  m_PrefabInternal: {fileID: 1716628456}
+  m_GameObject: {fileID: 1723057747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6709038a10382b34e9df0df5462494cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1723057753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400006, guid: 8cae9c30851b0af4abe47e54573a7a89,
     type: 2}
   m_PrefabInternal: {fileID: 1716628456}
   m_GameObject: {fileID: 1723057747}
