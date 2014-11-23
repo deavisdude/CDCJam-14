@@ -126,6 +126,7 @@ public class Player : MonoBehaviour {
 
 	void Kill(){
 		LivesManager.lives--;
+		PurchaseHolder.HasBCell = false;
 		if(LivesManager.lives < 0){
 			dead = true;
 			Application.LoadLevel("Credits");
