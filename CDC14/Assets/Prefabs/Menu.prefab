@@ -76,8 +76,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .340000033, y: -.322000027, z: .100000001}
-  m_LocalScale: {x: -.280000001, y: -.159999996, z: 1}
+  m_LocalPosition: {x: .340000033, y: -.330000013, z: .219999999}
+  m_LocalScale: {x: .300000012, y: .25, z: 1}
   m_Children: []
   m_Father: {fileID: 400006}
   m_RootOrder: 2
@@ -88,8 +88,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .0440000296, y: -.322000027, z: .100000001}
-  m_LocalScale: {x: -.100000001, y: -.159999996, z: 1}
+  m_LocalPosition: {x: .0399999991, y: -.330000013, z: .219999999}
+  m_LocalScale: {x: .330000013, y: .25, z: 1}
   m_Children: []
   m_Father: {fileID: 400006}
   m_RootOrder: 1
@@ -100,8 +100,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.296000004, y: -.322000027, z: .100000001}
-  m_LocalScale: {x: -.140000001, y: -.159999996, z: 1}
+  m_LocalPosition: {x: -.289999992, y: -.330000013, z: .219999999}
+  m_LocalScale: {x: .330000013, y: .25, z: 1}
   m_Children: []
   m_Father: {fileID: 400006}
   m_RootOrder: 0
@@ -186,6 +186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shrink: 0
+  startPos: {x: 0, y: 0, z: 0}
 --- !u!131 &13100000
 GUITexture:
   m_ObjectHideFlags: 1
@@ -197,10 +198,10 @@ GUITexture:
   m_Color: {r: .5, g: .5, b: .5, a: .5}
   m_PixelInset:
     serializedVersion: 2
-    x: -125
-    y: -54.5999985
-    width: 253.699997
-    height: 110.400002
+    x: 0
+    y: 0
+    width: 0
+    height: 0
   m_LeftBorder: 0
   m_RightBorder: 0
   m_TopBorder: 0
@@ -216,10 +217,10 @@ GUITexture:
   m_Color: {r: .5, g: .5, b: .5, a: .5}
   m_PixelInset:
     serializedVersion: 2
-    x: -124.400002
-    y: -54.5999985
-    width: 251.800003
-    height: 110.400002
+    x: 0
+    y: 0
+    width: 0
+    height: 0
   m_LeftBorder: 0
   m_RightBorder: 0
   m_TopBorder: 0
@@ -235,10 +236,10 @@ GUITexture:
   m_Color: {r: .5, g: .5, b: .5, a: .5}
   m_PixelInset:
     serializedVersion: 2
-    x: -124
-    y: -54.5999985
-    width: 251.800003
-    height: 110.400002
+    x: 0
+    y: 0
+    width: 0
+    height: 0
   m_LeftBorder: 0
   m_RightBorder: 0
   m_TopBorder: 0
