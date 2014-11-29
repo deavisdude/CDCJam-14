@@ -1,7 +1,8 @@
 fileFormatVersion: 2
 guid: 2252d90f9506a9d479bffc2c8c82eaa1
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: ItemShop-VitPreview
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0

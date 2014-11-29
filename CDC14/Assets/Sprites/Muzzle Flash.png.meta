@@ -1,8 +1,7 @@
 fileFormatVersion: 2
-guid: e492c390645687145ab3497c8afac8f6
+guid: fb0405e8d80d0d64a9add89682a717c4
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: tutorial3
+  fileIDToRecycleName: {}
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -23,7 +22,7 @@ TextureImporter:
   generateCubemap: 0
   seamlessCubemap: 0
   textureFormat: -1
-  maxTextureSize: 2048
+  maxTextureSize: 1024
   textureSettings:
     filterMode: -1
     aniso: 1
@@ -38,7 +37,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 1700
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []

@@ -154,6 +154,7 @@ GameObject:
   - 4: {fileID: 596822581}
   - 131: {fileID: 596822580}
   - 114: {fileID: 596822579}
+  - 114: {fileID: 596822582}
   m_Layer: 0
   m_Name: ScreenFader
   m_TagString: Fader
@@ -173,7 +174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5790675fbc7f65644a52aca5e53893df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeSpeed: .00999999978
+  fadeSpeed: .0250000004
   end: 0
   scene: 
 --- !u!131 &596822580
@@ -208,6 +209,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
+--- !u!114 &596822582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: 6e5addb06c31384468170550310871f0,
+    type: 2}
+  m_PrefabInternal: {fileID: 1633191358}
+  m_GameObject: {fileID: 596822578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 211c5be00f70f2f44804a2b24a333132, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shrink: 0
 --- !u!1 &751025818
 GameObject:
   m_ObjectHideFlags: 0
@@ -221,6 +235,7 @@ GameObject:
   - 124: {fileID: 751025820}
   - 81: {fileID: 751025819}
   - 114: {fileID: 751025824}
+  - 114: {fileID: 751025825}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -304,6 +319,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cfbd7731397299409e6b21535068a61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &751025825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 751025818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 211c5be00f70f2f44804a2b24a333132, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shrink: 0
 --- !u!1001 &1633191358
 Prefab:
   m_ObjectHideFlags: 0

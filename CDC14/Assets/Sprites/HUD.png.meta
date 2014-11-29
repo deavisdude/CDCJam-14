@@ -1,7 +1,8 @@
 fileFormatVersion: 2
 guid: c4e8bb0277787974a9660062a896cf3c
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: HUD
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0

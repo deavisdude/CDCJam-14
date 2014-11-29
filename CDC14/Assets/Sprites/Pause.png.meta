@@ -3,6 +3,7 @@ guid: ef520fdd1086fcb45a6b6af7b4a78514
 TextureImporter:
   fileIDToRecycleName:
     21300000: menuShop
+    21300002: Pause
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0

@@ -1,7 +1,8 @@
 fileFormatVersion: 2
 guid: a94952d5ebd89f94ba1ef1c350b61ead
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: HPBar
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
