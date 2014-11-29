@@ -3,7 +3,9 @@ using System.Collections;
 
 public class TestMouse : MonoBehaviour {
 	public Texture texture;
-	public GameObject Menu;
+	//public GameObject PauseMenu;
+	//public GameObject QuitPrompt;
+	//public GameObject MenuPrompt;
 	// Use this for initialization
 
 	void OnMouseEnter(){
@@ -14,24 +16,38 @@ public class TestMouse : MonoBehaviour {
 		
 	}
 	void OnMouseDown(){
+
 		if (gameObject.name == "Continue") {
 			GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayToggle();
 			Time.timeScale = 1.0f;
-			Destroy(Menu);
 		}
+
 		if (gameObject.name == "MainMenu") {
 			GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayToggle();
-			Application.LoadLevel("Menu");
-			GameObject.Find("Menu").SetActive(false);
-			GameObject.Find("Continue").SetActive(false);
-			GameObject.Find("MainMenu").SetActive(false);
-			GameObject.Find("Quit").SetActive(false);
-		}
-		if (gameObject.name == "Quit") {
-			GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayToggle();
-			Application.Quit();
+			//send message to pausehandler and pausebuthandler
 
 		}
+
+
+		/*
+
+		if (MenuPrompt.activeSelf == true) {
+			if (gameObject.name == "YesButton"){
+				Application.LoadLevel("Menu");
+			}
+			if (gameObject.name == "NoButton"){
+				//send message to pausehandler
+			}
+		}
+		if (QuitPrompt.activeSelf == true) {
+			if (gameObject.name == "YesButton"){
+				Application.Quit();
+			}
+			if (gameObject.name == "NoButton"){
+				//send message to pausehandler
+			}
+		}
+		*/
 	}
 	void OnMouseExit(){
 		if (GetComponent<GUITexture> ().texture == texture) {

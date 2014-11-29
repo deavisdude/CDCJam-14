@@ -41,6 +41,9 @@ public class ButtonHover : MonoBehaviour {
 		if(Application.loadedLevelName == "Menu"){
 			GameObject.Find("ScreenFader").GetComponent<SceneFadeInOut>().scene = scene;
 			GameObject.Find("ScreenFader").GetComponent<SceneFadeInOut>().end = true;
+			if(gameObject.name == "QuitButton"){
+				Application.Quit();
+			}
 			if(scene != "Credits"){
 				GameObject.Find("AudioManager").GetComponent<AudioManager>().StopMenuLoop();
 				GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayGameStart();
@@ -83,6 +86,8 @@ public class ButtonHover : MonoBehaviour {
 				GameObject.Find("PauseMenu").SetActive(false);
 				GameObject.Find("Quit").SetActive(false);
 				Application.LoadLevel("Menu");
+
+
 			}
 			if(gameObject.name == "Quit"){
 				Application.Quit();
