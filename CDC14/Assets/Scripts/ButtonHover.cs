@@ -10,13 +10,8 @@ public class ButtonHover : MonoBehaviour {
 		if(SpawnManager.levelCount == 1 && Application.loadedLevelName == "noBoss"){
 			Time.timeScale = 0.0f;
 			GameObject.Find("Prompt").GetComponent<GUITexture>().enabled = true;
-		}else if(Application.loadedLevelName == "noBoss"){
-			Destroy(GameObject.Find("Prompt"));
-			Destroy(GameObject.Find("NO"));
-			Destroy(GameObject.Find("OK"));
-			Destroy(GameObject.Find("InfoTut"));
-			Destroy(GameObject.Find("Return"));
 		}
+		
 	}
 
 	//public Texture texture;
@@ -41,6 +36,7 @@ public class ButtonHover : MonoBehaviour {
 		if(Application.loadedLevelName == "Menu"){
 			GameObject.Find("ScreenFader").GetComponent<SceneFadeInOut>().scene = scene;
 			GameObject.Find("ScreenFader").GetComponent<SceneFadeInOut>().end = true;
+            LivesManager.lives = 3;
 			if(gameObject.name == "QuitButton"){
 				Application.Quit();
 			}
@@ -50,48 +46,7 @@ public class ButtonHover : MonoBehaviour {
 				GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayMainLoop();
 				SpawnManager.enemyMultiplier = difficulty;
 			}
-		}else{
-			if(gameObject.name == "Return"){
-				Destroy(GameObject.Find("InfoTut"));
-				Destroy(gameObject);
-				Time.timeScale = 1.0f;
-				GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayGameStart();
-			}
-			if(gameObject.name == "OK"){
-				Destroy(GameObject.Find("Prompt"));
-				Destroy(gameObject);
-				Destroy(GameObject.Find("NO"));
-				GameObject.Find("InfoTut").GetComponent<GUITexture>().enabled = true;
-				GameObject.Find("Return").GetComponent<BoxCollider>().enabled = true;
-				GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayGameStart();
-			}
-			if(gameObject.name == "NO"){
-				Destroy(GameObject.Find("Prompt"));
-				Destroy(gameObject);
-				Destroy(GameObject.Find("OK"));
-				Destroy(GameObject.Find("InfoTut"));
-				Destroy(GameObject.Find("Return"));
-				Time.timeScale = 1.0f;
-				GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayGameStart();
-			}
-			if(gameObject.name == "Continue"){
-				Debug.Log("continue");
-				GameObject.Find("PauseMenu").SetActive(false);
-				GameObject.Find("MainMenu").SetActive(false);
-				GameObject.Find("Quit").SetActive(false);
-				Time.timeScale = 1.0f;
-			}
-			if(gameObject.name == "MainMenu"){
-				GameObject.Find("Continue").SetActive(false);
-				GameObject.Find("PauseMenu").SetActive(false);
-				GameObject.Find("Quit").SetActive(false);
-				Application.LoadLevel("Menu");
-
-
-			}
-			if(gameObject.name == "Quit"){
-				Application.Quit();
-			}
+		
 		}
 	}
 }

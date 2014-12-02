@@ -22,5 +22,9 @@ public class Teleport : MonoBehaviour {
 		if (Input.GetKey ("3")) {
 			Application.LoadLevel("lvl1");
 		}
+        if (Input.GetKey("4"))
+        {
+            Application.LoadLevel("Credits");
+        }
 	}
 }
