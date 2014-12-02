@@ -259,6 +259,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shrink: 0
+  startPos: {x: 0, y: 0, z: 0}
 --- !u!1 &170671611
 GameObject:
   m_ObjectHideFlags: 0
@@ -3112,6 +3113,7 @@ Transform:
   - {fileID: 511575885}
   - {fileID: 587248040}
   - {fileID: 1995814593}
+  - {fileID: 1595973420}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!114 &906956484
@@ -3130,6 +3132,8 @@ MonoBehaviour:
   PauseMenu: {fileID: 334528979}
   Tutorial: {fileID: 363903915}
   Tutorial2: {fileID: 345925875}
+  Exhaust: {fileID: 587248039}
+  Exhaust2: {fileID: 1995814592}
   bcell: {fileID: 100000, guid: 64ed0c811bcba0d47816cf1533e66d7a, type: 2}
   pews:
   - {fileID: 100000, guid: 86d7567b721e88649907660baf384ed7, type: 2}
@@ -3980,6 +3984,57 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1505416957}
+--- !u!1 &1595973419
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100010, guid: 8cae9c30851b0af4abe47e54573a7a89, type: 2}
+  m_PrefabInternal: {fileID: 1598087727}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1595973420}
+  - 212: {fileID: 1595973421}
+  m_Layer: 0
+  m_Name: Muzzle Flash
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1595973420
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400010, guid: 8cae9c30851b0af4abe47e54573a7a89, type: 2}
+  m_PrefabInternal: {fileID: 1598087727}
+  m_GameObject: {fileID: 1595973419}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.17922592, y: -.0137312412, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 906956483}
+  m_RootOrder: 4
+--- !u!212 &1595973421
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 21200006, guid: 8cae9c30851b0af4abe47e54573a7a89,
+    type: 2}
+  m_PrefabInternal: {fileID: 1598087727}
+  m_GameObject: {fileID: 1595973419}
+  m_Enabled: 0
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: fb0405e8d80d0d64a9add89682a717c4, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &1598087727
 Prefab:
   m_ObjectHideFlags: 0
@@ -4035,6 +4090,14 @@ Prefab:
       propertyPath: Tutorial2
       value: 
       objectReference: {fileID: 345925875}
+    - target: {fileID: 11400000, guid: 8cae9c30851b0af4abe47e54573a7a89, type: 2}
+      propertyPath: Exhaust
+      value: 
+      objectReference: {fileID: 587248039}
+    - target: {fileID: 11400000, guid: 8cae9c30851b0af4abe47e54573a7a89, type: 2}
+      propertyPath: Exhaust2
+      value: 
+      objectReference: {fileID: 1995814592}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8cae9c30851b0af4abe47e54573a7a89, type: 2}
   m_RootGameObject: {fileID: 906956478}

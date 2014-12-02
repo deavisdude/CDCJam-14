@@ -18,7 +18,7 @@ public class Player : MonoBehaviour {
     public GameObject Tutorial;
     public GameObject Tutorial2;
     public static bool gamepause;
-	
+
 	public static bool dead = false;
 
 	public GameObject bcell;
@@ -134,15 +134,15 @@ public class Player : MonoBehaviour {
 		}
 	}
 
-	void Kill(){
+	void Kill(){  
 		LivesManager.lives--;
 		PurchaseHolder.HasBCell = false;
 		if(LivesManager.lives < 0){
 			dead = true;
 			Application.LoadLevel("Credits");
 		}else{
-			dead = true;
-			Application.LoadLevel("Shop");
+            dead = true;
+            Application.LoadLevel("Shop");
 		}
 	}
 	
