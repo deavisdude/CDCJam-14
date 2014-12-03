@@ -11,6 +11,7 @@ public class Balance : MonoBehaviour {
 	public static bool hasTest = false;
 	public static bool hasBCell = false;
 	public static int hasExtraLife = 0;
+	public Texture box;
 	// Use this for initialization
 	void Start () {
 		total = 500;
@@ -21,70 +22,75 @@ public class Balance : MonoBehaviour {
 		texts.transform.localScale = new Vector3(pixelRatio * 10.0f, pixelRatio * 10.0f, pixelRatio * 0.1f);
 		texts.text = total + " P";
 		//texts.font = Agency;
-		texts.fontStyle = FontStyle.Normal;
-		texts.fontSize = 29;
+		texts.fontStyle = FontStyle.Bold;
+		texts.fontSize = 36;
 	
 	}
 
 	void Buy(string item){
-		switch(item){
-			case "Vitamin":
-				price = 200;
-				if(!hasVitamin){
-					if (total >= price) {
-						total -= price;
-						hasVitamin = true;
-					} else {
-						StartCoroutine(FlashWarning());
-						wcount = 0;
+		if (total>200){
+			switch(item){
+				case "Vitamin":
+					price = 200;
+					if(!hasVitamin){
+						if (total >= price) {
+							total -= price;
+							hasVitamin = true;
+						} else {
+							StartCoroutine(FlashWarning());
+							wcount = 0;
+						}
+					}else{
+						StartCoroutine(FlashHave());
+						hcount = 0;
 					}
-				}else{
-					StartCoroutine(FlashHave());
-					hcount = 0;
-				}
-			break;
-			case "Test":
-				price = 200;
-				if(!hasTest){
-					if (total >= price) {
-						total -= price;
-						hasTest = true;
-					} else {
-						StartCoroutine(FlashWarning());
-						wcount = 0;
-					}
-				}else{
-					StartCoroutine(FlashHave());
-					hcount = 0;
-				}
-			break;
-			case "BCell":
-				price = 350;
-				if(!hasBCell){
-					if (total >= price) {
-						total -= price;
-						hasBCell = true;
-						PurchaseHolder.HasBCell = true; 
-					} else {
-						StartCoroutine(FlashWarning());
-						wcount = 0;
-					}
-				}else{
-					StartCoroutine(FlashHave());
-					hcount = 0;
-				}
 				break;
-			case "ExtraLife":
-				price = 150;
-					if (total >= price) {
-						total -= price;
-						PurchaseHolder.NewLives++;
-						//hasExtraLife++;
-					} else {
-						StartCoroutine(FlashWarning());
-						wcount = 0;
+				case "Test":
+					price = 200;
+					if(!hasTest){
+						if (total >= price) {
+							total -= price;
+							hasTest = true;
+						} else {
+							StartCoroutine(FlashWarning());
+							wcount = 0;
+						}
+					}else{
+						StartCoroutine(FlashHave());
+						hcount = 0;
 					}
-			break;
+				break;
+				case "BCell":
+					price = 350;
+					if(!hasBCell){
+						if (total >= price) {
+							total -= price;
+							hasBCell = true;
+							PurchaseHolder.HasBCell = true; 
+						} else {
+							StartCoroutine(FlashWarning());
+							wcount = 0;
+						}
+					}else{
+						StartCoroutine(FlashHave());
+						hcount = 0;
+					}
+					break;
+				case "ExtraLife":
+					price = 150;
+						if (total >= price) {
+							total -= price;
+							PurchaseHolder.NewLives++;
+							//hasExtraLife++;
+						} else {
+							StartCoroutine(FlashWarning());
+							wcount = 0;
+						}
+				break;
+			}
+		}else{
+			StartCoroutine(NotEnough());
+			wcount = 0;
 		}
 	}
 	IEnumerator FlashWarning(){
@@ -109,6 +115,16 @@ public class Balance : MonoBehaviour {
 		}
 		GameObject.Find ("Have").GetComponent<GUIText> ().enabled = false;
 	}	
+
+	IEnumerator NotEnough(){
+		while (hcount < 3){
+			GameObject.Find ("Continue").GetComponent<GUITexture> ().texture = box;
+			yield return new WaitForSeconds (.5f);
+			GameObject.Find ("Continue").GetComponent<GUITexture> ().texture = null;
+			yield return new WaitForSeconds (.5f);
+			hcount++;
+		}
+	}
 
 	void Update(){
 		texts.text = total+" P";

@@ -11,6 +11,7 @@ public class DeathSplat : MonoBehaviour {
 
 	void Update () {
 		if(Player.dead){
+            
 			anim.SetBool("dead", true);
 			Invoke("Stand", 0.1f);
 		}

@@ -15,8 +15,10 @@ public class Player : MonoBehaviour {
 
 	public GameObject smokePrefab;
 	public GameObject PauseMenu;
-	public static bool gamepause;
-	
+    public GameObject Tutorial;
+    public GameObject Tutorial2;
+    public static bool gamepause;
+
 	public static bool dead = false;
 
 	public GameObject bcell;
@@ -24,7 +26,7 @@ public class Player : MonoBehaviour {
 	public GameObject[] pews = new GameObject[3];
 	public int currIndex;
 	public Sprite[] weapons = new Sprite[3];
-
+	public Texture[] canister = new Texture[3];
 
 	public static ArrayList delayPos = new ArrayList();
 	public float speed = 5;
@@ -46,7 +48,7 @@ public class Player : MonoBehaviour {
 			Instantiate(bcell,new Vector3(transform.position.x+2f, transform.position.y, 0),Quaternion.identity);
 		}
 		dead = false;
-		gamepause = false;
+		gamepause = true;
 		acc = new Vector3();
 
 		dist = (transform.position.z - Camera.main.transform.position.z);
@@ -65,6 +67,7 @@ public class Player : MonoBehaviour {
 		}
 		GetComponent<Gun>().projectile = pews[currIndex];
 		GameObject.Find("PlayerWeapon").GetComponent<SpriteRenderer>().sprite = weapons[currIndex];
+		GameObject.Find("WeaponIcon").GetComponent<GUITexture>().texture = canister[currIndex];
 		GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayWeaponChange();
 	}
 
@@ -75,8 +78,8 @@ public class Player : MonoBehaviour {
 			GetComponent<SpriteRenderer>().color = Color.white;
 		}
 
-
 		if (Application.loadedLevelName != "Menu") {
+            
 			if (!dead) {
 				acc = new Vector3 (Input.GetAxis ("Horizontal") * speed * Time.deltaTime, Input.GetAxis ("Vertical") * speed * Time.deltaTime, 0);
 				transform.position += acc;
@@ -90,12 +93,19 @@ public class Player : MonoBehaviour {
 				Vector3 newPos = new Vector3 (transform.position.x + 1.5f, transform.position.y, 0);
 				delayPos.Add (new PosOb (newPos, Time.time));
 				if(Input.GetKeyDown(KeyCode.Escape)){
-					if(!gamepause){
-					Instantiate(PauseMenu);
-						gamepause = true;
-					}else{
-						gamepause = !gamepause;
-					}
+                    if (Tutorial.activeSelf == false && Tutorial2.activeSelf == false)
+                    {
+                        if (Time.timeScale != 0.0f)
+                        {
+                            PauseMenu.SetActive(true);
+                            Time.timeScale = 0.0f;
+                        }
+                        else
+                        {
+                            Time.timeScale = 1.0f;
+                            PauseMenu.SetActive(false);
+                        }
+                    }
 				}
 			}
 		}
@@ -124,23 +134,21 @@ public class Player : MonoBehaviour {
 		}
 	}
 
-	void Kill(){
+	void Kill(){  
 		LivesManager.lives--;
 		PurchaseHolder.HasBCell = false;
 		if(LivesManager.lives < 0){
 			dead = true;
 			Application.LoadLevel("Credits");
 		}else{
-			dead = true;
-			Application.LoadLevel("Shop");
+            dead = true;
+            Application.LoadLevel("Shop");
 		}
 	}
 	
-
 	void OnTriggerEnter2D(Collision2D col){
 		if(col.gameObject.tag == "Border"){
 			Debug.Log("HitWall");
 		}
 	}
-
 }

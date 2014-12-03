@@ -46,6 +46,9 @@ public class AudioManager : MonoBehaviour {
 	public AudioClip BossLoop;
 	public AudioSource BossLoopSrc;
 
+    public AudioClip DeathMusic;
+    public AudioSource DeathMusicSrc;
+
 	AudioSource current;
 	
 	void Start () {
@@ -105,6 +108,11 @@ public class AudioManager : MonoBehaviour {
 		BossLoopSrc.clip=BossLoop;
 		BossLoopSrc.loop = true;
 		BossLoopSrc.volume = 0f;
+
+        DeathMusicSrc = gameObject.AddComponent<AudioSource>();
+        DeathMusicSrc.clip = DeathMusic;
+        DeathMusicSrc.loop = false;
+        DeathMusicSrc.volume = 0f;
 
 		//PlayGameStart();
 		PlayMenuLoop();
@@ -179,4 +187,16 @@ public class AudioManager : MonoBehaviour {
 		//HOTween.To(MenuLoopSrc, 1,"volume", 0);
 		MenuLoopSrc.Stop();
 	}
+
+    public void PlayDeathMusic()
+    {
+        //HOTween.To(BossLoopSrc, 1,"volume", 1);
+        DeathMusicSrc.Play();
+    }
+
+    public void StopDeathMusic()
+    {
+        //HOTween.To(BossLoopSrc, 1,"volume", 0);
+        DeathMusicSrc.Stop();
+    }
 }
