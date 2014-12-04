@@ -13,6 +13,7 @@ public class Balance : MonoBehaviour {
 	public static bool hasBCell = false;
 	public static int hasExtraLife = 0;
 	public Sprite box;
+    //public GameObject level;
 	// Use this for initialization
 	void Start () {
 		total = 500;
@@ -27,6 +28,24 @@ public class Balance : MonoBehaviour {
 		texts.fontSize = 36;
 	
 	}
+    void Continue()
+    {
+        if (SpawnManager.levelCount == 1)
+        {
+            Application.LoadLevel("lvl1");
+        }
+        if (SpawnManager.levelCount == 2) // This is the first level
+        {
+            Application.LoadLevel("noBoss2");
+        }
+        if (SpawnManager.levelCount >= 3) // This is the first level
+        {
+            Application.LoadLevel("lvl2");
+        }
+        
+    }
+
+
 
 	void BuyTherapy(){
 		if (total>150){
@@ -36,7 +55,7 @@ public class Balance : MonoBehaviour {
 					total -= price;
 					hasVitamin = true;
 				} else {
-					//StartCoroutine(FlashWarning());
+					StartCoroutine(FlashWarning());
 					wcount = 0;
 				}
 			}else{
@@ -85,14 +104,14 @@ public class Balance : MonoBehaviour {
 	
     IEnumerator FlashWarning(){
 		while (wcount < 3){
-			GameObject.Find ("Warning").GetComponent<GUIText> ().enabled = true;
-			GameObject.Find ("Warning").GetComponent<GUIText> ().color = Color.red;
+            GameObject.Find("Warning").GetComponent<Text>().enabled = true;
+            GameObject.Find("Warning").GetComponent<Text>().color = Color.red;
 			yield return new WaitForSeconds (.5f);
-			GameObject.Find ("Warning").GetComponent<GUIText> ().color = Color.white;
+            GameObject.Find("Warning").GetComponent<Text>().color = Color.white;
 			yield return new WaitForSeconds (.5f);
 			wcount++;
 		}
-		GameObject.Find ("Warning").GetComponent<GUIText> ().enabled = false;
+        GameObject.Find("Warning").GetComponent<Text>().enabled = false;
 	}	
 	IEnumerator FlashHave(){
 		while (hcount < 2){
@@ -117,10 +136,6 @@ public class Balance : MonoBehaviour {
 	}
 
 	void Update(){
-        if (total < 150)
-        {
-
-        }
         texts.text = total+" P";
 	}
 }
