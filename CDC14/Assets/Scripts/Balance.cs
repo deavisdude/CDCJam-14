@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class Balance : MonoBehaviour {
@@ -11,7 +12,7 @@ public class Balance : MonoBehaviour {
 	public static bool hasTest = false;
 	public static bool hasBCell = false;
 	public static int hasExtraLife = 0;
-	public Texture box;
+	public Sprite box;
 	// Use this for initialization
 	void Start () {
 		total = 500;
@@ -39,10 +40,11 @@ public class Balance : MonoBehaviour {
 					wcount = 0;
 				}
 			}else{
-				//StartCoroutine(FlashHave());
+				StartCoroutine(FlashHave());
 				hcount = 0;
 			}
         }
+
     }
     void BuyNRTI()
     {
@@ -57,29 +59,31 @@ public class Balance : MonoBehaviour {
             }
             else
             {
-               // StartCoroutine(FlashWarning());
+                StartCoroutine(FlashWarning());
                 wcount = 0;
             }
         }
         else
         {
-            //StartCoroutine(FlashHave());
+            StartCoroutine(FlashHave());
             hcount = 0;
         }
     }
-        void BuyExtraLife()
-        {
-			price = 150;
-			if (total >= price) {
-				total -= price;
-				PurchaseHolder.NewLives++;
-				//hasExtraLife++;
-		    }else{
-			StartCoroutine(NotEnough());
-			wcount = 0;
-		    }
-        }
-	IEnumerator FlashWarning(){
+
+    void BuyExtraLife()
+    {
+		price = 150;
+		if (total >= price) {
+			total -= price;
+			PurchaseHolder.NewLives++;
+			//hasExtraLife++;
+		}else{
+		StartCoroutine(NotEnough());
+		wcount = 0;
+		}
+    }
+	
+    IEnumerator FlashWarning(){
 		while (wcount < 3){
 			GameObject.Find ("Warning").GetComponent<GUIText> ().enabled = true;
 			GameObject.Find ("Warning").GetComponent<GUIText> ().color = Color.red;
@@ -92,28 +96,32 @@ public class Balance : MonoBehaviour {
 	}	
 	IEnumerator FlashHave(){
 		while (hcount < 2){
-			GameObject.Find ("Have").GetComponent<GUIText> ().enabled = true;
-			GameObject.Find ("Have").GetComponent<GUIText> ().color = Color.red;
+            GameObject.Find("AlreadyHave").GetComponent<Text>().enabled = true;
+            GameObject.Find("AlreadyHave").GetComponent<Text>().color = Color.red;
 			yield return new WaitForSeconds (.5f);
-			GameObject.Find ("Have").GetComponent<GUIText> ().color = Color.white;
+            GameObject.Find("AlreadyHave").GetComponent<Text>().color = Color.white;
 			yield return new WaitForSeconds (.5f);
 			hcount++;
 		}
-		GameObject.Find ("Have").GetComponent<GUIText> ().enabled = false;
+        GameObject.Find("AlreadyHave").GetComponent<Text>().enabled = false;
 	}	
 
 	IEnumerator NotEnough(){
 		while (hcount < 3){
-			GameObject.Find ("Continue").GetComponent<GUITexture> ().texture = box;
+            GameObject.Find("ContineButton").GetComponent<Image>().sprite = box;
 			yield return new WaitForSeconds (.5f);
-			GameObject.Find ("Continue").GetComponent<GUITexture> ().texture = null;
+            GameObject.Find("ContineButton").GetComponent<Image>().sprite = null;
 			yield return new WaitForSeconds (.5f);
 			hcount++;
 		}
 	}
 
 	void Update(){
-		texts.text = total+" P";
+        if (total < 150)
+        {
+
+        }
+        texts.text = total+" P";
 	}
 }
 
