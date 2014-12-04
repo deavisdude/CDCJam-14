@@ -55,7 +55,7 @@ public class SpawnManager : MonoBehaviour {
 
 	void Sender(){
 		try{
-			Send(spawnQueue[Random.Range(0,spawnQueue.Count)]);
+			Send(spawnQueue[Random.Range(0,spawnQueue.Count-1)]);
 		}catch{
 			CancelInvoke("Send");
 		}
@@ -71,6 +71,7 @@ public class SpawnManager : MonoBehaviour {
 	}
 
 	void CheckForWin () {
+		if(spawnQueue.Count>0)Debug.Log(spawnQueue[0].Type);
 		if(GameObject.FindGameObjectsWithTag("HIV").GetLength(0) < 1 &&
 		   GameObject.FindGameObjectsWithTag("EarlyInfected").GetLength(0) < 1 &&
 		   GameObject.FindGameObjectsWithTag("LateInfected").GetLength(0) < 1 &&

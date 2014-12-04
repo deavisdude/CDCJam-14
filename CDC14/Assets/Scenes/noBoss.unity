@@ -4651,8 +4651,6 @@ MonoBehaviour:
   PauseMenu: {fileID: 2114337192}
   Tutorial: {fileID: 1350407083}
   Tutorial2: {fileID: 1811313498}
-  Exhaust: {fileID: 113650756}
-  Exhaust2: {fileID: 146683581}
   bcell: {fileID: 100000, guid: 64ed0c811bcba0d47816cf1533e66d7a, type: 2}
   pews:
   - {fileID: 100000, guid: 86d7567b721e88649907660baf384ed7, type: 2}
