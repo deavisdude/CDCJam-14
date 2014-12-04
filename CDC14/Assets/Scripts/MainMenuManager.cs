@@ -2,9 +2,9 @@
 using System.Collections;
 
 public class MainMenuManager : MonoBehaviour {
-    public int EasyDifficulty = 1;
-    public int MediumDifficulty = 2;
-    public int HardDifficulty = 3;
+    public float EasyDifficulty = 1;
+    public float MediumDifficulty = 2;
+    public float HardDifficulty = 3;
   
     void Easy()
     {
