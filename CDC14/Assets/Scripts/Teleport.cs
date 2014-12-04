@@ -24,7 +24,7 @@ public class Teleport : MonoBehaviour {
 		}
         if (Input.GetKey("4"))
         {
-            Application.LoadLevel("Credits");
+            Application.LoadLevel("lvl2");
         }
 	}
 }

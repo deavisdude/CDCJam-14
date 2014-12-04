@@ -35,11 +35,11 @@ public class Needle : MonoBehaviour {
 		}
 		//Debug.Log(health);
 
-		if(health <= startHealth){
+		/*if(health <= startHealth){
 			transform.FindChild ("EnemyHp").GetComponent<SpriteRenderer>().sprite = hpbar;
 		}
 		transform.FindChild ("EnemyHp").GetComponent<Transform>().transform.localScale = new Vector3(scaleFactor*health, transform.FindChild ("EnemyHp").GetComponent<Transform>().transform.localScale.y, transform.FindChild ("EnemyHp").GetComponent<Transform>().transform.localScale.z);
-
+*/
 
 	}
 
