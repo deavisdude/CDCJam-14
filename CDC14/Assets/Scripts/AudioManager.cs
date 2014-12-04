@@ -49,6 +49,13 @@ public class AudioManager : MonoBehaviour {
     public AudioClip DeathMusic;
     public AudioSource DeathMusicSrc;
 
+	public AudioClip NeedMoney;
+	public AudioSource NeedMoneySrc;
+
+	public AudioClip HitWeakness;
+	public AudioSource HitWeaknessSrc;
+
+
 	AudioSource current;
 	
 	void Start () {
@@ -64,7 +71,7 @@ public class AudioManager : MonoBehaviour {
 		MainLoopSrc = gameObject.AddComponent<AudioSource>();
 		MainLoopSrc.clip = MainLoop;
 		MainLoopSrc.loop = true;
-		MainLoopSrc.volume = 0f;
+		MainLoopSrc.volume = 1f;
 		
 		EnemyHitSrc = gameObject.AddComponent<AudioSource>();
 		EnemyHitSrc.clip = EnemyHit;
@@ -95,6 +102,14 @@ public class AudioManager : MonoBehaviour {
 		BossRumbleSrc.clip=BossRumble;
 		BossRumbleSrc.loop = false;
 
+		NeedMoneySrc = gameObject.AddComponent<AudioSource>();
+		NeedMoneySrc.clip=NeedMoney;
+		NeedMoneySrc.loop = false;
+
+		HitWeaknessSrc = gameObject.AddComponent<AudioSource>();
+		HitWeaknessSrc.clip = NeedMoney;
+		HitWeaknessSrc.loop = false;
+
 		MenuLoopSrc = gameObject.AddComponent<AudioSource>();
 		MenuLoopSrc.clip=MenuLoop;
 		MenuLoopSrc.loop = true;
@@ -122,6 +137,15 @@ public class AudioManager : MonoBehaviour {
 	public AudioSource CurrentSrc(){
 		return current;
 	}
+
+	public void PlayHitWeakness(){
+		HitWeaknessSrc.Play();
+	}
+
+	public void PlayNeedMoney(){
+		NeedMoneySrc.Play();
+	}
+
 
 	public void PlayBossLoop(){
 		//HOTween.To(BossLoopSrc, 1,"volume", 1);

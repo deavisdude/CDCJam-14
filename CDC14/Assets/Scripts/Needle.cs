@@ -12,7 +12,7 @@ public class Needle : MonoBehaviour {
 	float scaleFactor;
 
 	void Start(){
-		health = SpawnManager.enemyMultiplier*50;
+		health = (int)SpawnManager.enemyMultiplier*50;
 		InvokeRepeating("SpawnEnemy", 1f, 3f);
 	}
 
@@ -45,6 +45,7 @@ public class Needle : MonoBehaviour {
 		AudioManager am= GameObject.Find("AudioManager").GetComponent<AudioManager>();
 		am.PlayBossRumble();
 		am.StopMainLoop();
+		am.BossLoopSrc.volume = 1f;
 		am.PlayBossLoop();
 	}
 

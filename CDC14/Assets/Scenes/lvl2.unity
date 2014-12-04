@@ -158,8 +158,8 @@ GameObject:
   - 212: {fileID: 110924354}
   - 114: {fileID: 110924353}
   - 50: {fileID: 110924356}
-  - 61: {fileID: 110924357}
   - 114: {fileID: 110924358}
+  - 58: {fileID: 110924357}
   m_Layer: 0
   m_Name: Needle
   m_TagString: Boss
@@ -181,7 +181,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 306278169}
   speed: 25
-  prefab: {fileID: 100000, guid: a4096a2524218e14284e867bcaccbdf5, type: 2}
+  prefab: {fileID: 100000, guid: 2602f46f6a27be643934b59152ec0308, type: 2}
 --- !u!212 &110924354
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -203,7 +203,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c6379f53d043ef140840699b61effc66, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 261672fd5b8c9ef41a2184ee595c7f2b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &110924355
 Transform:
@@ -213,7 +213,7 @@ Transform:
   m_GameObject: {fileID: 110924352}
   m_LocalRotation: {x: 0, y: 0, z: -.359109759, w: .933295369}
   m_LocalPosition: {x: 13.670146, y: 5.76751947, z: -.686035156}
-  m_LocalScale: {x: .645243406, y: 2.57470512, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1068507403}
   m_Father: {fileID: 0}
@@ -234,18 +234,17 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
---- !u!61 &110924357
-BoxCollider2D:
+--- !u!58 &110924357
+CircleCollider2D:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6100000, guid: 38a72f1ca9aebba43a2eb6725bd4d419,
-    type: 2}
-  m_PrefabInternal: {fileID: 983622027}
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 110924352}
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: 1.40999997, y: 5.21999979}
-  m_Center: {x: -2.01999998, y: 1.40999997}
+  m_Radius: 2.53143358
+  m_Center: {x: -4.76837158e-07, y: 0}
 --- !u!114 &110924358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2780,7 +2779,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 180c9a4cef3f5b5469a8fc1f1038d1bc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ebbc829f9a305dc4c97c434fab828acb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &841983314
 Transform:
@@ -2852,7 +2851,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: ad4ac4b65ab58d344bc9763e7977eca4, type: 2}
+  - {fileID: 2100000, guid: 013bb91547d5470448f996def81ac8aa, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -3213,7 +3212,41 @@ Prefab:
       propertyPath: m_LocalPosition.y
       value: -1.00516582
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 21200000, guid: 38a72f1ca9aebba43a2eb6725bd4d419, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 261672fd5b8c9ef41a2184ee595c7f2b,
+        type: 3}
+    - target: {fileID: 400000, guid: 38a72f1ca9aebba43a2eb6725bd4d419, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 38a72f1ca9aebba43a2eb6725bd4d419, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100000, guid: 38a72f1ca9aebba43a2eb6725bd4d419, type: 2}
+      propertyPath: m_Size.x
+      value: 4.60726452
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100000, guid: 38a72f1ca9aebba43a2eb6725bd4d419, type: 2}
+      propertyPath: m_Size.y
+      value: 4.82230663
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100000, guid: 38a72f1ca9aebba43a2eb6725bd4d419, type: 2}
+      propertyPath: m_Center.x
+      value: -.286157817
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100000, guid: 38a72f1ca9aebba43a2eb6725bd4d419, type: 2}
+      propertyPath: m_Center.y
+      value: .192349821
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 38a72f1ca9aebba43a2eb6725bd4d419, type: 2}
+      propertyPath: prefab
+      value: 
+      objectReference: {fileID: 100000, guid: 2602f46f6a27be643934b59152ec0308, type: 2}
+    m_RemovedComponents:
+    - {fileID: 6100000, guid: 38a72f1ca9aebba43a2eb6725bd4d419, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 38a72f1ca9aebba43a2eb6725bd4d419, type: 2}
   m_RootGameObject: {fileID: 110924352}
   m_IsPrefabParent: 0

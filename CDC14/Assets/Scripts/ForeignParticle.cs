@@ -45,6 +45,7 @@ public class ForeignParticle : MonoBehaviour {
 			
 			if(col.GetComponent<DamageControl>().getType() == 1){
 				gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+				GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayHitWeakness();
 				Invoke("normalizeColor", 0.2f);
 			}else{
 				Color c = renderer.material.color;

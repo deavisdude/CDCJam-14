@@ -2,9 +2,9 @@
 using System.Collections;
 
 public class MainMenuManager : MonoBehaviour {
-    public int EasyDifficulty = 1;
-    public int MediumDifficulty = 2;
-    public int HardDifficulty = 3;
+    public float EasyDifficulty = 1;
+    public float MediumDifficulty = 2;
+    public float HardDifficulty = 3;
   
     void Easy()
     {
@@ -13,7 +13,7 @@ public class MainMenuManager : MonoBehaviour {
         LivesManager.lives = 3;
         GameObject.Find("AudioManager").GetComponent<AudioManager>().StopMenuLoop();
         GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayGameStart();
-        GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayMainLoop();
+		Invoke("mainplay", 1.7f);
         SpawnManager.enemyMultiplier = EasyDifficulty;
         GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayGameStart();
     }
@@ -24,7 +24,7 @@ public class MainMenuManager : MonoBehaviour {
         LivesManager.lives = 3;
         GameObject.Find("AudioManager").GetComponent<AudioManager>().StopMenuLoop();
         GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayGameStart();
-        GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayMainLoop();
+		Invoke("mainplay", 1.7f);
         SpawnManager.enemyMultiplier = MediumDifficulty;
         GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayGameStart();
     }
@@ -36,10 +36,12 @@ public class MainMenuManager : MonoBehaviour {
         LivesManager.lives = 3;
         GameObject.Find("AudioManager").GetComponent<AudioManager>().StopMenuLoop();
         GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayGameStart();
-        GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayMainLoop();
+		Invoke("mainplay", 1.7f);
         SpawnManager.enemyMultiplier = HardDifficulty;
         GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayGameStart();
     }
+
+	void mainplay(){GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayMainLoop();}
 
     void Credits()
     {
