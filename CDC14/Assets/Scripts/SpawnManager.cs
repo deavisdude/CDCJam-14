@@ -86,6 +86,10 @@ public class SpawnManager : MonoBehaviour {
 		Needle.bosstime = false;
 		levelCount++;
 		prevLevel = Application.loadedLevelName;
+		if(prevLevel == "lvl2" && GameObject.Find("Needle")==null){
+			Application.LoadLevel("Credits");
+		}else{
 		Application.LoadLevel("Shop");
+		}
 	}
 }

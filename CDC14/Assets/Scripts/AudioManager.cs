@@ -113,6 +113,7 @@ public class AudioManager : MonoBehaviour {
 		HitWeaknessSrc = gameObject.AddComponent<AudioSource>();
 		HitWeaknessSrc.clip = HitWeakness;
 		HitWeaknessSrc.loop = false;
+		HitWeaknessSrc.volume = .4f;
 
 		MenuLoopSrc = gameObject.AddComponent<AudioSource>();
 		MenuLoopSrc.clip=MenuLoop;

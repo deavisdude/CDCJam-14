@@ -7,12 +7,15 @@ public class Needle : MonoBehaviour {
 	public float speed;
 	public static bool bosstime=false;
 	public static int health;
+	public int startHealth;
 	public GameObject prefab;
 	bool soundPlayed = false;
 	float scaleFactor;
+	public Sprite hpbar;
 
 	void Start(){
 		health = (int)SpawnManager.enemyMultiplier*50;
+		startHealth = health;
 		InvokeRepeating("SpawnEnemy", 1f, 3f);
 	}
 
@@ -32,6 +35,11 @@ public class Needle : MonoBehaviour {
 		}
 		//Debug.Log(health);
 
+		/*if(health <= startHealth){
+			transform.FindChild ("EnemyHp").GetComponent<SpriteRenderer>().sprite = hpbar;
+		}
+		transform.FindChild ("EnemyHp").GetComponent<Transform>().transform.localScale = new Vector3(scaleFactor*health, transform.FindChild ("EnemyHp").GetComponent<Transform>().transform.localScale.y, transform.FindChild ("EnemyHp").GetComponent<Transform>().transform.localScale.z);
+*/
 
 	}
 
