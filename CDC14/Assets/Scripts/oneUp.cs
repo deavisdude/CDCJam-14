@@ -7,7 +7,7 @@ public class oneUp : MonoBehaviour {
 		if(col.gameObject.tag == "Good"){
 			LivesManager.lives++;
 			Destroy(gameObject);
-			GameObject.Find("AudioMananger").GetComponent<AudioManager>().PlayPowerUp();
+			//GameObject.Find("AudioMananger").GetComponent<AudioManager>().PlayPowerUp();
 			GameObject.Find("Lives").GetComponent<LivesManager>().UpdateLives();
 		}
 	}
