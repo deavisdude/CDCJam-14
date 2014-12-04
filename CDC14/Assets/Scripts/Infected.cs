@@ -66,6 +66,7 @@ public class Infected : MonoBehaviour {
 		if(col.gameObject.tag == "Pew" && early){
 			if(col.GetComponent<DamageControl>().getType() == 3){
 				gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+				GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayHitWeakness();
 				Invoke("normalizeColor", 0.2f);
 			}else{
 				Color c = renderer.material.color;
@@ -83,6 +84,7 @@ public class Infected : MonoBehaviour {
 
 			if(col.GetComponent<DamageControl>().getType() == 2){
 				gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+				GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayHitWeakness();
 				Invoke("normalizeColor", 0.2f);
 			}else{
 				Color c = renderer.material.color;

@@ -628,6 +628,10 @@ MonoBehaviour:
   BossLoopSrc: {fileID: 0}
   DeathMusic: {fileID: 8300000, guid: 68b35c7edcb782e489ee312ffa3f43af, type: 3}
   DeathMusicSrc: {fileID: 0}
+  NeedMoney: {fileID: 8300000, guid: 3bebee16082c7e6448d288176f01605e, type: 3}
+  NeedMoneySrc: {fileID: 0}
+  HitWeakness: {fileID: 8300000, guid: 8555c93335c7d9e4194a69eea148c6e5, type: 3}
+  HitWeaknessSrc: {fileID: 0}
 --- !u!4 &167804258
 Transform:
   m_ObjectHideFlags: 0
@@ -2375,6 +2379,14 @@ Prefab:
       propertyPath: DeathMusic
       value: 
       objectReference: {fileID: 8300000, guid: 68b35c7edcb782e489ee312ffa3f43af, type: 3}
+    - target: {fileID: 11400000, guid: a9ec80ea79a137e459938f3b3659804d, type: 2}
+      propertyPath: NeedMoney
+      value: 
+      objectReference: {fileID: 8300000, guid: 3bebee16082c7e6448d288176f01605e, type: 3}
+    - target: {fileID: 11400000, guid: a9ec80ea79a137e459938f3b3659804d, type: 2}
+      propertyPath: HitWeakness
+      value: 
+      objectReference: {fileID: 8300000, guid: 8555c93335c7d9e4194a69eea148c6e5, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a9ec80ea79a137e459938f3b3659804d, type: 2}
   m_RootGameObject: {fileID: 167804256}

@@ -2806,6 +2806,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1345622730}
+  currTarget: {x: 0, y: 0, z: 0}
   speed: 25
   startPos: {x: 0, y: 0, z: 0}
 --- !u!1 &844370152
@@ -2851,7 +2852,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 013bb91547d5470448f996def81ac8aa, type: 2}
+  - {fileID: 2100000, guid: ad4ac4b65ab58d344bc9763e7977eca4, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
