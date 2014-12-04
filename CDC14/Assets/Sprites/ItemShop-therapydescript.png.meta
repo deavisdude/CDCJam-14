@@ -1,12 +1,11 @@
 fileFormatVersion: 2
-guid: 81c64315f93b6304fafcab6b983e3abd
+guid: d945bcd6595975649862dea77f018bdd
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: ItemShop-BcellDescript
+  fileIDToRecycleName: {}
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 0
+    enableMipMap: 1
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -26,7 +25,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: 1
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0

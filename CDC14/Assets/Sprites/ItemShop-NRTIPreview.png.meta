@@ -1,12 +1,11 @@
 fileFormatVersion: 2
-guid: 2252d90f9506a9d479bffc2c8c82eaa1
+guid: 237a0e9cdd03844458922f5d6403a049
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: ItemShop-VitPreview
+  fileIDToRecycleName: {}
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 0
+    enableMipMap: 1
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -23,12 +22,12 @@ TextureImporter:
   generateCubemap: 0
   seamlessCubemap: 0
   textureFormat: -1
-  maxTextureSize: 2048
+  maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: 1
+    aniso: -1
     mipBias: -1
-    wrapMode: 1
+    wrapMode: -1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
