@@ -106,8 +106,12 @@ public class AudioManager : MonoBehaviour {
 		NeedMoneySrc.clip=NeedMoney;
 		NeedMoneySrc.loop = false;
 
+		PowerUpSrc = gameObject.AddComponent<AudioSource>();
+		PowerUpSrc.clip = PowerUp;
+		PowerUpSrc.loop = false;
+
 		HitWeaknessSrc = gameObject.AddComponent<AudioSource>();
-		HitWeaknessSrc.clip = NeedMoney;
+		HitWeaknessSrc.clip = HitWeakness;
 		HitWeaknessSrc.loop = false;
 
 		MenuLoopSrc = gameObject.AddComponent<AudioSource>();
@@ -136,6 +140,10 @@ public class AudioManager : MonoBehaviour {
 
 	public AudioSource CurrentSrc(){
 		return current;
+	}
+
+	public void PlayPowerUp(){
+		PowerUpSrc.Play();
 	}
 
 	public void PlayHitWeakness(){
