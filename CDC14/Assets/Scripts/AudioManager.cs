@@ -64,7 +64,7 @@ public class AudioManager : MonoBehaviour {
 		MainLoopSrc = gameObject.AddComponent<AudioSource>();
 		MainLoopSrc.clip = MainLoop;
 		MainLoopSrc.loop = true;
-		MainLoopSrc.volume = 0f;
+		MainLoopSrc.volume = 1f;
 		
 		EnemyHitSrc = gameObject.AddComponent<AudioSource>();
 		EnemyHitSrc.clip = EnemyHit;
