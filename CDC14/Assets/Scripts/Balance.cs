@@ -27,72 +27,58 @@ public class Balance : MonoBehaviour {
 	
 	}
 
-	void Buy(string item){
-		if (total>200){
-			switch(item){
-				case "Vitamin":
-					price = 200;
-					if(!hasVitamin){
-						if (total >= price) {
-							total -= price;
-							hasVitamin = true;
-						} else {
-							StartCoroutine(FlashWarning());
-							wcount = 0;
-						}
-					}else{
-						StartCoroutine(FlashHave());
-						hcount = 0;
-					}
-				break;
-				case "Test":
-					price = 200;
-					if(!hasTest){
-						if (total >= price) {
-							total -= price;
-							hasTest = true;
-						} else {
-							StartCoroutine(FlashWarning());
-							wcount = 0;
-						}
-					}else{
-						StartCoroutine(FlashHave());
-						hcount = 0;
-					}
-				break;
-				case "BCell":
-					price = 350;
-					if(!hasBCell){
-						if (total >= price) {
-							total -= price;
-							hasBCell = true;
-							PurchaseHolder.HasBCell = true; 
-						} else {
-							StartCoroutine(FlashWarning());
-							wcount = 0;
-						}
-					}else{
-						StartCoroutine(FlashHave());
-						hcount = 0;
-					}
-					break;
-				case "ExtraLife":
-					price = 150;
-						if (total >= price) {
-							total -= price;
-							PurchaseHolder.NewLives++;
-							//hasExtraLife++;
-						} else {
-							StartCoroutine(FlashWarning());
-							wcount = 0;
-						}
-				break;
+	void BuyTherapy(){
+		if (total>150){
+			price = 150;
+			if(!hasVitamin){
+				if (total >= price) {
+					total -= price;
+					hasVitamin = true;
+				} else {
+					//StartCoroutine(FlashWarning());
+					wcount = 0;
+				}
+			}else{
+				//StartCoroutine(FlashHave());
+				hcount = 0;
 			}
-		}else{
+        }
+    }
+    void BuyNRTI()
+    {
+        price = 350;
+        if (!hasBCell)
+        {
+            if (total >= price)
+            {
+                total -= price;
+                hasBCell = true;
+                PurchaseHolder.HasBCell = true;
+            }
+            else
+            {
+               // StartCoroutine(FlashWarning());
+                wcount = 0;
+            }
+        }
+        else
+        {
+            //StartCoroutine(FlashHave());
+            hcount = 0;
+        }
+    }
+        void BuyExtraLife()
+        {
+			price = 150;
+			if (total >= price) {
+				total -= price;
+				PurchaseHolder.NewLives++;
+				//hasExtraLife++;
+		    }else{
 			StartCoroutine(NotEnough());
 			wcount = 0;
-		}
-	}
+		    }
+        }
 	IEnumerator FlashWarning(){
 		while (wcount < 3){
 			GameObject.Find ("Warning").GetComponent<GUIText> ().enabled = true;
