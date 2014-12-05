@@ -9,7 +9,7 @@ public class PromptManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
     {
-        if (Application.loadedLevelName == "noBoss") { 
+        if (Application.loadedLevelName == "noBoss" && LivesManager.lives == 3) { 
             Tutorial.SetActive(true);
             Time.timeScale = 0.0f;
         }

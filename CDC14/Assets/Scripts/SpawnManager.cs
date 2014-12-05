@@ -87,7 +87,7 @@ public class SpawnManager : MonoBehaviour {
 		levelCount++;
 		prevLevel = Application.loadedLevelName;
 		if(prevLevel == "lvl2" && GameObject.Find("Needle")==null){
-			Application.LoadLevel("Credits");
+			Application.LoadLevel("Victory");
 		}else{
 		Application.LoadLevel("Shop");
 		}
