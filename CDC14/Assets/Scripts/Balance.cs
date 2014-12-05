@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 
 public class Balance : MonoBehaviour {
-	GUIText texts;
+	Text texts;
 	private int total;
 	private int wcount = 0;
 	private int hcount = 0;
@@ -13,36 +13,39 @@ public class Balance : MonoBehaviour {
 	public static bool hasBCell = false;
 	public static int hasExtraLife = 0;
 	public Sprite box;
+    public Sprite box2;
+    SpriteState spritestate;
     //public GameObject level;
 	// Use this for initialization
 	void Start () {
 		total = 500;
-		texts = gameObject.GetComponent<GUIText>();
+		texts = gameObject.GetComponent<Text>();
 		texts.color = Color.white;
 		//Font Agency = (Font)Resources.Load("Assets/Sprites/Font/4822485673.ttf");
-		float pixelRatio = (Camera.main.orthographicSize * 2.0f) / Camera.main.pixelHeight;
-		texts.transform.localScale = new Vector3(pixelRatio * 10.0f, pixelRatio * 10.0f, pixelRatio * 0.1f);
+		
 		texts.text = total + " P";
 		//texts.font = Agency;
-		texts.fontStyle = FontStyle.Bold;
-		texts.fontSize = 36;
-	
+		texts.fontStyle = FontStyle.Normal;
+        texts.fontSize = 20;
 	}
     void Continue()
     {
-        if (SpawnManager.levelCount == 1)
+        if (SpawnManager.prevLevel == "noBoss")
         {
             Application.LoadLevel("lvl1");
         }
-        if (SpawnManager.levelCount == 2) // This is the first level
+        if (SpawnManager.prevLevel == "lvl1") 
         {
             Application.LoadLevel("noBoss2");
         }
-        if (SpawnManager.levelCount >= 3) // This is the first level
+        if (SpawnManager.prevLevel == "noBoss2") 
         {
             Application.LoadLevel("lvl2");
         }
-        
+        if (SpawnManager.prevLevel == "lvl2") 
+        {
+            Application.LoadLevel("lvl2");
+        }
     }
 
 
@@ -88,7 +91,6 @@ public class Balance : MonoBehaviour {
             hcount = 0;
         }
     }
-
     void BuyExtraLife()
     {
 		price = 150;
@@ -124,12 +126,11 @@ public class Balance : MonoBehaviour {
 		}
         GameObject.Find("AlreadyHave").GetComponent<Text>().enabled = false;
 	}	
-
 	IEnumerator NotEnough(){
 		while (hcount < 3){
             GameObject.Find("ContineButton").GetComponent<Image>().sprite = box;
 			yield return new WaitForSeconds (.5f);
-            GameObject.Find("ContineButton").GetComponent<Image>().sprite = null;
+            GameObject.Find("ContineButton").GetComponent<Image>().sprite = box2;
 			yield return new WaitForSeconds (.5f);
 			hcount++;
 		}

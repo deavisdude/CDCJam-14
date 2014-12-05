@@ -22,7 +22,7 @@ public class SpawnManager : MonoBehaviour {
 	public GameObject oneUp;
 	public GameObject atripla;
 
-	public static string prevLevel;
+	public static string prevLevel="";
 	public static List<Enemy> spawnQueue = new List<Enemy>();
 	public static int levelCount = 1;
 	public static float enemyMultiplier;
