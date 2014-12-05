@@ -18,7 +18,8 @@ public class Balance : MonoBehaviour {
     //public GameObject level;
 	// Use this for initialization
 	void Start () {
-		total = 500;
+        PurchaseHolder.vitamin = true;
+        total = 500;
 		texts = gameObject.GetComponent<Text>();
 		texts.color = Color.white;
 		//Font Agency = (Font)Resources.Load("Assets/Sprites/Font/4822485673.ttf");
@@ -57,6 +58,7 @@ public class Balance : MonoBehaviour {
 				if (total >= price) {
 					total -= price;
 					hasVitamin = true;
+                    PurchaseHolder.vitamin = false;
 				} else {
 					StartCoroutine(FlashWarning());
 					wcount = 0;
@@ -96,8 +98,8 @@ public class Balance : MonoBehaviour {
 		price = 150;
 		if (total >= price) {
 			total -= price;
-			PurchaseHolder.NewLives++;
-			//hasExtraLife++;
+			//PurchaseHolder.NewLives++;
+            LivesManager.lives++;
 		}else{
 		StartCoroutine(NotEnough());
 		wcount = 0;
