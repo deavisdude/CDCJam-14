@@ -132,12 +132,17 @@ public class AudioManager : MonoBehaviour {
         DeathMusicSrc = gameObject.AddComponent<AudioSource>();
         DeathMusicSrc.clip = DeathMusic;
         DeathMusicSrc.loop = false;
-        DeathMusicSrc.volume = 0f;
+        DeathMusicSrc.volume = 1f;
 
 		//PlayGameStart();
 		PlayMenuLoop();
 		//Application.LoadLevel("lvl1");
 	}
+
+	public void invokeMenu(){
+		Invoke("PlayMenuLoop", DeathMusic.length-1);
+	}
+
 
 	public AudioSource CurrentSrc(){
 		return current;
