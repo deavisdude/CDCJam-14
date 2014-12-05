@@ -15,6 +15,8 @@ public class Player : MonoBehaviour {
 
 	public GameObject smokePrefab;
 	public GameObject PauseMenu;
+    public GameObject QuitMenu;
+    public GameObject MainMenu;
     public GameObject Tutorial;
     public GameObject Tutorial2;
     public static bool gamepause;
@@ -123,7 +125,7 @@ public class Player : MonoBehaviour {
                             PauseMenu.SetActive(true);
                             Time.timeScale = 0.0f;
                         }
-                        else
+                        else if(Time.timeScale == 1.0f && QuitMenu.activeSelf == false && MainMenu.activeSelf == false)
                         {
                             Time.timeScale = 1.0f;
                             PauseMenu.SetActive(false);

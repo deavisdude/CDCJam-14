@@ -137,6 +137,14 @@ Prefab:
       propertyPath: Exhaust2
       value: 
       objectReference: {fileID: 146683581}
+    - target: {fileID: 11400000, guid: 8cae9c30851b0af4abe47e54573a7a89, type: 2}
+      propertyPath: QuitMenu
+      value: 
+      objectReference: {fileID: 230477249}
+    - target: {fileID: 11400000, guid: 8cae9c30851b0af4abe47e54573a7a89, type: 2}
+      propertyPath: MainMenu
+      value: 
+      objectReference: {fileID: 827551881}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8cae9c30851b0af4abe47e54573a7a89, type: 2}
   m_RootGameObject: {fileID: 906956478}
@@ -246,7 +254,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 1568303166}
+  m_TargetGraphic: {fileID: 50945574}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -4649,6 +4657,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   smokePrefab: {fileID: 100000, guid: 6103a588117e79d46a1de9a09145e00b, type: 2}
   PauseMenu: {fileID: 2114337192}
+  QuitMenu: {fileID: 230477249}
+  MainMenu: {fileID: 827551881}
   Tutorial: {fileID: 1350407083}
   Tutorial2: {fileID: 1811313498}
   bcell: {fileID: 100000, guid: 64ed0c811bcba0d47816cf1533e66d7a, type: 2}
@@ -4666,6 +4676,7 @@ MonoBehaviour:
   - {fileID: 2800000, guid: 9a702299792da634ba61b70be0a60be1, type: 3}
   - {fileID: 2800000, guid: 8877273e43a60214da85864b0addc39d, type: 3}
   speed: 5
+  prefab: {fileID: 906956478}
 --- !u!114 &906956485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6178,7 +6189,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: e492c390645687145ab3497c8afac8f6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f456e4843dd23fb408f79ae344d70dcf, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
