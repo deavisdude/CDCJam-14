@@ -159,6 +159,7 @@ public class Player : MonoBehaviour {
 				GameObject.Find("PlayerWeapon").GetComponent<Rigidbody2D>().gravityScale = 1;
 				Invoke("Kill", 2f);
 				GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayPlayerDeath();
+				GameObject.Find("AudioManager").GetComponent<AudioManager>().invokeMenu();
 			}
 		}
 	}
