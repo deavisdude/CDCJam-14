@@ -20,6 +20,7 @@ public class Player : MonoBehaviour {
     public static bool gamepause;
 
 	public static bool dead = false;
+	public static bool invincible = true;
 
 	public GameObject bcell;
 
@@ -31,6 +32,8 @@ public class Player : MonoBehaviour {
 	public static ArrayList delayPos = new ArrayList();
 	public float speed = 5;
 	Vector3 acc;
+
+	public GameObject prefab;
 
 	float dist;
 	float leftLimitation;
@@ -47,6 +50,7 @@ public class Player : MonoBehaviour {
 		if(PurchaseHolder.HasBCell){
 			Instantiate(bcell,new Vector3(transform.position.x+2f, transform.position.y, 0),Quaternion.identity);
 		}
+		invincible = true;
 		dead = false;
 		gamepause = true;
 		acc = new Vector3();
@@ -57,6 +61,11 @@ public class Player : MonoBehaviour {
 		upLimitation = Camera.main.ViewportToWorldPoint(new Vector3(0,.97f,dist)).y;
 		downLimitation = Camera.main.ViewportToWorldPoint(new Vector3(0,.03f,dist)).y;
 
+		Invoke("vulnerable", 4f);
+	}
+
+	void vulnerable(){
+		invincible = false;
 	}
 
 	void CycleWeapon(){
@@ -71,7 +80,21 @@ public class Player : MonoBehaviour {
 		GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayWeaponChange();
 	}
 
+	void SwapColor(){
+		if(gameObject.GetComponent<SpriteRenderer>().color == Color.gray){
+			gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+		}else{
+			gameObject.GetComponent<SpriteRenderer>().color = Color.gray;
+		}
+	}
+
 	void Update () {
+		if(invincible){
+			SwapColor();
+		}else{
+			gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+		}
+
 		if(PurchaseHolder.AtriplaTime > 0){
 			GetComponent<SpriteRenderer>().color = Color.yellow;
 		}else{
@@ -110,16 +133,22 @@ public class Player : MonoBehaviour {
 			}
 		}
 		if(Input.GetMouseButtonDown(1)){
-			if(!dead)
+			if(!dead && PurchaseHolder.vitamin){
 				CycleWeapon();
+			}else{
+				GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayNeedMoney();
+			}
 		}
 
 		GameObject lb = GameObject.Find("LifeBar");
 		lb.transform.localScale = new Vector3(scaleFactor*health, lb.transform.localScale.y, lb.transform.localScale.z);
+
+
+
 	}
 
 	void OnTriggerEnter2D(Collider2D col){
-		if(col.gameObject.tag != "Good" && col.gameObject.tag != "Antibody" && col.gameObject.tag != "Pew" && col.gameObject.tag != "Border"){
+		if(col.gameObject.tag != "Good" && col.gameObject.tag != "Antibody" && col.gameObject.tag != "Pew" && col.gameObject.tag != "Border" && !invincible){
 			health--;
 			if(health<1){
 				dead = true;
@@ -139,10 +168,11 @@ public class Player : MonoBehaviour {
 		PurchaseHolder.HasBCell = false;
 		if(LivesManager.lives < 0){
 			dead = true;
+			GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayDeathMusic();
 			Application.LoadLevel("Credits");
 		}else{
             dead = true;
-            Application.LoadLevel("Shop");
+			Application.LoadLevel(Application.loadedLevelName);
 		}
 	}
 	
