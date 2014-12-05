@@ -133,8 +133,11 @@ public class Player : MonoBehaviour {
 			}
 		}
 		if(Input.GetMouseButtonDown(1)){
-			if(!dead)
+			if(!dead && PurchaseHolder.vitamin){
 				CycleWeapon();
+			}else{
+				GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayNeedMoney();
+			}
 		}
 
 		GameObject lb = GameObject.Find("LifeBar");
