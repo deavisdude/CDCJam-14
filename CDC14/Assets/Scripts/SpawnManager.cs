@@ -87,6 +87,9 @@ public class SpawnManager : MonoBehaviour {
 		levelCount++;
 		prevLevel = Application.loadedLevelName;
 		if(prevLevel == "lvl2" && GameObject.Find("Needle")==null){
+			GameObject.Find("AudioManager").GetComponent<AudioManager>().StopMainLoop();
+			GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayVictory();
+			GameObject.Find("AudioManager").GetComponent<AudioManager>().invokeMenuVic();
 			Application.LoadLevel("Victory");
 		}else{
 		Application.LoadLevel("Shop");

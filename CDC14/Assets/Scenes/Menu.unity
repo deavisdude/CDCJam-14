@@ -632,6 +632,8 @@ MonoBehaviour:
   NeedMoneySrc: {fileID: 0}
   HitWeakness: {fileID: 8300000, guid: 8555c93335c7d9e4194a69eea148c6e5, type: 3}
   HitWeaknessSrc: {fileID: 0}
+  Victory: {fileID: 8300000, guid: c8cc770962b42834dbc12cb73b1e89d8, type: 3}
+  VictorySrc: {fileID: 0}
 --- !u!4 &167804258
 Transform:
   m_ObjectHideFlags: 0
@@ -2387,6 +2389,10 @@ Prefab:
       propertyPath: HitWeakness
       value: 
       objectReference: {fileID: 8300000, guid: 8555c93335c7d9e4194a69eea148c6e5, type: 3}
+    - target: {fileID: 11400000, guid: a9ec80ea79a137e459938f3b3659804d, type: 2}
+      propertyPath: Victory
+      value: 
+      objectReference: {fileID: 8300000, guid: c8cc770962b42834dbc12cb73b1e89d8, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a9ec80ea79a137e459938f3b3659804d, type: 2}
   m_RootGameObject: {fileID: 167804256}

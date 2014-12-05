@@ -169,8 +169,10 @@ public class Player : MonoBehaviour {
 		PurchaseHolder.HasBCell = false;
 		if(LivesManager.lives < 0){
 			dead = true;
+			GameObject.Find("AudioManager").GetComponent<AudioManager>().StopMainLoop();
+			GameObject.Find("AudioManager").GetComponent<AudioManager>().StopBossLoop();
 			GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayDeathMusic();
-			Application.LoadLevel("Credits");
+			Application.LoadLevel("death");
 		}else{
             dead = true;
 			Application.LoadLevel(Application.loadedLevelName);

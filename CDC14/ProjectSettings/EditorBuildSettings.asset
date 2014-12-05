@@ -21,3 +21,5 @@ EditorBuildSettings:
     path: Assets/Scenes/noBoss2.unity
   - enabled: 1
     path: Assets/Scenes/victory.unity
+  - enabled: 1
+    path: Assets/Scenes/death.unity

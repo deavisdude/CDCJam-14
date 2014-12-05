@@ -55,6 +55,9 @@ public class AudioManager : MonoBehaviour {
 	public AudioClip HitWeakness;
 	public AudioSource HitWeaknessSrc;
 
+	public AudioClip Victory;
+	public AudioSource VictorySrc;
+
 
 	AudioSource current;
 	
@@ -72,7 +75,11 @@ public class AudioManager : MonoBehaviour {
 		MainLoopSrc.clip = MainLoop;
 		MainLoopSrc.loop = true;
 		MainLoopSrc.volume = 1f;
-		
+
+		VictorySrc = gameObject.AddComponent<AudioSource>();
+		VictorySrc.clip = Victory;
+		VictorySrc.loop = false;
+
 		EnemyHitSrc = gameObject.AddComponent<AudioSource>();
 		EnemyHitSrc.clip = EnemyHit;
 		EnemyHitSrc.loop = false;
@@ -143,6 +150,13 @@ public class AudioManager : MonoBehaviour {
 		Invoke("PlayMenuLoop", DeathMusic.length-1);
 	}
 
+	public void invokeMenuVic(){
+		Invoke("PlayMenuLoop", Victory.length);
+	}
+
+	public void PlayVictory(){
+		VictorySrc.Play();
+	}
 
 	public AudioSource CurrentSrc(){
 		return current;
