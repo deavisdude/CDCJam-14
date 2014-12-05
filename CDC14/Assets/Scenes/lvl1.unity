@@ -3134,8 +3134,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   smokePrefab: {fileID: 100000, guid: 6103a588117e79d46a1de9a09145e00b, type: 2}
   PauseMenu: {fileID: 334528979}
-  Tutorial: {fileID: 363903915}
-  Tutorial2: {fileID: 345925875}
+  QuitMenu: {fileID: 619883342}
+  MainMenu: {fileID: 1672889680}
+  Tutorial: {fileID: 0}
+  Tutorial2: {fileID: 0}
   bcell: {fileID: 100000, guid: 64ed0c811bcba0d47816cf1533e66d7a, type: 2}
   pews:
   - {fileID: 100000, guid: 86d7567b721e88649907660baf384ed7, type: 2}
@@ -3151,6 +3153,7 @@ MonoBehaviour:
   - {fileID: 2800000, guid: 9a702299792da634ba61b70be0a60be1, type: 3}
   - {fileID: 2800000, guid: 8877273e43a60214da85864b0addc39d, type: 3}
   speed: 5
+  prefab: {fileID: 906956478}
 --- !u!114 &906956485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4147,11 +4150,11 @@ Prefab:
     - target: {fileID: 11400000, guid: 8cae9c30851b0af4abe47e54573a7a89, type: 2}
       propertyPath: Tutorial
       value: 
-      objectReference: {fileID: 363903915}
+      objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 8cae9c30851b0af4abe47e54573a7a89, type: 2}
       propertyPath: Tutorial2
       value: 
-      objectReference: {fileID: 345925875}
+      objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 8cae9c30851b0af4abe47e54573a7a89, type: 2}
       propertyPath: Exhaust
       value: 
@@ -4160,6 +4163,14 @@ Prefab:
       propertyPath: Exhaust2
       value: 
       objectReference: {fileID: 1995814592}
+    - target: {fileID: 11400000, guid: 8cae9c30851b0af4abe47e54573a7a89, type: 2}
+      propertyPath: QuitMenu
+      value: 
+      objectReference: {fileID: 619883342}
+    - target: {fileID: 11400000, guid: 8cae9c30851b0af4abe47e54573a7a89, type: 2}
+      propertyPath: MainMenu
+      value: 
+      objectReference: {fileID: 1672889680}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8cae9c30851b0af4abe47e54573a7a89, type: 2}
   m_RootGameObject: {fileID: 906956478}

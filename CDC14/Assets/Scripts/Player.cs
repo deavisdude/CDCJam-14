@@ -125,7 +125,7 @@ public class Player : MonoBehaviour {
                             PauseMenu.SetActive(true);
                             Time.timeScale = 0.0f;
                         }
-                        else if(Time.timeScale == 1.0f && QuitMenu.activeSelf == false && MainMenu.activeSelf == false)
+                        else if(Time.timeScale == 0.0f && QuitMenu.activeSelf == false && MainMenu.activeSelf == false)
                         {
                             Time.timeScale = 1.0f;
                             PauseMenu.SetActive(false);
